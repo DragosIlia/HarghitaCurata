@@ -1,0 +1,183 @@
+<app-header iconName="arrow-back-outline" title="Centres.Title" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content" *ngIf="currentCentre">
+        <div class="centreInformation">
+            <div class="group">
+                <div class="icon">
+                    <ion-icon class="boldIcon" name="business-outline"></ion-icon>
+                </div>
+                <p class="boldName">
+                    <ng-container *ngIf="locale === 'ro';else nameGb">
+                        {{ currentCentre.name }}
+                    </ng-container>
+                    <ng-template #nameGb>
+                        <ng-container *ngIf="locale === 'en';else nameHu">
+                            {{ currentCentre.nameGb }}
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #nameHu>
+                        {{ currentCentre.nameHu }}
+                    </ng-template>
+                </p>
+            </div>
+            <div class="group" *ngIf="currentCentre.street && currentCentre.street.length > 0">
+                <div class="icon">
+                    <ion-icon name="navigate-outline"></ion-icon>
+                </div>
+                <p>{{ currentCentre.street }} {{ currentCentre.streetNumber }}</p>
+            </div>
+            <div class="group" *ngIf="currentCentre.hours && currentCentre.hours.length > 0">
+                <div class="icon">
+                    <ion-icon name="time-outline"></ion-icon>
+                </div>
+                <p>{{ currentCentre.hours }}</p>
+            </div>
+            <div class="group" *ngIf="currentCentre.phoneNumber && currentCentre.phoneNumber.length > 0">
+                <div class="icon">
+                    <ion-icon name="call-outline"></ion-icon>
+                </div>
+                <p>{{ currentCentre.phoneNumber }}</p>
+            </div>
+            <div class="group" *ngIf="currentCentre.email && currentCentre.email.length > 0">
+                <div class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </div>
+                <p>{{ currentCentre.email }}</p>
+            </div>
+            <div class="group" *ngIf="currentCentre.website && currentCentre.website.length > 0">
+                <div class="icon">
+                    <ion-icon name="link-outline"></ion-icon>
+                </div>
+                <p class="website text-ellipsis" (click)="visitLink(currentCentre.website)">{{ currentCentre.website }}
+                </p>
+            </div>
+            <ng-container *ngIf="locale === 'ro';else descriptionGb">
+                <div class="group description" *ngIf="currentCentre.description && currentCentre.description.length > 0">
+                    <div class="icon">
+                        <ion-icon name="chatbox-outline"></ion-icon>
+                    </div>
+                    <p> {{ currentCentre.description }} </p>
+                </div>
+            </ng-container>
+            <ng-template #descriptionGb>
+                <ng-container *ngIf="locale === 'en';else descriptionHu">
+                    <div class="group description" *ngIf="currentCentre.descriptionGb && currentCentre.descriptionGb.length > 0">
+                        <div class="icon">
+                            <ion-icon name="chatbox-outline"></ion-icon>
+                        </div>
+                        <p> {{ currentCentre.descriptionGb }} </p>
+                    </div>
+                </ng-container>
+            </ng-template>
+            <ng-template #descriptionHu>
+                <div class="group description" *ngIf="currentCentre.descriptionHu && currentCentre.descriptionHu.length > 0">
+                    <div class="icon">
+                        <ion-icon name="chatbox-outline"></ion-icon>
+                    </div>
+                    <p> {{ currentCentre.descriptionHu }} </p>
+                </div>
+            </ng-template>
+        </div>
+
+        <div class="actions">
+            <ion-button class="mainButton" type="button" expand="block" (click)="navigateTo(currentCentre)">
+                <p class="text-ellipsis">{{ 'Centres.Navigate' | translate }}</p>
+            </ion-button>
+            <ion-button *ngIf="currentCentre.phoneNumber && currentCentre.phoneNumber.length > 0" class="mainButton"
+                type="button" expand="block" (click)="call(currentCentre.phoneNumber)">
+                <p class="text-ellipsis">{{ 'Centres.Call' | translate }}</p>
+            </ion-button>
+        </div>
+
+        <div class="recyclableItems">
+            <div class="recyclableItems__top">
+                <h1 class="text-ellipsis">{{ 'Tabs.Map.RecyclableItems' | translate }}</h1>
+                <p *ngIf="centreItems && centreItems.length > 0" [ngClass]="{'not-enough': centreItems && centreItems.length <= 3}" (click)="seeAllItems()">
+                    {{ 'Tabs.Map.SeeMoreItems' | translate }}
+                    ({{ centreItems.length }})
+                </p>
+            </div>
+
+            <ng-container *ngIf="loadingCentreItems; else showItems">
+                <ion-list *ngFor="let item of [0,1,2]">
+                    <ion-item>
+                        <ion-thumbnail slot="start">
+                            <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                        </ion-thumbnail>
+                        <ion-label>
+                            <h3>
+                                <ion-skeleton-text [animated]="true" style="width: 50%;"></ion-skeleton-text>
+                            </h3>
+                            <p>
+                                <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+                            </p>
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </ng-container>
+
+            <ng-template #showItems>
+                <ion-list *ngIf="featuredCentreItems && featuredCentreItems.length > 0; else no_items">
+                    <ion-item *ngFor="let featuredCentreItem of featuredCentreItems">
+                        <ion-icon slot="start" name="reader"></ion-icon>
+                        <ion-label>
+                            <h3>
+                                <ng-container *ngIf="locale === 'ro';else itemNameGb">
+                                    {{ featuredCentreItem.name }}
+                                </ng-container>
+                                <ng-template #itemNameGb>
+                                    <ng-container *ngIf="locale === 'en';else itemNameHu">
+                                        {{ featuredCentreItem.nameGb }}
+                                    </ng-container>
+                                </ng-template>
+                                <ng-template #itemNameHu>
+                                    {{ featuredCentreItem.nameHu }}
+                                </ng-template>
+                            </h3>
+                            <p>
+                                <ng-container *ngIf="locale === 'ro';else itemDescriptionGb">
+                                    {{ featuredCentreItem.description }}
+                                </ng-container>
+                                <ng-template #itemDescriptionGb>
+                                    <ng-container *ngIf="locale === 'en';else itemDescriptionHu">
+                                        {{ featuredCentreItem.descriptionGb }}
+                                    </ng-container>
+                                </ng-template>
+                                <ng-template #itemDescriptionHu>
+                                    {{ featuredCentreItem.descriptionHu }}
+                                </ng-template>
+                            </p>
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+
+                <ng-template #no_items>
+                    <app-no-array content="Tabs.Map.NoRecyclableItems" [hasPadding]="false"></app-no-array>
+                </ng-template>
+            </ng-template>
+        </div>
+
+        <div class="wasteTypes" *ngIf="currentCentreFractions && currentCentreFractions.length > 0">
+            <h1 class="title text-ellipsis">{{ 'Tabs.Map.FractionTypes' | translate }}</h1>
+            <div class="fractionTypes">
+                <p *ngFor="let fractionType of currentCentreFractions"
+                    [ngStyle]="{'background-color': hexToRGB(fractionType.id) }">
+                    <ng-container *ngIf="locale === 'ro';else nameGb">
+                        {{ fractionType.name }}
+                    </ng-container>
+                    <ng-template #nameGb>
+                        <ng-container *ngIf="locale === 'en';else nameHu">
+                            {{ fractionType.nameGb }}
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #nameHu>
+                        {{ fractionType.nameHu }}
+                    </ng-template>
+                </p>
+            </div>
+        </div>
+
+        <p class="lastUpdate">{{ 'Centres.LastUpdate' | translate }} {{ currentCentre.updatedAt | date: 'dd MMM yyyy' : '' : locale }}</p>
+    </div>
+</ion-content>

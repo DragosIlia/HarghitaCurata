@@ -1,0 +1,47 @@
+<app-header iconName="arrow-back-outline" title="Notifications.Notifications" [enableTitle]="true" [isModal]="true">
+</app-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <div class="content">
+        <ng-container *ngIf="sortedNotifications === null; else noNotifications">
+            <div class="spinner">
+                <ion-spinner name="dots"></ion-spinner>
+            </div>
+        </ng-container>
+        <ng-template #noNotifications>
+            <ng-container
+                *ngIf="isEmptyNotifications(sortedNotifications); else notificationList">
+                <app-no-array content="Notifications.NoNotifications" [hasPadding]="true"></app-no-array>
+            </ng-container>
+        </ng-template>
+        <ng-template #notificationList>
+            <ion-list>
+                <ion-item-group *ngFor="let day of sortedNotifications | keyvalue: keyDescOrder">
+                    <ion-item-divider>
+                        <ion-label>
+                            {{ formatDate(day.key) }}
+                        </ion-label>
+                    </ion-item-divider>
+
+                    <ion-card *ngFor="let notification of day.value" [ngClass]="getCardClass(notification.type)">
+                        <ion-card-header>
+                            <ion-card-title>{{ notification.title | translate }} • {{ calcDiff(day.key, notification.time) }}
+                            </ion-card-title>
+                            <ion-card-subtitle>{{ notification.subtitle | translate }}</ion-card-subtitle>
+                        </ion-card-header>
+
+                        <ion-icon [name]="getNotificationName(notification.type)"
+                            [color]="getNotificationColor(notification.type)"></ion-icon>
+
+                        <ion-card-content>
+                            {{ notification.content | translate }}
+                        </ion-card-content>
+                    </ion-card>
+                </ion-item-group>
+            </ion-list>
+        </ng-template>
+    </div>
+</ion-content>

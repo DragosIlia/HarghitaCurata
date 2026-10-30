@@ -1,0 +1,60 @@
+<app-header iconName="arrow-back-outline" title="Send.Send" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <div class="complaint__container">
+            <div class="history" *ngIf="userComplaints && userComplaints.length > 0" (click)="viewComplaintHistory()">
+                <p class="text-ellipsis">{{ 'Send.ReviewHistory' | translate }} ({{ userComplaints.length }})</p>
+                <ion-badge *ngIf="hasUnreadComplaints()" mode="ios" color="danger">{{ getUnreadComplaints() }}</ion-badge>
+            </div>
+
+            <form [formGroup]="messageForm">
+                <ion-item>
+                    <ion-label position="stacked">{{ 'Send.Name' | translate }}</ion-label>
+                    <ion-input inputmode="text" mode="ios" spellcheck="false" type="text"
+                        [value]="data?.firstName + ' ' + data?.lastName" disabled>
+                        <ion-icon class="disabledIcon" name="person-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">{{ 'Send.Address' | translate }}</ion-label>
+                    <ion-select interface="action-sheet" mode="ios" formControlName="address" [cancelText]="'Send.CancelSheet' | translate" [placeholder]="'Send.SelectAddress' | translate">
+                        <ion-select-option *ngFor="let userAddress of userAddresses" [value]="userAddress.id">{{ userAddress.street }}, {{ userAddress.streetNumber }}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="stacked">{{ 'Send.Title' | translate }}</ion-label>
+                    <ion-select interface="action-sheet" mode="ios" formControlName="title" [cancelText]="'Send.CancelSheet' | translate" [placeholder]="'Send.SelectCategory' | translate">
+                        <ion-select-option *ngFor="let category of categories" [value]="category">{{ category | translate }}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item class="textarea">
+                    <ion-label position="stacked">{{ 'Send.Message' | translate }}</ion-label>
+                    <ion-textarea
+                        formControlName="message"
+                        mode="ios"
+                        inputmode="text"
+                        spellcheck="false"
+                        maxlength="400"
+                        [class.error]="(messageForm.get('message')?.value?.length || 0) < 4"
+                    ></ion-textarea>
+                </ion-item>
+
+                <div class="counter-container">
+                    <span [class.error]="(messageForm.get('message')?.value?.length || 0) < 4">
+                        {{ (messageForm.get('message')?.value?.length || 0) }}
+                    </span>/400
+                </div>
+
+                <ion-button class="mainButton" type="button" expand="block" (click)="sendMessage()"
+                    [disabled]="!messageForm.valid">
+                    <p class="text-ellipsis">{{ 'Send.Button' | translate }}</p>
+                    <!-- <ion-icon name="send-outline"></ion-icon> -->
+                </ion-button>
+            </form>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,35 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Dashboard.ZoneList" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <ion-searchbar inputmode="text" placeholder="" spellcheck="false" type="text"
+            placeholder="{{ 'Placeholder.Filter' | translate }}" (ionChange)="filter($any($event))">
+        </ion-searchbar>
+        <ion-list>
+            <ion-item *ngFor="let zone of zones" [ngClass]="getZoneClass(zone)" (click)="selectZone(zone)" lines="full" button detail="true" detail-icon="chevron-forward-outline">
+                <ion-label>
+                    <h3>
+                        <ng-container *ngIf="zone.city; else noCity">
+                            {{ 'Tabs.Dashboard.Tab' | translate }} {{ zone.city.name }}
+                            <span *ngIf="zone.city.hasMoreThanOneZone"> — {{ 'Tabs.Dashboard.Zone' | translate }} {{zone.zoneNumber}}</span>
+                        </ng-container>
+                        <ng-template #noCity>
+                            {{ 'Tabs.Dashboard.Unknown' | translate }}
+                        </ng-template>
+                    </h3>
+                    <p>
+                        <ng-container *ngIf="zone.calendar && zone.calendar.state === 3; else noCalendar">
+                            {{ 'Tabs.Dashboard.LastUpdate' | translate }} <b>{{ zone.calendar.updateDate | date: 'dd MMM yyyy HH:mm:ss' : '' : locale }}</b>
+                        </ng-container>
+                        <ng-template #noCalendar>
+                            {{ 'Tabs.Dashboard.Unknown' | translate }}
+                        </ng-template>
+                    </p>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+            <ion-infinite-scroll-content loadingSpinner="crescent"></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+    </div>
+</ion-content>

@@ -1,0 +1,43 @@
+ion-content {
+    --padding-start: 0 !important;
+    .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 !important;
+
+        ion-list {
+            padding-top: 0;
+            width: 100%;
+
+            ion-item {
+                --padding-start: 0;
+                --border-style: groove;
+                --background: #fff;
+                --border-color: rgb(213 213 213 / 24%);
+
+                ion-checkbox {
+                    --size: 20px;
+                    --checkmark-color: transparent;
+                    --background: unset !important;
+                    margin: 0;
+                }
+
+                ion-checkbox::part(container) {
+                    border-radius: 12px;
+                    border: 1px solid rgba(23, 23, 23, 0.3);
+                }
+
+                ion-label {
+                    --ion-font-family: "DM Sans Regular" !important;
+                    font-family: "DM Sans Regular" !important;
+                    font-style: normal;
+                    font-weight: 400;
+                    color: #3d3d3d;
+                    padding-left: 15px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

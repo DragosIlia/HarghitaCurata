@@ -1,0 +1,48 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Guide.Details.Title" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content" *ngIf="data">
+        <div class="group" *ngIf="data.item.name && data.item.name.length > 0">
+            <div class="icon">
+                <ion-icon class="boldIcon" name="bookmark-outline"></ion-icon>
+            </div>
+            <p class="boldName">
+                {{ data.item.name }}
+            </p>
+        </div>
+
+        <div class="group" *ngIf="data.item.fraction">
+            <div class="icon">
+                <ion-icon name="trash-outline"></ion-icon>
+            </div>
+            <ion-badge [ngStyle]="{ 'background-color': data.item.fraction.color }">
+                <ng-container *ngIf="locale === 'ro';else nameGb">
+                    {{ data.item.fraction.name }}
+                </ng-container>
+                <ng-template #nameGb>
+                    <ng-container *ngIf="locale === 'en';else nameHu">
+                        {{ data.item.fraction.nameGb }}
+                    </ng-container>
+                </ng-template>
+                <ng-template #nameHu>
+                    {{ data.item.fraction.nameHu }}
+                </ng-template>
+            </ion-badge>
+        </div>
+
+        <div class="group details" *ngIf="data.item.details && data.item.details.length > 0">
+            <div class="icon">
+                <ion-icon name="chatbox-outline"></ion-icon>
+            </div>
+            <p>{{ data.item.details }}</p>
+        </div>
+
+        <ion-button (click)="visitLink(data.item.link)" class="mainButton" type="button" expand="block"
+            *ngIf="data.item.link && data.item.link.length > 0">
+            <p class="text-ellipsis">{{ 'Tabs.Guide.Details.Visit' | translate }}</p>
+            <!-- <ion-icon name="logo-youtube"></ion-icon> -->
+        </ion-button>
+
+        <p class="lastUpdate">{{ 'Tabs.Guide.Details.LastUpdate' | translate }} {{ data.item.updatedAt | date: 'dd MMM yyyy' : '' : locale }}</p>
+    </div>
+</ion-content>

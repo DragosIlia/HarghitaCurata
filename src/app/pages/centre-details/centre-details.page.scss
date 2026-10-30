@@ -1,0 +1,199 @@
+ion-content {
+    .content {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: relative;
+        padding-top: 0 !important;
+
+        .actions {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgb(0 0 0 / 20%);
+        }
+
+        .recyclableItems {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .recyclableItems__top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1 {
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 32px;
+                    letter-spacing: -0.8px;
+                    color: #171717;
+                }
+                p {
+                    --ion-font-family: "DM Sans Regular" !important;
+                    font-family: "DM Sans Regular" !important;
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 32px;
+                    letter-spacing: -0.8px;
+                    color: var(--ion-color-primary);
+                }
+
+                .not-enough {
+                    opacity: 0.5;
+                }
+            }
+
+            ion-list {
+                padding-top: 0;
+
+                ion-item {
+                    --padding-start: 0px;
+
+                    ion-icon {
+                        margin: 0;
+                        margin-right: 15px;
+                        color: #171717;
+                        opacity: 0.5;
+                    }
+
+                    ion-label {
+                        h3 {
+                            --ion-font-family: "DM Sans Medium" !important;
+                            font-family: "DM Sans Medium" !important;
+                            margin: 0;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 18px;
+                            letter-spacing: -0.8px;
+                            color: #171717;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+
+                        p {
+                            margin: 0;
+                            --ion-font-family: "DM Sans Medium" !important;
+                            font-family: "DM Sans Medium" !important;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            letter-spacing: -0.4px;
+                            color: #171717;
+                            mix-blend-mode: normal;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wasteTypes {
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+
+            .title {
+                --ion-font-family: "DM Sans Medium" !important;
+                font-family: "DM Sans Medium" !important;
+                margin: 0;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: -0.8px;
+                color: #171717;
+            }
+
+            .fractionTypes {
+                gap: 5px;
+                display: flex;
+                flex-wrap: wrap;
+
+                p {
+                    margin: 0;
+                    color: whitesmoke;
+                    border-radius: 6px;
+                    font-family: "DM Sans Medium" !important;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15px;
+                    letter-spacing: -0.4px;
+                    width: max-content;
+                    height: max-content;
+                    padding: 4px 10px;
+                }
+            }
+        }
+
+        .lastUpdate {
+            --ion-font-family: "DM Sans Regular" !important;
+            font-family: "DM Sans Regular" !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            margin: 0;
+            letter-spacing: -0.4px;
+            padding-bottom: 20px;
+        }
+
+        .centreInformation {
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+
+            .group {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .icon {
+                    width: 23px;
+                    height: 23px;
+
+                    .boldIcon {
+                        opacity: 1;
+                    }
+
+                    ion-icon {
+                        font-size: 23px;
+                        color: rgba(23, 23, 23);
+                        opacity: 0.6;
+                    }
+                }
+
+                .website {
+                    color: var(--ion-color-primary);
+                    text-decoration: underline;
+                }
+
+                .boldName {
+                    font-weight: 700;
+                }
+
+                p {
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    --ion-font-family: "DM Sans Regular" !important;
+                    font-family: "DM Sans Regular" !important;
+                    color: #3d3d3d;
+                }
+            }
+
+            .description {
+                align-items: start;
+            }
+        }
+    }
+}

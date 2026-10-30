@@ -1,0 +1,51 @@
+ion-content {
+    .content {
+        form {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-direction: column;
+
+            ion-item {
+                --padding-start: 0;
+                --border-style: groove;
+                --border-color: rgb(213 213 213 / 24%);
+                --background: transparent !important;
+
+                ion-input {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: -0.2px;
+                    color: #171717;
+                    position: relative;
+                    --padding-end: 0;
+                    margin-top: 8px;
+                    --padding-start: 8px;
+
+                    ion-icon {
+                        color: #171717;
+                        font-size: 20px;
+                    }
+                }
+
+                ion-label {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    letter-spacing: -0.171429px;
+                    color: #8f92a1;
+                }
+            }
+
+            ion-button {
+                margin-top: 10px;
+            }
+        }
+    }
+}

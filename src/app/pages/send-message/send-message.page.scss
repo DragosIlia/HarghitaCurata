@@ -1,0 +1,209 @@
+ion-content {
+    .content {
+        padding-top: 10px !important;
+
+        .complaint__container {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+            gap: 10px;
+
+            .history {
+                display: flex;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background: #fafafa;
+                padding: 10px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+                position: relative;
+
+                ion-badge {
+                    position: absolute;
+                    top: -8px;
+                    right: 0;
+                    border-radius: 12px;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    -webkit-animation: shake-top 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+                    animation: shake-top 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+                }
+
+                p {
+                    margin: 0;
+                    --ion-font-family: "DM Sans Bold" !important;
+                    font-family: "DM Sans Bold" !important;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: -0.4px;
+                    color: #171717;
+                    opacity: 0.6;
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+
+                .textarea {
+                    --border-style: unset;
+                    --border-width: 0;
+                    --inner-padding-end: 0;
+                }
+
+                ion-button {
+                    margin-top: 5px;
+                }
+
+                ion-item {
+                    --padding-start: 0;
+                    --border-style: groove;
+                    --background: transparent !important;
+                    --border-color: rgb(213 213 213 / 24%);
+
+                    ion-select {
+                        --placeholder-opacity: 0.5;
+                        --placeholder-color: #171717;
+                    }
+
+                    ion-input {
+                        font-style: normal;
+                        font-weight: 500;
+                        --ion-font-family: "DM Sans Medium" !important;
+                        font-family: "DM Sans Medium" !important;
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: -0.2px;
+                        color: #171717;
+                        position: relative;
+                        --padding-end: 0;
+                        margin-top: 8px;
+                        --padding-start: 8px;
+
+                        .disabledIcon {
+                            opacity: 0.4;
+                        }
+
+                        ion-icon {
+                            color: #171717;
+                            font-size: 20px;
+                        }
+                    }
+
+                    ion-textarea {
+                        font-style: normal;
+                        font-weight: 500;
+                        --ion-font-family: "DM Sans Medium" !important;
+                        font-family: "DM Sans Medium" !important;
+                        font-size: 16px;
+                        line-height: 20px;
+                        letter-spacing: -0.2px;
+                        color: #171717;
+                        min-height: 300px;
+                        --background: #f6f6f6;
+                        margin-top: 8px;
+                        border-radius: 5px;
+                        --padding-end: 8px;
+                        --padding-start: 8px;
+                    }
+
+                    ion-label {
+                        font-style: normal;
+                        font-weight: 500;
+                        --ion-font-family: "DM Sans Medium" !important;
+                        font-family: "DM Sans Medium" !important;
+                        letter-spacing: -0.171429px;
+                        color: #8f92a1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.counter-container {
+  text-align: right;
+  font-size: 12px;
+  color: var(--ion-color-medium);
+  margin: 0 8px 0 0;
+
+  .error {
+    color: var(--ion-color-danger);
+    font-weight: 500;
+  }
+}
+
+@-webkit-keyframes shake-top {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+    }
+    10% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg);
+    }
+    80% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    90% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+@keyframes shake-top {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+    }
+    10% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg);
+    }
+    80% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+    }
+    90% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}

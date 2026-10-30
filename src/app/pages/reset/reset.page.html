@@ -1,0 +1,44 @@
+<app-header iconName="arrow-back-outline" [enableTitle]="true" [isModal]="true" [enableImage]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <div class="top">
+            <h1 class="text-ellipsis">{{ 'Reset.Title' | translate }}</h1>
+            <p>{{ 'Reset.Subtitle' | translate }}</p>
+        </div>
+
+        <form [formGroup]="resetForm">
+            <ion-item>
+                <ion-label position="stacked">{{ 'Reset.Code' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="text"
+                    formControlName="accessCode">
+                    <ion-icon name="key-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">{{ 'Reset.NewPassword' | translate }}</ion-label>
+                <app-password>
+                    <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="password"
+                        formControlName="newPassword">
+                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </app-password>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Reset.ConfirmNewPassword' | translate }}</ion-label>
+                <app-password>
+                    <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="password"
+                        formControlName="confirmNewPassword">
+                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </app-password>
+            </ion-item>
+
+            <ion-button class="mainButton" type="button" expand="block" [disabled]="!resetForm.valid"
+                (click)="changePassword()">
+                <p class="text-ellipsis">{{ 'Reset.Submit' | translate }}</p>
+            </ion-button>
+        </form>
+    </div>
+</ion-content>

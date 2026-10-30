@@ -1,0 +1,49 @@
+ion-content {
+    .content {
+        padding-top: 0 !important;
+        .spinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ion-accordion-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 20px;
+            ion-accordion {
+                .accordion-content {
+                    padding: 10px;
+                    background: #f6f6f6ad;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    letter-spacing: -0.4px;
+                    color: #171717;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+                ion-item {
+                    --padding-start: 10px;
+                    --background: #f6f6f6;
+                    --border-color: transparent;
+                    border-radius: 5px;
+
+                    ion-label {
+                        margin: 0;
+                        --ion-font-family: "DM Sans Regular" !important;
+                        font-family: "DM Sans Regular" !important;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 17px;
+                        color: #3d3d3d;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<ion-tabs #tabsMenu (ionTabsDidChange)="setSelectedTab()">
+
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="dashboard" layout="icon-top">
+            <ion-icon [name]="selectedTab === 'dashboard' ? 'calendar' : 'calendar-outline'"></ion-icon>
+            <ion-label>
+                {{ 'Tabs.Dashboard.Tab' | translate }}
+            </ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="map" layout="icon-top">
+            <ion-icon [name]="selectedTab === 'map' ? 'map' : 'map-outline'"></ion-icon>
+            <ion-label>
+                {{ 'Tabs.Map.Tab' | translate }}
+            </ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button *ngIf="isLogged" tab="wastehunter" layout="icon-top">
+            <ion-icon [name]="selectedTab === 'wastehunter' ? 'document-attach' : 'document-attach-outline'"></ion-icon>
+            <ion-label>
+                {{ 'Tabs.WasteHunter.Tab' | translate }}
+            </ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="guide" layout="icon-top">
+            <ion-icon [name]="selectedTab === 'guide' ? 'layers' : 'layers-outline'"></ion-icon>
+            <ion-label>
+                {{ 'Tabs.Guide.Tab' | translate }}
+            </ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="profile" layout="icon-top">
+            <ion-icon [name]="selectedTab === 'profile' ? 'person' : 'person-outline'"></ion-icon>
+            <ion-label>
+                {{ 'Tabs.Profile.Tab' | translate }}
+            </ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+
+</ion-tabs>

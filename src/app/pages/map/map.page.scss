@@ -1,0 +1,171 @@
+ion-content {
+    --background: transparent;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+
+    .loading-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: white;
+        z-index: 10;
+
+        ion-spinner {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    ion-fab.location-fab {
+        ion-fab-button {
+            --background: #ffffff;
+            --color: #3a3b3c;
+        }
+    }
+
+    .map {
+        width: 100%;
+        height: 99.9%;
+        position: relative;
+        z-index: 10;
+
+        .mapContent {
+            --background: transparent;
+            background: transparent;
+            z-index: 11;
+            width: 100%;
+            height: 100%;
+
+            capacitor-google-map {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px;
+            }
+        }
+
+        ion-fab.map-action-fab {
+            ion-fab-button {
+                margin-right: 10px;
+                --box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        .nearestPoints.closed {
+            height: 40px;
+        }
+
+        .nearestPoints {
+            position: fixed;
+            top: 9.5vh;
+            left: 4vw;
+            padding: 10px;
+            max-width: 360px;
+            background: #fafafa;
+            box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px;
+            border-radius: 5px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: 130px;
+            overflow: hidden;
+            transition: height 0.35s ease-out;
+
+            .nearestPoint__top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1 {
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    letter-spacing: -0.8px;
+                    color: #171717;
+                    width: 90%;
+                }
+            }
+
+            .nearestPoint__bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .nearestPoint {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .nearestPoint__left {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        width: 85%;
+
+                        .icon {
+                            width: 18px;
+                            height: 18px;
+
+                            ion-icon {
+                                color: #171717;
+                                font-size: 18px;
+                                mix-blend-mode: normal;
+                                opacity: 0.6;
+                            }
+                        }
+
+                        .group {
+                            display: flex;
+                            width: 85%;
+                            flex-direction: column;
+
+                            h1 {
+                                --ion-font-family: "DM Sans Medium" !important;
+                                font-family: "DM Sans Medium" !important;
+                                margin: 0;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 14px;
+                                letter-spacing: -0.8px;
+                                color: #171717;
+                            }
+
+                            p {
+                                margin: 0;
+                                --ion-font-family: "DM Sans Regular" !important;
+                                font-family: "DM Sans Regular" !important;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 12px;
+                                letter-spacing: -0.4px;
+                                color: #171717;
+                                mix-blend-mode: normal;
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+
+                    .nearestPoint__right {
+                        width: 24px;
+                        background: var(--ion-color-primary);
+                        height: 24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100%;
+                        ion-icon {
+                            font-size: 18px;
+                            color: #171717;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

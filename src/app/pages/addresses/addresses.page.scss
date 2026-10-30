@@ -1,0 +1,95 @@
+ion-content {
+    .content {
+        padding-top: 0px !important;
+
+        ion-button {
+            margin-bottom: 10px;
+        }
+
+        ion-card {
+            margin-inline: 0;
+            margin-bottom: 10px;
+            margin-top: 0;
+            z-index: 1;
+            position: relative;
+
+            .actions {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 9999;
+
+                .mark {
+                    color: var(--ion-color-medium) !important;
+                }
+
+                .edit {
+                    color: var(--ion-color-warning) !important;
+                }
+
+                .delete {
+                    color: var(--ion-color-danger) !important;
+                }
+
+                ion-icon {
+                    font-size: 21px;
+                    --ionicon-stroke-width: 32px;
+                    background: #fafafa;
+                    box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px;
+                    padding: 8px;
+                    border-radius: 100%;
+                }
+            }
+
+            ion-card-header {
+                padding-bottom: 0;
+
+                .main_address {
+                    color: var(--ion-color-primary) !important;
+                }
+                .secondary_address {
+                    color: var(--ion-color-medium) !important;
+                }
+
+                ion-card-title {
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-weight: 400;
+                    font-size: 15px;
+                    letter-spacing: -0.4px;
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+
+                    ion-icon {
+                        font-size: 14px;
+                    }
+                }
+
+                ion-card-subtitle {
+                    --ion-font-family: "DM Sans Regular" !important;
+                    font-family: "DM Sans Regular" !important;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #3d3d3d;
+                    margin: 0;
+                    text-transform: none;
+                }
+            }
+            ion-card-content {
+                --ion-font-family: "DM Sans Medium" !important;
+                font-family: "DM Sans Medium" !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: -0.4px;
+                color: #171717;
+            }
+        }
+    }
+}

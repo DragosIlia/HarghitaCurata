@@ -1,0 +1,177 @@
+diff --git a/node_modules/@capacitor/google-maps/dist/esm/web.js b/node_modules/@capacitor/google-maps/dist/esm/web.js
+index 4209a34..e8b7fc5 100644
+--- a/node_modules/@capacitor/google-maps/dist/esm/web.js
++++ b/node_modules/@capacitor/google-maps/dist/esm/web.js
+@@ -426,7 +426,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin {
+         });
+     }
+     async setMarkerListeners(mapId, markerId, marker) {
+-        marker.addListener('click', () => {
++        marker.addEventListener('gmp-click', () => {
+             var _a;
+             const position = marker.position;
+             this.notifyListeners('onMarkerClick', {
+@@ -439,7 +439,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin {
+             });
+         });
+         if (marker.gmpDraggable) {
+-            marker.addListener('dragstart', () => {
++            marker.addEventListener('gmp-dragstart', () => {
+                 var _a;
+                 const position = marker.position;
+                 this.notifyListeners('onMarkerDragStart', {
+@@ -451,7 +451,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin {
+                     snippet: '',
+                 });
+             });
+-            marker.addListener('drag', () => {
++            marker.addEventListener('gmp-drag', () => {
+                 var _a;
+                 const position = marker.position;
+                 this.notifyListeners('onMarkerDrag', {
+@@ -463,7 +463,7 @@ export class CapacitorGoogleMapsWeb extends WebPlugin {
+                     snippet: '',
+                 });
+             });
+-            marker.addListener('dragend', () => {
++            marker.addEventListener('gmp-dragend', () => {
+                 var _a;
+                 const position = marker.position;
+                 this.notifyListeners('onMarkerDragEnd', {
+@@ -547,15 +547,16 @@ export class CapacitorGoogleMapsWeb extends WebPlugin {
+                     : undefined,
+             };
+             const pin = new this.PinElement(pinOptions);
+-            content = pin.element;
++            content = pin;
+         }
+         const advancedMarker = new this.AdvancedMarkerElement({
+             position: marker.coordinate,
+             map: map,
+-            content: content,
+             title: marker.title,
+             gmpDraggable: marker.draggable,
++            gmpClickable: true,
+         });
++        advancedMarker.append(content);
+         return advancedMarker;
+     }
+ }
+diff --git a/node_modules/@capacitor/google-maps/dist/plugin.cjs.js b/node_modules/@capacitor/google-maps/dist/plugin.cjs.js
+index 25d49eb..4cac565 100644
+--- a/node_modules/@capacitor/google-maps/dist/plugin.cjs.js
++++ b/node_modules/@capacitor/google-maps/dist/plugin.cjs.js
+@@ -1346,7 +1346,7 @@ class CapacitorGoogleMapsWeb extends core.WebPlugin {
+         });
+     }
+     async setMarkerListeners(mapId, markerId, marker) {
+-        marker.addListener('click', () => {
++        marker.addEventListener('gmp-click', () => {
+             var _a;
+             const position = marker.position;
+             this.notifyListeners('onMarkerClick', {
+@@ -1359,7 +1359,7 @@ class CapacitorGoogleMapsWeb extends core.WebPlugin {
+             });
+         });
+         if (marker.gmpDraggable) {
+-            marker.addListener('dragstart', () => {
++            marker.addEventListener('gmp-dragstart', () => {
+                 var _a;
+                 const position = marker.position;
+                 this.notifyListeners('onMarkerDragStart', {
+@@ -1371,7 +1371,7 @@ class CapacitorGoogleMapsWeb extends core.WebPlugin {
+                     snippet: '',
+                 });
+             });
+-            marker.addListener('drag', () => {
++            marker.addEventListener('gmp-drag', () => {
+                 var _a;
+                 const position = marker.position;
+                 this.notifyListeners('onMarkerDrag', {
+@@ -1383,7 +1383,7 @@ class CapacitorGoogleMapsWeb extends core.WebPlugin {
+                     snippet: '',
+                 });
+             });
+-            marker.addListener('dragend', () => {
++            marker.addEventListener('gmp-dragend', () => {
+                 var _a;
+                 const position = marker.position;
+                 this.notifyListeners('onMarkerDragEnd', {
+@@ -1467,15 +1467,16 @@ class CapacitorGoogleMapsWeb extends core.WebPlugin {
+                     : undefined,
+             };
+             const pin = new this.PinElement(pinOptions);
+-            content = pin.element;
++            content = pin;
+         }
+         const advancedMarker = new this.AdvancedMarkerElement({
+             position: marker.coordinate,
+             map: map,
+-            content: content,
+             title: marker.title,
+             gmpDraggable: marker.draggable,
++            gmpClickable: true,
+         });
++        advancedMarker.append(content);
+         return advancedMarker;
+     }
+ }
+diff --git a/node_modules/@capacitor/google-maps/dist/plugin.js b/node_modules/@capacitor/google-maps/dist/plugin.js
+index 2375095..7a47d1a 100644
+--- a/node_modules/@capacitor/google-maps/dist/plugin.js
++++ b/node_modules/@capacitor/google-maps/dist/plugin.js
+@@ -1344,7 +1344,7 @@ var capacitorCapacitorGoogleMaps = (function (exports, core, markerclusterer) {
+             });
+         }
+         async setMarkerListeners(mapId, markerId, marker) {
+-            marker.addListener('click', () => {
++            marker.addEventListener('gmp-click', () => {
+                 var _a;
+                 const position = marker.position;
+                 this.notifyListeners('onMarkerClick', {
+@@ -1357,7 +1357,7 @@ var capacitorCapacitorGoogleMaps = (function (exports, core, markerclusterer) {
+                 });
+             });
+             if (marker.gmpDraggable) {
+-                marker.addListener('dragstart', () => {
++                marker.addEventListener('gmp-dragstart', () => {
+                     var _a;
+                     const position = marker.position;
+                     this.notifyListeners('onMarkerDragStart', {
+@@ -1369,7 +1369,7 @@ var capacitorCapacitorGoogleMaps = (function (exports, core, markerclusterer) {
+                         snippet: '',
+                     });
+                 });
+-                marker.addListener('drag', () => {
++                marker.addEventListener('gmp-drag', () => {
+                     var _a;
+                     const position = marker.position;
+                     this.notifyListeners('onMarkerDrag', {
+@@ -1381,7 +1381,7 @@ var capacitorCapacitorGoogleMaps = (function (exports, core, markerclusterer) {
+                         snippet: '',
+                     });
+                 });
+-                marker.addListener('dragend', () => {
++                marker.addEventListener('gmp-dragend', () => {
+                     var _a;
+                     const position = marker.position;
+                     this.notifyListeners('onMarkerDragEnd', {
+@@ -1465,15 +1465,16 @@ var capacitorCapacitorGoogleMaps = (function (exports, core, markerclusterer) {
+                         : undefined,
+                 };
+                 const pin = new this.PinElement(pinOptions);
+-                content = pin.element;
++                content = pin;
+             }
+             const advancedMarker = new this.AdvancedMarkerElement({
+                 position: marker.coordinate,
+                 map: map,
+-                content: content,
+                 title: marker.title,
+                 gmpDraggable: marker.draggable,
++                gmpClickable: true,
+             });
++            advancedMarker.append(content);
+             return advancedMarker;
+         }
+     }

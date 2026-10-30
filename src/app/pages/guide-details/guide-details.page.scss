@@ -1,0 +1,87 @@
+ion-header {
+    ion-toolbar {
+        --background: #f7f7f7;
+        --border-color: #c8c8c8;
+        padding-bottom: 0 !important;
+        ion-title {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            --ion-font-family: "DM Sans Medium" !important;
+            font-family: "DM Sans Medium" !important;
+        }
+    }
+}
+
+ion-content {
+    .content {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: relative;
+        padding-top: 0 !important;
+
+        .lastUpdate {
+            --ion-font-family: "DM Sans Regular" !important;
+            font-family: "DM Sans Regular" !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            margin: 0;
+            letter-spacing: -0.4px;
+        }
+
+        .group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            ion-badge {
+                --ion-font-family: "DM Sans Medium" !important;
+                font-family: "DM Sans Medium" !important;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                color: whitesmoke;
+                text-transform: uppercase;
+                border-radius: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .icon {
+                width: 23px;
+                height: 23px;
+
+                .boldIcon {
+                    opacity: 1;
+                }
+
+                ion-icon {
+                    font-size: 23px;
+                    color: rgba(23, 23, 23);
+                    opacity: 0.6;
+                }
+            }
+
+            .boldName {
+                font-weight: 700;
+            }
+
+            p {
+                margin: 0;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                --ion-font-family: "DM Sans Regular" !important;
+                font-family: "DM Sans Regular" !important;
+                color: #3d3d3d;
+            }
+        }
+
+        .details {
+            align-items: start;
+        }
+    }
+}

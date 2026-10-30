@@ -1,0 +1,85 @@
+<app-header iconName="arrow-back-outline" title="Request.Request" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <ng-container
+            *ngIf="userAddresses && userAddresses.length === 1; then onlyOneAddress; else manyAddresses"></ng-container>
+
+        <ng-template #onlyOneAddress>
+            <div class="preview">
+                <ng-container *ngIf="loadingPreview; then showSpinnerOnlyOne; else hideSpinnerOnlyOne"></ng-container>
+                <ng-template #showSpinnerOnlyOne>
+                    <div class="loading">
+                        <ion-spinner name="crescent"></ion-spinner>
+                    </div>
+                </ng-template>
+                <ng-template #hideSpinnerOnlyOne>
+                    <ng-container *ngIf="previewPdfSrc; then previewSrcOnlyOne; else noSrcOnlyOne"></ng-container>
+                    <ng-template #previewSrcOnlyOne>
+                        <div class="previewPdf">
+                            <div class="actions">
+                                <div class="out" (click)="editPdfZoom('out')">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </div>
+                                <div class="in" (click)="editPdfZoom('in')">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <pdf-viewer [src]="previewPdfSrc" [zoom]="previewPdfZoom"
+                                style="width: 100%; height: 95%;"></pdf-viewer>
+                        </div>
+                    </ng-template>
+                    <ng-template #noSrcOnlyOne>
+                        <ng-container *ngIf="previewPdfSrc === null;">
+                            <app-no-array content="Request.NoInfo" [hasPadding]="false"></app-no-array>
+                        </ng-container>
+                    </ng-template>
+                </ng-template>
+            </div>
+
+        </ng-template>
+
+        <ng-template #manyAddresses>
+            <div class="preview">
+                <ion-item>
+                    <ion-label position="stacked">{{ 'Request.Address' | translate }}</ion-label>
+                    <ion-select interface="action-sheet" mode="ios" (ionChange)="handleChange($event)"
+                        [cancelText]="'Request.CancelSheet' | translate"
+                        [placeholder]="'Request.SelectAddress' | translate">
+                        <ion-select-option *ngFor="let userAddress of userAddresses" [value]="userAddress.id">{{
+                            userAddress.street }}, {{ userAddress.streetNumber }}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ng-container *ngIf="loadingPreview; then showSpinner; else hideSpinner"></ng-container>
+                <ng-template #showSpinner>
+                    <div class="loading">
+                        <ion-spinner name="crescent"></ion-spinner>
+                    </div>
+                </ng-template>
+                <ng-template #hideSpinner>
+                    <ng-container *ngIf="previewPdfSrc; then previewSrc; else noSrc"></ng-container>
+                    <ng-template #previewSrc>
+                        <div class="previewPdf">
+                            <div class="actions">
+                                <div class="out" (click)="editPdfZoom('out')">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </div>
+                                <div class="in" (click)="editPdfZoom('in')">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <pdf-viewer [src]="previewPdfSrc" [zoom]="previewPdfZoom"
+                                style="width: 100%; height: 95%;"></pdf-viewer>
+                        </div>
+                    </ng-template>
+                    <ng-template #noSrc>
+                        <ng-container *ngIf="previewPdfSrc === null;">
+                            <app-no-array content="Request.NoInfo" [hasPadding]="false"></app-no-array>
+                        </ng-container>
+                    </ng-template>
+                </ng-template>
+            </div>
+
+        </ng-template>
+    </div>
+</ion-content>

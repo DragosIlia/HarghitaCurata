@@ -1,0 +1,16 @@
+HARGHITA CURATA — REZUMAT DECIZII (01.10.2026)
+
+1. De ce Angular + Ionic + Capacitor
+Aplicația originală este deja construită cu Angular/Ionic. Păstrarea acestui stack permite reutilizarea paginilor, stilurilor și fluxurilor existente. React Native cu Expo ar necesita rescrierea aplicației și retestarea fiecărei funcții. React Native poate fi potrivit pentru interfețe foarte intensive sau funcții native speciale, dar nu oferă automat performanță ori hărți mai bune pentru acest proiect.
+
+2. Ce s-a făcut
+Duplicatul este în folderul HarghitaCurata. Folosește Angular 22.2.1, Ionic 9.0.6, Capacitor 8.5.2 și Google Maps 8.0.1. Pluginurile vechi Cordova au fost înlocuite, iar butonul „Distribuie” a fost reparat. Buildul web și APK-ul Android debug se compilează; iOS nu a fost testat pe acest PC.
+
+3. Backend și hartă
+Pentru test, aplicația de dezvoltare este legată la EcoVilleAPI local, portul 5001. Din 34 de apeluri API, 33 au rută și metodă corespunzătoare după adăugarea rutei GET pentru ghid. Lipsește ruta pentru materialele specifice unui centru. Backendul nu rula în timpul verificării, deci fluxurile nu au fost testate live. Harta are nevoie de chei Google Maps proprii și de configurarea serviciului Google; pluginul actualizat nu garantează singur date mai noi.
+
+4. Plăți
+Recomandarea este Stripe Checkout pentru taxe, servicii reale sau bunuri fizice: integrare simplă, pagină de plată găzduită și confirmare prin webhook în backend. Tariful standard afișat pentru carduri SEE este 1,5% + 1 leu/tranzacție (verificați prețul curent înainte de implementare). Plata nu este implementată deoarece încă nu știm ce vor cumpăra utilizatorii. Pentru conținut sau abonamente digitale folosite în aplicație trebuie evaluate regulile Apple In-App Purchase și Google Play Billing.
+
+5. Înainte de lansare
+Sunt necesare backendul și datele Harghita, cheile Google Maps, Firebase/APNs pentru notificări, identitatea vizuală, emailul de suport și documentele legale proprii. Backendul existent folosește .NET 6, care trebuie actualizat pe termen lung. Detaliile tehnice și pașii de test sunt în README.md.

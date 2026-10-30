@@ -1,0 +1,93 @@
+ion-content {
+    .content {
+        padding-top: 0 !important;
+
+        .preview {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .previewPdf {
+                width: 100%;
+                height: 95%;
+                background: white;
+                border-radius: 12px;
+                box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .actions {
+                    display: flex;
+                    gap: 10px;
+
+                    .out {
+                        width: 35px;
+                        height: 35px;
+                        background: var(--ion-color-danger);
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0.75;
+
+                        ion-icon {
+                            font-size: 22px;
+                        }
+                    }
+
+                    .in {
+                        width: 35px;
+                        height: 35px;
+                        background: var(--ion-color-primary);
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0.75;
+
+                        ion-icon {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+
+            ion-item {
+                --padding-start: 0;
+                --border-style: groove;
+                --background: transparent !important;
+                --border-color: rgb(213 213 213 / 24%);
+
+                ion-select {
+                    --placeholder-opacity: 0.5;
+                    --placeholder-color: #171717;
+                }
+
+                ion-label {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    letter-spacing: -0.171429px;
+                    color: #8f92a1;
+                }
+            }
+
+            .loading {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                ion-spinner {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+}

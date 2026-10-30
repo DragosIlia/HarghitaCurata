@@ -1,0 +1,16 @@
+ion-content {
+    .content {
+        padding: 0 !important;
+        p {
+            padding-left: 15px;
+            padding-right: 10px;
+            --ion-font-family: "DM Sans Regular" !important;
+            font-family: "DM Sans Regular" !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            color: #171717;
+            margin: 0;
+        }
+    }
+}

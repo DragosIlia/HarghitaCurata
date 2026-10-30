@@ -1,0 +1,13 @@
+<app-header iconName="arrow-back-outline" title="Language.Language" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <ion-list>
+            <ion-item *ngFor="let lang of availableLanguages">
+                <ion-label>{{ lang.name }}</ion-label>
+                <ion-checkbox slot="end" [value]="lang.shortname" [ngModel]="lang.checked"
+                    (ionChange)="changeLanguage($event)"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

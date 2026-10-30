@@ -1,0 +1,41 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Map.RecyclableItems" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <div class="content">
+        <ion-list *ngIf="data && data.length > 0;">
+            <ion-item *ngFor="let centreItem of data">
+                <ion-label class="ion-text-wrap">
+                    <h3>
+                        <ng-container *ngIf="locale === 'ro';else itemNameGb">
+                            {{ centreItem.name }}
+                        </ng-container>
+                        <ng-template #itemNameGb>
+                            <ng-container *ngIf="locale === 'en';else itemNameHu">
+                                {{ centreItem.nameGb }}
+                            </ng-container>
+                        </ng-template>
+                        <ng-template #itemNameHu>
+                            {{ centreItem.nameHu }}
+                        </ng-template>
+                    </h3>
+                    <p>
+                        <ng-container *ngIf="locale === 'ro';else itemDescriptionGb">
+                            {{ centreItem.description }}
+                        </ng-container>
+                        <ng-template #itemDescriptionGb>
+                            <ng-container *ngIf="locale === 'en';else itemDescriptionHu">
+                                {{ centreItem.descriptionGb }}
+                            </ng-container>
+                        </ng-template>
+                        <ng-template #itemDescriptionHu>
+                            {{ centreItem.descriptionHu }}
+                        </ng-template>
+                    </p>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

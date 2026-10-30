@@ -1,0 +1,32 @@
+<app-header iconName="arrow-back-outline" title="Complaints.Details.Title" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <ng-container *ngIf="data">
+            <div class="details__group">
+                <h1 class="text-ellipsis">{{ 'Complaints.Details.Category' | translate }}</h1>
+                <p>{{ data.title | translate }}</p>
+            </div>
+            <div class="details__group">
+                <h1 class="text-ellipsis">{{ 'Complaints.Details.Message' | translate }}</h1>
+                <p>{{ data.content }}</p>
+            </div>
+            <div class="details__group" *ngIf="data.address">
+                <h1 class="text-ellipsis">{{ 'Complaints.Details.Address' | translate }}</h1>
+                <p>{{ data.address.street }}, {{ data.address.streetNumber }}</p>
+            </div>
+            <div class="details__group">
+                <h1 class="text-ellipsis">{{ 'Complaints.Details.SendDate' | translate }}</h1>
+                <p>{{ data.sendDate | date: 'dd MMM yyyy HH:mm:ss' : '' : locale }}</p>
+            </div>
+            <div class="details__group">
+                <h1 class="text-ellipsis">{{ 'Complaints.Details.State' | translate }}</h1>
+                <p [ngStyle]="{'color': data.state === 3 ? 'var(--ion-color-primary)' : 'var(--ion-color-warning)' }">{{ data.state === 3 ? ('Complaints.Details.Accepted' | translate) : ('Complaints.Details.Waiting' | translate) }}</p>
+            </div>
+            <div class="details__group" *ngIf="data.state === 3 && data.responseMessage && data.responseMessage.length > 0">
+                <h1 class="text-ellipsis">{{ 'Complaints.Details.Response' | translate }} ({{ data.responseDate | date: 'dd MMM yyyy HH:mm' : '' : locale }})</h1>
+                <p>{{ data.responseMessage }}</p>
+            </div>
+        </ng-container>
+    </div>
+</ion-content>

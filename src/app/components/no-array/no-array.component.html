@@ -1,0 +1,6 @@
+<div class="box" [ngStyle]="{'padding': hasPadding ? '10px 20px 0px 20px' : '0'}">
+    <div class="noRecords">
+        <ion-icon [name]="icon !== null ? icon : 'sad-outline'"></ion-icon>
+        <p class="text-ellipsis">{{ content | translate }}</p>
+    </div>
+</div>

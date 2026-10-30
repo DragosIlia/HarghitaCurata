@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border header-component">
+    <ion-toolbar>
+        <ion-buttons *ngIf="isModal; else no_modal" slot="start">
+            <ion-button (click)="closeModal()">
+                <ion-icon slot="icon-only" [name]="iconName"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title *ngIf="enableTitle" 
+                [ngClass]="{ 'center-title': enableImage }">
+        <img *ngIf="enableImage; else no_image" src="./assets/images/harghita-curata-logo.svg" alt="Harghita Curată"/>
+        <ng-template #no_image>
+            {{ title | translate }}
+        </ng-template>
+        </ion-title>
+
+        <ng-template #no_modal>
+            <ion-buttons slot="end" *ngIf="isLogged">
+                <ion-button (click)="moveToNotifications()">
+                    <ion-icon slot="icon-only" name="notifications-outline" class="count"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ng-template>
+    </ion-toolbar>
+</ion-header>

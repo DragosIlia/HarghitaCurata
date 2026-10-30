@@ -1,0 +1,101 @@
+ion-content {
+    .content {
+        padding-top: 0 !important;
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+
+            ion-button {
+                margin-top: 10px;
+            }
+
+            .includedBlock {
+                --min-height: unset;
+                --border-style: none;
+
+                ion-checkbox {
+                    margin: 0;
+                    margin-right: 10px;
+                    --background: unset !important;
+                    --background-checked: transparent;
+                }
+
+                ion-label {
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    letter-spacing: -0.8px;
+                    color: #171717;
+                    white-space: unset;
+                }
+
+                ion-checkbox::part(container) {
+                    border-radius: 4px;
+                    border: 2px solid #3d3d3d;
+                }
+            }
+
+            ion-item {
+                --padding-start: 0;
+                --border-style: groove;
+                --background: transparent !important;
+                --border-color: rgb(213 213 213 / 24%);
+
+                ion-input {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: -0.2px;
+                    color: #171717;
+                    position: relative;
+                    --padding-end: 0;
+                    margin-top: 8px;
+                    --padding-start: 8px;
+
+                    ion-icon {
+                        color: #171717;
+                        font-size: 20px;
+                    }
+                }
+
+                span {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: -0.2px;
+                    color: #171717;
+                    display: flex;
+                    gap: 3px;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    margin-top: 8px;
+                    padding-bottom: 5px;
+
+                    ion-icon {
+                        color: #171717;
+                    }
+                }
+
+                ion-label {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    letter-spacing: -0.171429px;
+                    color: #8f92a1;
+                }
+            }
+        }
+    }
+}

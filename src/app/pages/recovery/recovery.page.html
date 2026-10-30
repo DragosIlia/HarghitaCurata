@@ -1,0 +1,26 @@
+<app-header iconName="arrow-back-outline" [enableTitle]="true" [isModal]="true" [enableImage]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <div class="top">
+            <h1 class="text-ellipsis">{{ 'Recovery.Title' | translate }}</h1>
+            <p>{{ 'Recovery.Subtitle' | translate }}</p>
+        </div>
+
+        <form [formGroup]="recoveryForm">
+            <ion-item>
+                <ion-label position="stacked">{{ 'Recovery.Email' | translate }}</ion-label>
+                <ion-input inputmode="email" mode="ios" required="true" spellcheck="false" type="email"
+                    formControlName="email">
+                    <ion-icon name="mail-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+
+            <ion-button class="mainButton" type="button" expand="block" [disabled]="!recoveryForm.valid"
+                (click)="sendCode()">
+                <p class="text-ellipsis">{{ 'Recovery.Send' | translate }}</p>
+                <!-- <ion-icon name="checkmark-outline"></ion-icon> -->
+            </ion-button>
+        </form>
+    </div>
+</ion-content>

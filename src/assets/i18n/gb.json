@@ -1,0 +1,388 @@
+{
+    "Onboarding": {
+        "Welcome": "Welcome to",
+        "Description": "Join the movement to live more sustainably and feel good about the products you recycle.",
+        "Continue": "Continue"
+    },
+    "Placeholder": {
+        "Filter": "Filter results"
+    },
+    "Tabs": {
+        "Dashboard": {
+            "Tab": "Calendar",
+            "Salute": "Hi",
+            "Welcome": "Welcome back!",
+            "Guest": "Guest",
+            "Select": "Choose a zone for calendar",
+            "Zone": "Zone",
+            "ZoneList": "Valid areas",
+            "LastUpdate": "Updated on",
+            "Unknown": "Unknown",
+            "NoCollections": "There are no collections on this day!",
+            "NoCalendar": "Select a valid calendar!",
+            "NoFractions": "The calendar has no valid fractions!",
+            "NextCollection": "Next collection",
+            "CancelSheet": "Cancel"
+        },
+        "Map": {
+            "Tab": "Map",
+            "Filter": "Filter the centres",
+            "FractionTypes": "Fraction types",
+            "RecyclableItems": "Recyclable items",
+            "SeeMoreItems": "See more",
+            "NoRecyclableItems": "There are no recyclable items",
+            "NearbyCentres": "Centres near you"
+        },
+        "Guide": {
+            "Tab": "Guide",
+            "WithoutDescription": "No description available",
+            "Details": {
+                "Title": "Item information",
+                "Type": "Type",
+                "Fraction": "Fraction",
+                "Material": "Material",
+                "Recyclable": "Recyclable",
+                "NonRecyclable": "Non-recyclable",
+                "Visit": "Visit link",
+                "LastUpdate": "Updated on"
+            }
+        },
+        "WasteHunter": {
+            "Tab": "Report",
+            "NewRecord": "Report an abandoned waste",
+            "LastEntries": "Last 10 records",
+            "NoRecords": "No records found",
+            "Details": "Waste details",
+            "Add": {
+                "Title": "Waste reporting",
+                "Additional": "Additional information",
+                "Location": "Waste location",
+                "Fit": {
+                    "Title": "Waste category",
+                    "NotSelected": "You didn't choose at least one category of waste!",
+                    "Bag": "Fits in a bag",
+                    "Wheelbarrow": "Fits in a wheelbarrow",
+                    "Car": "Fits in a car"
+                },
+                "Success": "The waste has been reported successfully!"
+            }
+        },
+        "Profile": {
+            "Tab": "Profile",
+            "ApplicationVersion": "Application version",
+            "UnknownVersion": "unknown",
+            "NewUpdate": "New",
+            "Actions": {
+                "Dividers": {
+                    "Account": "Account",
+                    "ForYou": "For you",
+                    "Information": "Useful information"
+                },
+                "Details": "Account Details",
+                "Addresses": "My addresses",
+                "Truck": "Request a truck",
+                "Message": "Send a complaint",
+                "Language": "Application Language",
+                "Support": "Support",
+                "Feedback": "Application Feedback",
+                "Curiosities": "Unusual curiosities",
+                "FAQ": "Frequently Asked Questions",
+                "Terms": "Terms and Conditions",
+                "Privacy": "Privacy Policy",
+                "Logout": "Sign out",
+                "Delete": "Delete account",
+                "PromptDelete": {
+                    "Title": "Account deletion",
+                    "Message": "Your personal data will be deleted along with this action, are you sure you want to do this?",
+                    "Ok": "Confirm",
+                    "Cancel": "Cancel"
+                },
+                "AccountDeleted": "Your account and data have been successfully removed from our application. You can always create another account with the same data.",
+                "NeedAddress": "You cannot do this unless you have at least one valid address on your account!",
+                "NeedToBeLogged": "You must be logged in to be able to use this functionality!",
+                "ToBeEdited": "To be edited soon",
+                "InformationNotAvailable": "Information only available in Romanian!"
+            },
+            "Share": {
+                "Text": "Would you like to contribute to a greener city? Try our app now!",
+                "Title": "Share with friends"
+            },
+            "Logged": {
+                "Contribute": "Do you want to contribute to a cleaner city?",
+                "Recommend": "Recommend us now!"
+            },
+            "NotLogged": {
+                "Auth": "You need to log in to benefit from all the features of the app.",
+                "Button": "Sign in / Register"
+            }
+        }
+    },
+    "Login": {
+        "Sign": "Let’s Sign You In",
+        "Back": "Welcome back, you’ve been missed!",
+        "Username": "Username",
+        "Password": "Password",
+        "Login": "Log in",
+        "Without": "Don't have an account?",
+        "Register": "Sign up",
+        "Forgot": "Forgot your password?"
+    },
+    "Register": {
+        "Start": "Getting Started",
+        "Info": "Create an account to continue!",
+        "Username": "Username",
+        "Email": "Email",
+        "Password": "Password",
+        "ConfirmPassword": "Confirm Password",
+        "FirstName": "First Name",
+        "LastName": "Last Name",
+        "Phone": "Phone Number",
+        "BeforeTerms": "By creating an account, you agree to our",
+        "Terms": "Term & Conditions",
+        "Privacy": "Privacy Policy",
+        "Create": "Sign Up",
+        "Identical": "The passwords do not match",
+        "PasswordRules": "Password must be between {{min}} and {{max}} characters.",
+        "PasswordInvalid": "Password must be between {{min}} and {{max}} characters.",
+        "TermsAccepted": "You have not accepted the terms and conditions",
+        "AccountCreated": "The account has been successfully created!",
+        "And": "and"
+    },
+    "Recovery": {
+        "Title": "Password Recovery",
+        "Subtitle": "Enter your email address to recover your password.",
+        "Email": "Email",
+        "Send": "Send code"
+    },
+    "Reset": {
+        "Title": "Password Reset",
+        "Subtitle": "Enter the recovery code from your email address.",
+        "Code": "Recovery code",
+        "NewPassword": "New password",
+        "ConfirmNewPassword": "Confirm new password",
+        "IdenticalPasswords": "The passwords must be identical!",
+        "Submit": "Change Password",
+        "Success": "Password has been successfully changed, you can now login"
+    },
+    "Language": {
+        "Language": "Language"
+    },
+    "Details": {
+        "Title": "Your account",
+        "General": "General Information",
+        "Security": "Security",
+        "Username": "Username",
+        "Email": "Email",
+        "FirstName": "First Name",
+        "LastName": "Last Name",
+        "Phone": "Phone Number",
+        "CurrentPassword": "Current Password",
+        "NewPassword": "New Password",
+        "Save": "Save",
+        "Success": "The account details have been successfully saved!"
+    },
+    "Addresses": {
+        "Title": "Addresses",
+        "Add": "Add new address",
+        "Main": "Main Address",
+        "Secondary": "Secondary Address",
+        "DeleteTitle": "Delete address",
+        "DeleteConfirm": "Are you sure you want to delete this address? This action is irreversible!",
+        "DeleteOk": "Confirm",
+        "DeleteCancel": "Cancel",
+        "Delete": "The address has been successfully deleted!",
+        "Success": "Address successfully added as main.",
+        "CanNotDeleteMain": "This address is set as your primary address and to delete it, add another one or select another address as your primary address!",
+        "NoRecords": "No valid addresses"
+    },
+    "Address": {
+        "Add": "New address",
+        "City": "City",
+        "CityList": "Locations",
+        "SelectCity": "Choose a location",
+        "Street": "Street",
+        "StreetList": "Streets",
+        "SelectStreet": "Choose a street",
+        "StreetNumber": "Street Number",
+        "Confirm": "Confirm",
+        "NeedSelectCity": "You must choose a valid city first!",
+        "NoValidStreets": "This city does not provide any valid streets!",
+        "NoAddressesOnCity": "The selected city has no streets, the street number is mandatory!",
+        "LiveInBlock": "I live in a block"
+    },
+    "Centres": {
+        "Title": "Centre information",
+        "Navigate": "Navigate",
+        "Call": "Call",
+        "LastUpdate": "Updated on"
+    },
+    "Curiosities": {
+        "Title": "Did you know that?"
+    },
+    "Notifications": {
+        "Notifications": "Your notifications",
+        "Today": "Today",
+        "Yesterday": "Yesterday",
+        "Recently": "Recently",
+        "NoNotifications": "No notifications found",
+        "Register": {
+            "AccountCreated": "Account created",
+            "AccountCreatedSuccess": "Your account has been successfully created!"
+        },
+        "Complaint": {
+            "ReplyReceived": "Complaint solved",
+            "ReplyReceivedSuccess": "Your complaint has been handled and you have received a response, check your history for details!"
+        }
+    },
+    "Request": {
+        "Request": "Truck request",
+        "Name": "Your name",
+        "Address": "Your address",
+        "Message": "Request",
+        "Button": "Submit request",
+        "Success": "The request for a truck has been sent!",
+        "CancelSheet": "Cancel",
+        "SelectAddress": "Choose an address",
+        "NoInfo": "No information available"
+    },
+    "Send": {
+        "Send": "Submit complaint",
+        "Name": "Your name",
+        "Address": "Your address",
+        "Title": "Title",
+        "Message": "Message",
+        "Button": "Send",
+        "Success": "The complaint was successfully sent!",
+        "CancelSheet": "Cancel",
+        "SelectAddress": "Choose an address",
+        "SelectCategory": "Choose a category",
+        "ReviewHistory": "View your complaint history",
+        "Categories": {
+            "NotLifted": "The waste has not been collected",
+            "Dustbin": "Broken dustbin",
+            "Compliance": "Non-compliance with the collection schedule",
+            "NotReceivedBags": "We did not receive collection bags for recyclables",
+            "Crew": "Rude staff",
+            "Invoice": "Invoice Problem",
+            "MixingWaste": "Collection staff mixes waste",
+            "Other": "Other problems"
+        }
+    },
+    "Complaints": {
+        "Title": "Complaint history",
+        "SeeDetails": "View details",
+        "SendAt": "Complaint submitted on",
+        "Details": {
+            "Title": "Complaint",
+            "Category": "Category",
+            "Message": "Message",
+            "Address": "Address",
+            "SendDate": "Sending date",
+            "State": "Status of complaint",
+            "Response": "Reply",
+            "Accepted": "Solved",
+            "Waiting": "Waiting for response"
+        }
+    },
+    "Feedback": {
+        "Title": "Send feedback",
+        "Message": "Message",
+        "RatingRequired": "Please rate the app",
+        "Experience": "How was your experience with the app?",
+        "Button": "Send",
+        "Success": "Feedback has been sent, thank you!"
+    },
+    "Faq": {
+        "Language": {
+            "Title": "I can't see my language in the app!",
+            "Content": "<strong>I can't see my language in the app!</strong><br/>Currently, our application is available in 3 languages, namely <strong>Romanian</strong>, <strong>English</strong> and <strong>Hungarian</strong>."
+        },
+        "Calendar": {
+            "Title": "How can I see the calendar for my address?",
+            "Content": "<strong>How can I see the calendar for my address?</strong><br/>In order to view the calendar associated with your primary address, you must have a valid address in your account. To do this, go to <strong>Profile</strong> -> <strong>Account Details</strong> -> <strong>My addresses</strong> -> <strong>Add new address</strong>."
+        },
+        "CalendarDates": {
+            "Title": "The calendar does not include the actual colection dates. How can I get the right data?",
+            "Content": "<strong>The calendar does not include the actual colection dates. How can I get the right data?</strong><br/>There may be several reasons that could justify the appearance of this error, for example:<br/>1. If you live in an apartment or condominium, where the waste is collected in common bins, you will find a special calendar because you always have the opportunity of depositing waste in the common bins. This element can be added to your address by checking the special box: <strong>'I live in a block'</strong>.<br/>2. If you live in a house and you have your own bins but the collection calendar does not correspond to what the system gives you, please contact us so that we can correct this error.<br/>We are constantly working to improve the application, so all feedback is well recieved and important to us."
+        },
+        "InvalidStreet": {
+            "Title": "Although I have selected the town where I live, I cannot find the exact street. How do I proceed?",
+            "Content": "<strong>Although I have selected the town where I live, I cannot find the exact street. How do I proceed?</strong><br/>1. There is a possibility that the street nomenclature from your locality has not yet entered our database. The database is continuously being updated. If you experience this situation, please contact us about this issue so we can fix it.<br/>2. If you live in the municipality of Oradea, the street nomenclature is being continuously  updated, and will be fully completed by <strong>April 30, 2023</strong>.<br/>We apologize in advance for any discomfort we may have caused. Thank you for your patience and understanding!"
+        },
+        "Centres": {
+            "Title": "How can I see the collection centres around me?",
+            "Content": "<strong>How can I see the collection centres around me?</strong><br/>To see the collection points around you, go to the Map section. Optionally, you can filter these centres by clicking on the filter button in the bottom right corner and selecting the desired waste types."
+        },
+        "WasteHunter": {
+            "Title": "How do I report an abandoned waste?",
+            "Content": "<strong>How do I report an abandoned waste?</strong><br/>To report an abandoned waste, go to <strong>Report</strong> -> <strong>Report an abandoned waste</strong>. After taking the picture, optionally fill in the information about the waste and its category."
+        },
+        "Notifications": {
+            "Title": "How can I see the notifications for my account?",
+            "Content": "<strong>How can I see the notifications for my account?</strong><br/>To do this you need to be logged in by clicking on the button in the top right corner."
+        },
+        "Complaints": {
+            "Title": "How can I make a complaint?",
+            "Content": "<strong>How can I make a complaint?</strong><br/>Complaints can be submitted when you are logged in and have a valid address on your account by going to <strong>Profile</strong> -> <strong>Send a complaint</strong>."
+        }
+    },
+    "DirectivePassword": {
+        "Show": "Show",
+        "Hide": "Hide"
+    },
+    "Network": {
+        "Connection": "No connection!",
+        "Description": "Something has gone wrong, try connecting to the internet to continue. 😔"
+    },
+    "Location": {
+        "Normal": {
+            "Title": "Location services are disabled",
+            "Content": "This app requires location services to be enabled. Please turn them on by pressing the button below.",
+            "Button": "Activate"
+        },
+        "Precise": {
+            "Title": "Precise location is necessary!",
+            "Content": "In order to do this you will need to enable from the app permissions the use of precise location when the app is running.",
+            "Button": "Settings"
+        },
+        "ManuallyEnabled": "You need to enable location services manually and restart the app.",
+        "PreciseNeeded": "Precise location is necessary!"
+    },
+    "Maintenance": {
+        "Title": "App maintenance",
+        "Content": "We are currently improving your app experience. Please try again later..."
+    },
+    "Versioning": {
+        "Cancel": "Cancel",
+        "Update": {
+            "Title": "App Update",
+            "Content": "There's a new version available, please update your app to the latest version to continue using it.",
+            "Button": "Download"
+        },
+        "Major": {
+            "Title": "Important App update",
+            "Content": "Please update your app to the latest version to continue using it.",
+            "Button": "Download"
+        },
+        "Minor": {
+            "Title": "App update available",
+            "Content": "There's a new version available, would you like to get it now?",
+            "Button": "Download"
+        }
+    },
+    "Errors": {
+        "ContactDeveloper": "Please contact the application development team",
+        "InvalidLogin": "Invalid username or password",
+        "UsernameExists": "Username already exists",
+        "EmailExists": "Email already exists",
+        "UsernameHasSpaces": "Username cannot contain spaces!",
+        "PasswordIncorect": "The password is incorrect, use capital letters, small letters and at least one punctuation mark!",
+        "BadOldPassword": "The old password is incorrect",
+        "SamePasswords": "The new password must be different from the old one",
+        "BadNewPassword": "The new password is invalid",
+        "InvalidCode": "The recovery code is invalid or no longer valid!",
+        "InvalidCodeOrPassword": "The recovery code or the password is invalid!",
+        "AccessForbiddenOnMobile": "You cannot log into this account from your mobile!",
+        "SendReclamation": "To submit the complaint, please select an address, fill in the title, and write a message of at least 4 characters."
+    }
+}

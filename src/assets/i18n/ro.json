@@ -1,0 +1,388 @@
+{
+    "Onboarding": {
+        "Welcome": "Bine ați venit la",
+        "Description": "Alăturați-vă mișcării pentru a trăi mai durabil și pentru a vă simți bine în legătură cu produsele pe care le reciclați.",
+        "Continue": "Continuă"
+    },
+    "Placeholder": {
+        "Filter": "Filtrează rezultatele"
+    },
+    "Tabs": {
+        "Dashboard": {
+            "Tab": "Calendar",
+            "Salute": "Salut",
+            "Welcome": "Bine ai (re)venit!",
+            "Guest": "Utilizatorule",
+            "Select": "Alegeți o zonă pentru calendar",
+            "Zone": "Zona",
+            "ZoneList": "Zone valabile",
+            "LastUpdate": "Actualizat la",
+            "Unknown": "Necunoscut",
+            "NoCollections": "Nu există colectări în această zi!",
+            "NoCalendar": "Selectează un calendar valid!",
+            "NoFractions": "Calendarul nu are fracții valabile!",
+            "NextCollection": "Următoarea colectare",
+            "CancelSheet": "Anulează"
+        },
+        "Map": {
+            "Tab": "Hartă",
+            "Filter": "Filtrează centrele",
+            "FractionTypes": "Tipuri de fracții",
+            "RecyclableItems": "Articole reciclabile",
+            "SeeMoreItems": "Vezi mai multe",
+            "NoRecyclableItems": "Nu există obiecte reciclabile",
+            "NearbyCentres": "Centrele din apropierea ta"
+        },
+        "Guide": {
+            "Tab": "Ghid",
+            "WithoutDescription": "Fără descriere",
+            "Details": {
+                "Title": "Informații obiect",
+                "Type": "Tip",
+                "Fraction": "Fracție",
+                "Material": "Material",
+                "Recyclable": "Reciclabil",
+                "NonRecyclable": "Nereciclabil",
+                "Visit": "Vizitează link-ul",
+                "LastUpdate": "Actualizat la"
+            }
+        },
+        "WasteHunter": {
+            "Tab": "Raportare",
+            "NewRecord": "Raportează un deșeu abandonat",
+            "LastEntries": "Ultimele 10 înregistrări",
+            "NoRecords": "Nu s-au găsit înregistrări",
+            "Details": "Informații deșeu",
+            "Add": {
+                "Title": "Raportare deșeu",
+                "Additional": "Informații suplimentare",
+                "Location": "Locație deșeu",
+                "Fit": {
+                    "Title": "Categoria de deșeu",
+                    "NotSelected": "Nu ați ales cel puțin o categorie de deșeu!",
+                    "Bag": "Încape într-o pungă",
+                    "Wheelbarrow": "Încape într-o roabă",
+                    "Car": "Încape într-o mașină"
+                },
+                "Success": "Raportarea a fost trimisă cu succes!"
+            }
+        },
+        "Profile": {
+            "Tab": "Cont",
+            "ApplicationVersion": "Versiunea aplicației",
+            "UnknownVersion": "necunoscută",
+            "NewUpdate": "Nou",
+            "Actions": {
+                "Dividers": {
+                    "Account": "Contul meu",
+                    "ForYou": "Pentru tine",
+                    "Information": "Informații utile"
+                },
+                "Details": "Detaliile contului",
+                "Addresses": "Adresele mele",
+                "Truck": "Solicită un camion",
+                "Message": "Trimite o reclamație",
+                "Language": "Limba aplicației",
+                "Support": "Ajutor",
+                "Feedback": "Feedback aplicație",
+                "Curiosities": "Curiozități inedite",
+                "FAQ": "Întrebări frecvente",
+                "Terms": "Termeni și condiții",
+                "Privacy": "Politica de confidențialitate",
+                "Logout": "Deconectare",
+                "Delete": "Ștergere cont",
+                "PromptDelete": {
+                    "Title": "Ștergerea contului",
+                    "Message": "Datele dvs. personale vor fi șterse odată cu această acțiune, sunteți sigur că doriți să faceți acest lucru?",
+                    "Ok": "Confirmă",
+                    "Cancel": "Anulează"
+                },
+                "AccountDeleted": "Contul și datele dvs. au fost eliminate cu succes din aplicația noastră. Puteți crea oricând un alt cont cu aceleași date.",
+                "NeedAddress": "Nu puteți face acest lucru decât dacă aveți cel puțin o adresă validă în contul dumneavoastră!",
+                "NeedToBeLogged": "Trebuie să fiți autentificat pentru a putea utiliza această funcționalitate!",
+                "ToBeEdited": "Urmează să fie editat în curând",
+                "InformationNotAvailable": "Aceste informații sunt disponibile doar în limba română!"
+            },
+            "Share": {
+                "Text": "Doriți să contribuiți la un oraș mai curat? Încercați aplicația noastră acum!",
+                "Title": "Împărtășește cu prietenii"
+            },
+            "Logged": {
+                "Contribute": "Vrei să contribui la un oraș mai curat?",
+                "Recommend": "Recomandați-ne acum!"
+            },
+            "NotLogged": {
+                "Auth": "Trebuie să te autentifici a putea beneficia de toate funcționalitățile aplicației!",
+                "Button": "Autentificare / Cont nou"
+            }
+        }
+    },
+    "Login": {
+        "Sign": "Autentificare",
+        "Back": "Bine ai revenit, ne-ai lipsit!",
+        "Username": "Nume de utilizator",
+        "Password": "Parolă",
+        "Login": "Autentificare",
+        "Without": "Nu ai un cont?",
+        "Register": "Înregistreaza-te",
+        "Forgot": "Ți-ai uitat parola?"
+    },
+    "Register": {
+        "Start": "Începe acum",
+        "Info": "Creează-ți un cont pentru a continua!",
+        "Username": "Nume de utilizator",
+        "Email": "Adresă de e-mail",
+        "Password": "Parolă",
+        "ConfirmPassword": "Confirmă parola",
+        "FirstName": "Prenume",
+        "LastName": "Nume",
+        "Phone": "Număr de telefon",
+        "BeforeTerms": "Prin crearea acestui cont, veți fi de acord cu",
+        "Terms": "Termenii și Condițiile",
+        "Privacy": "Politica de confidențialitate",
+        "Create": "Înregistrare",
+        "Identical": "Parolele nu corespund",
+        "PasswordRules": "Parola trebuie să aibă între {{min}} și {{max}} caractere.",
+        "PasswordInvalid": "Parola trebuie să aibă între {{min}} și {{max}} caractere.",
+        "TermsAccepted": "Nu ai acceptat termenii și condițiile",
+        "AccountCreated": "Contul a fost creat cu succes!",
+        "And": "și"
+    },
+    "Recovery": {
+        "Title": "Recuperare parola",
+        "Subtitle": "Introdu adresa de e-mail pentru a recupera parola.",
+        "Email": "Adresă de e-mail",
+        "Send": "Trimite codul"
+    },
+    "Reset": {
+        "Title": "Resetare parolă",
+        "Subtitle": "Introdu codul de recuperare de pe adresa dvs. de e-mail.",
+        "Code": "Cod de recuperare",
+        "NewPassword": "Noua parolă",
+        "ConfirmNewPassword": "Confirmă noua parolă",
+        "IdenticalPasswords": "Parolele nu sunt identice!",
+        "Submit": "Schimbă parola",
+        "Success": "Parola a fost schimbată cu succes, vă puteți conecta acum"
+    },
+    "Language": {
+        "Language": "Limbă"
+    },
+    "Details": {
+        "Title": "Contul tău",
+        "General": "Informații generale",
+        "Security": "Securitate",
+        "Username": "Nume de utilizator",
+        "Email": "Adresă de e-mail",
+        "FirstName": "Prenume",
+        "LastName": "Nume",
+        "Phone": "Număr de telefon",
+        "CurrentPassword": "Parolă curentă",
+        "NewPassword": "Parolă nouă",
+        "Save": "Salvează",
+        "Success": "Datele contului dvs. au fost salvate cu succes!"
+    },
+    "Addresses": {
+        "Title": "Adrese",
+        "Add": "Adaugă adresă",
+        "Main": "Adresă principală",
+        "Secondary": "Adresă secundară",
+        "DeleteTitle": "Ștergere adresă",
+        "DeleteConfirm": "Sunteți sigur că doriți să ștergeți această adresă? Această acțiune este ireversibilă!",
+        "DeleteOk": "Confirmă",
+        "DeleteCancel": "Anulează",
+        "Delete": "Adresa a fost ștearsă cu succes!",
+        "Success": "Adresa a fost adăugată cu succes ca principală.",
+        "CanNotDeleteMain": "Această adresă este setată ca adresă principală și pentru a o șterge, adăugați alta sau selectați o altă adresă ca adresă principală!",
+        "NoRecords": "Nu există adrese valide"
+    },
+    "Address": {
+        "Add": "Adresă nouă",
+        "City": "Localitate",
+        "CityList": "Localități",
+        "SelectCity": "Alege o locație",
+        "Street": "Stradă",
+        "StreetList": "Străzi",
+        "SelectStreet": "Alege o stradă",
+        "StreetNumber": "Numărul străzii",
+        "Confirm": "Confirmă",
+        "NeedSelectCity": "Trebuie să alegeți mai întâi un oraș valid!",
+        "NoValidStreets": "Acest oraș nu oferă nicio stradă valabilă!",
+        "NoAddressesOnCity": "Orașul selectat nu are străzi, numărul străzii este obligatoriu!",
+        "LiveInBlock": "Locuiesc într-un bloc"
+    },
+    "Centres": {
+        "Title": "Informații despre centru",
+        "Navigate": "Navighează",
+        "Call": "Sună",
+        "LastUpdate": "Actualizat la"
+    },
+    "Curiosities": {
+        "Title": "Știați că?"
+    },
+    "Notifications": {
+        "Notifications": "Notificările tale",
+        "Today": "Astăzi",
+        "Yesterday": "Ieri",
+        "Recently": "Recent",
+        "NoNotifications": "Nu există notificări",
+        "Register": {
+            "AccountCreated": "Cont creat",
+            "AccountCreatedSuccess": "Contul a fost creat si validat cu succes!"
+        },
+        "Complaint": {
+            "ReplyReceived": "Reclamație soluționată",
+            "ReplyReceivedSuccess": "Reclamația dvs. a fost rezolvată și ați primit un răspuns, verificați istoricul pentru detalii!"
+        }
+    },
+    "Request": {
+        "Request": "Solicitare camion",
+        "Name": "Nume complet",
+        "Address": "Adresă",
+        "Message": "Cerere",
+        "Button": "Trimite cerere",
+        "Success": "Cererea pentru un camion a fost trimisă!",
+        "CancelSheet": "Anulează",
+        "SelectAddress": "Alegeți o adresă",
+        "NoInfo": "Nu există informații disponibile"
+    },
+    "Send": {
+        "Send": "Trimitere reclamație",
+        "Name": "Nume complet",
+        "Address": "Adresă",
+        "Title": "Titlu",
+        "Message": "Mesaj",
+        "Button": "Trimite",
+        "Success": "Reclamația a fost trimisă cu succes!",
+        "CancelSheet": "Anulează",
+        "SelectAddress": "Alegeți o adresă",
+        "SelectCategory": "Alegeți o categorie",
+        "ReviewHistory": "Vezi istoricul reclamațiilor tale",
+        "Categories": {
+            "NotLifted": "Deșeurile nu au fost ridicate",
+            "Dustbin": "Pubelă spartă",
+            "Compliance": "Nerespectarea programului de colectare",
+            "NotReceivedBags": "Nu am primit saci de colectare pentru reciclabile",
+            "Crew": "Echipaj nepoliticos",
+            "Invoice": "Problemă legată de factură",
+            "MixingWaste": "Echipajul de colectare amestecă deșeurile",
+            "Other": "Alte probleme"
+        }
+    },
+    "Complaints": {
+        "Title": "Istoricul reclamațiilor",
+        "SeeDetails": "Vezi detalii",
+        "SendAt": "Reclamație trimisă pe",
+        "Details": {
+            "Title": "Reclamație",
+            "Category": "Categorie",
+            "Message": "Mesaj",
+            "Address": "Adresă",
+            "SendDate": "Data trimiterii",
+            "State": "Statusul reclamației",
+            "Response": "Răspuns",
+            "Accepted": "Soluționat",
+            "Waiting": "În așteptarea unui răspuns"
+        }
+    },
+    "Feedback": {
+        "Title": "Trimite feedback",
+        "Message": "Mesaj",
+        "RatingRequired": "Vă rugăm să evaluați aplicația",
+        "Experience": "Cum este experiența ta cu aplicația?",
+        "Button": "Trimite",
+        "Success": "Feedback-ul a fost trimis, vă mulțumim!"
+    },
+    "Faq": {
+        "Language": {
+            "Title": "Nu pot vedea limba mea în aplicație!",
+            "Content": "<strong>Nu pot vedea limba mea în aplicație!</strong><br/>În prezent, aplicația noastră este disponibilă în 3 limbi, și anume <strong>Română</strong>, <strong>Engleză</strong> și <strong>Maghiară</strong>."
+        },
+        "Calendar": {
+            "Title": "Cum pot vedea calendarul pentru adresa mea?",
+            "Content": "<strong>Cum pot vedea calendarul pentru adresa mea?</strong><br/>Pentru a vizualiza calendarul asociat cu adresa dvs. principală, trebuie să aveți o adresă validă în contul dvs. Pentru a face acest lucru, mergeți la <strong>Cont</strong> -> <strong>Detaliile contului</strong> -> <strong>Adresele mele</strong> -> <strong>Adaugă adresă</strong>."
+        },
+        "CalendarDates": {
+            "Title": "Calendarul nu afișează datele reale de ridicare. Cum pot obține datele bune?",
+            "Content": "<strong>Calendarul nu afișează datele reale de ridicare. Cum pot obține datele bune?</strong><br/>Sunt mai multe motive care ar putea justifica apariția acestei erori, spre exemplu:<br/>1. Dacă stați la bloc sau condominiu, unde colectarea deșeurilor se face în pubele comune, veți găsi un calendar special, dumneavoastră având  întotdeauna posibilitatea de a depune deșeurile în pubelele comune. Acest element se poate adăuga la adresă, cu bifarea boxului special: <strong>'Locuiesc într-un bloc'</strong>.<br/>2. În cazul în care locuiți într-o casă și aveți propriile pubele, iar calendarul de colectare nu corespunde cu ceea ce vă oferă sistemul, vă rugăm să ne contactați pentru a putea corecta această eroare.<br/>Lucrăm în mod constant la îmbunătățirea aplicației, așa că orice feedback este bine primit și important pentru noi."
+        },
+        "InvalidStreet": {
+            "Title": "Deși am selectat localitatea, nu reușesc să găsesc strada pe care locuiesc. Cum să procedez?",
+            "Content": "<strong>Deși am selectat localitatea, nu reușesc să găsesc strada pe care locuiesc. Cum să procedez?</strong><br/>1. Există posibilitatea ca nomenclatorul stradal din localitatea dvs., să nu fi  intrat in baza noastră de date. Aceasta bază de date, fiind in mod continuu actualizată. Dacă întâmpinați această situație, vă rugăm să ne contactați în legătură cu acest aspect pentru a remedia problema.<br/>2. Dacă locuiți în municipiul Oradea, nomenclatorul stradal este in curs de actualizare, care va fi finalizată până în <strong>30 Aprilie 2023</strong>.<br/>Ne cerem scuze pentru eventualul discomfort creat. Vă mulțumim pentru răbdare și înțelegere!"
+        },
+        "Centres": {
+            "Title": "Cum pot vedea centrele de colectare din jurul meu?",
+            "Content": "<strong>Cum pot vedea centrele de colectare din jurul meu?</strong><br/>Pentru a vedea centrele de colectare din jurul dumneavoastră, mergeți la secțiunea Hartă. Opțional, puteți filtra aceste centre făcând clic pe butonul de filtrare din colțul din dreapta jos și selectând tipurile de deșeuri dorite."
+        },
+        "WasteHunter": {
+            "Title": "Cum pot raporta un deșeu abandonat?",
+            "Content": "<strong>Cum pot raporta un deșeu abandonat?</strong><br/>Pentru a raporta un deșeu abandonat, accesați <strong>Raportare</strong> -> <strong>Raportează un deșeu abandonat</strong>. După ce faceți fotografia, completați categoria acestuia si opțional informațiile despre deșeu."
+        },
+        "Notifications": {
+            "Title": "Cum pot vedea notificările pentru contul meu?",
+            "Content": "<strong>Cum pot vedea notificările pentru contul meu?</strong><br/>Pentru a face acest lucru, trebuie să vă conectați făcând clic pe butonul din colțul din dreapta sus."
+        },
+        "Complaints": {
+            "Title": "Cum pot face o reclamație?",
+            "Content": "<strong>Cum pot face o reclamație?</strong><br/>Reclamațiile pot fi depuse atunci când sunteți conectat și aveți o adresă validă în cont, accesând <strong>Cont</strong> -> <strong>Trimite o reclamație</strong>."
+        }
+    },
+    "DirectivePassword": {
+        "Show": "Arată",
+        "Hide": "Ascunde"
+    },
+    "Network": {
+        "Connection": "Fără conexiune!",
+        "Description": "Ceva a mers prost, încercați să vă conectați la internet pentru a continua. 😔"
+    },
+    "Location": {
+        "Normal": {
+            "Title": "Serviciile de localizare sunt dezactivate",
+            "Content": "Această aplicație necesită activarea serviciilor de localizare. Vă rugăm să le activați apăsând butonul de mai jos.",
+            "Button": "Activează"
+        },
+        "Precise": {
+            "Title": "Locația precisă este necesară!",
+            "Content": "Pentru a face acest lucru, va trebui să activați din permisiunile aplicației utilizarea locației precise atunci când aplicația este în funcțiune.",
+            "Button": "Setări"
+        },
+        "ManuallyEnabled": "Trebuie să activați serviciile de localizare manual și să reveniți la aplicație.",
+        "PreciseNeeded": "Locația precisă este necesară pentru a putea folosi aplicația."
+    },
+    "Maintenance": {
+        "Title": "Mentenanță aplicație",
+        "Content": "În prezent, îmbunătățim experiența aplicației dumneavoastră. Vă rugăm să încercați din nou mai târziu..."
+    },
+    "Versioning": {
+        "Cancel": "Închide",
+        "Update": {
+            "Title": "Actualizare aplicație",
+            "Content": "Este disponibilă o nouă versiune, vă rugăm să vă actualizați aplicația la cea mai recentă versiune pentru a continua să o utilizați.",
+            "Button": "Descarcă"
+        },
+        "Major": {
+            "Title": "Actualizare importantă",
+            "Content": "Vă rugăm să actualizați aplicația la cea mai recentă versiune pentru a continua să o utilizați.",
+            "Button": "Descarcă"
+        },
+        "Minor": {
+            "Title": "Actualizare disponibilă",
+            "Content": "Există o nouă versiune disponibilă, ați dori să o descărcați acum?",
+            "Button": "Descarcă"
+        }
+    },
+    "Errors": {
+        "ContactDeveloper": "Vă rugăm să contactați echipa de dezvoltare a aplicației",
+        "InvalidLogin": "Numele de utilizator sau parola sunt incorecte",
+        "UsernameExists": "Numele de utilizator există deja",
+        "EmailExists": "Adresa de e-mail există deja",
+        "UsernameHasSpaces": "Numele de utilizator nu poate conține spații!",
+        "PasswordIncorect": "Parola este incorectă, folosiți litere mari, litere mici și cel puțin un semn de punctuație!",
+        "BadOldPassword": "Parola veche este incorectă",
+        "SamePasswords": "Parola veche și nouă sunt identice",
+        "BadNewPassword": "Parola nouă este incorectă",
+        "InvalidCode": "Codul de recuperare este invalid sau nu mai este valabil!",
+        "InvalidCodeOrPassword": "Codul de recuperare este invalid sau parola este invalidă!",
+        "AccessForbiddenOnMobile": "Nu vă puteți autentifica în acest cont de pe telefonul mobil!",
+        "SendReclamation": "Pentru a trimite reclamația, te rugăm să selectezi o adresă, să completezi titlul și să scrii un mesaj de cel puțin 4 caractere."
+    }
+}

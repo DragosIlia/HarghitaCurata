@@ -1,0 +1,38 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Profile.Actions.Curiosities" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <ng-container *ngIf="curiosities && curiosities.length > 0; then showCuriosities; else loadingCuriosities"></ng-container>
+        <ng-template #showCuriosities>
+            <ion-list>
+                <div class="curiosity" *ngFor="let curiosity of curiosities">
+                    <div class="top">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                        <span>{{ 'Curiosities.Title' | translate }}</span>
+                    </div>
+                    <p>
+                        <ng-container *ngIf="data === 'ro';else nameGb">
+                            {{ curiosity.name }}
+                        </ng-container>
+                        <ng-template #nameGb>
+                            <ng-container *ngIf="data === 'gb';else nameHu">
+                                {{ curiosity.nameGb }}
+                            </ng-container>
+                        </ng-template>
+                        <ng-template #nameHu>
+                            {{ curiosity.nameHu }}
+                        </ng-template>
+                    </p>
+                </div>
+            </ion-list>
+            <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+                <ion-infinite-scroll-content loadingSpinner="crescent"></ion-infinite-scroll-content>
+            </ion-infinite-scroll>
+        </ng-template>
+        <ng-template #loadingCuriosities>
+            <div class="loading">
+                <ion-spinner name="crescent"></ion-spinner>
+            </div>
+        </ng-template>
+    </div>
+</ion-content>

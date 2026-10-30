@@ -1,0 +1,35 @@
+<app-header [enableImage]="true" [enableTitle]="true"></app-header>
+
+<ion-content class="fade-in-image">
+    <div class="content">
+        <div class="search">
+            <ion-searchbar inputmode="text" placeholder="" spellcheck="false" type="text"
+                (ionChange)="filter($any($event))" placeholder="{{ 'Placeholder.Filter' | translate }}"></ion-searchbar>
+        </div>
+
+        <ion-list *ngIf="filteredGuide && filteredGuide.length > 0; else loading;">
+            <ng-container *ngFor="let item of filteredGuide">
+                <ion-item *ngIf="item.name" lines="full" button detail="true" detail-icon="chevron-forward-outline" (click)="viewInformation(item)">
+                    <ion-label>
+                        <h3>
+                            {{ item.name }}
+                            <ion-icon class="youtubeLogo" *ngIf="item.link && item.link.length > 0" name="logo-youtube"></ion-icon>
+                        </h3>
+
+                        <p>
+                            <ng-container *ngIf="item.details && item.details.length > 0; then showDetails; else hideDetails"></ng-container>
+                            <ng-template #showDetails>{{ item.details }}</ng-template>
+                            <ng-template #hideDetails>{{ 'Tabs.Guide.WithoutDescription' | translate }}</ng-template>
+                        </p>
+                    </ion-label>
+                </ion-item>
+            </ng-container>
+
+        </ion-list>
+        <ng-template #loading>
+            <div class="loading">
+                <ion-spinner name="crescent"></ion-spinner>
+            </div>
+        </ng-template>
+    </div>
+</ion-content>

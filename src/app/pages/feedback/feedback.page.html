@@ -1,0 +1,26 @@
+<app-header iconName="arrow-back-outline" title="Feedback.Title" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <form [formGroup]="feedbackForm">
+            <ion-item class="textarea">
+                <ion-label position="stacked">{{ 'Feedback.Message' | translate }}</ion-label>
+                <ion-textarea inputmode="text" mode="ios" required="true" spellcheck="false" cols="10"
+                    formControlName="message"></ion-textarea>
+            </ion-item>
+
+            <ion-item class="experience">
+                <ion-label position="stacked">{{ 'Feedback.Experience' | translate }}</ion-label>
+                <div class="stars">
+                    <ion-icon *ngFor="let star of experienceStars; let i = index;" [name]="star ? 'star' : 'star-outline'" [ngClass]="{ 'markedStar': star }" (click)="markRating(i)"></ion-icon>
+                </div>
+            </ion-item>
+
+            <ion-button class="mainButton" type="button" expand="block" (click)="sendFeedback()"
+                [disabled]="!feedbackForm.valid">
+                <p class="text-ellipsis">{{ 'Feedback.Button' | translate }}</p>
+                <!-- <ion-icon name="cafe-outline"></ion-icon> -->
+            </ion-button>
+        </form>
+    </div>
+</ion-content>

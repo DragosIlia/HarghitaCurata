@@ -1,0 +1,30 @@
+<app-header iconName="arrow-back-outline" title="Tabs.WasteHunter.Details" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <div class="previewImage">
+
+            <ng-container *ngIf="previewImage === undefined; else image_null">
+                <ion-spinner name="circular"></ion-spinner>
+            </ng-container>
+            <ng-template #image_null>
+                <ng-container *ngIf="previewImage === null; else preview">
+                    <div class="imageContainer" [ngStyle]="{'background-image': 'url(../../../assets/icons/no-image-available.svg)'}"></div>
+                </ng-container>
+            </ng-template>
+            <ng-template #preview>
+                <div class="mapPin" (click)="navigateToEntry()">
+                    <ion-icon name="pin-outline"></ion-icon>
+                    <p>{{ data.gpsLatitude.toFixed(4) }}, {{ data.gpsLongitude.toFixed(4) }}</p>
+                </div>
+                <div class="imageContainer" [ngStyle]="{'background-image': 'url(' + previewImage + ')'}"></div>
+            </ng-template>
+        </div>
+        <div class="description" *ngIf="data.description && data.description.length > 0">
+            {{ data.description }}
+        </div>
+        <div class="previewLocation" *ngIf="data.location && data.location.length > 0">
+            {{ data.location }}
+        </div>
+    </div>
+</ion-content>

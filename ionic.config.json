@@ -1,0 +1,7 @@
+{
+    "name": "Bihor Curat",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "angular"
+}

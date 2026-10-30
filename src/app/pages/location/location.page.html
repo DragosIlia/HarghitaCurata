@@ -1,0 +1,26 @@
+<ion-content>
+    <div class="content">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+
+                    <ion-label *ngIf="!preciseNeeded; else preciseTitle">{{ 'Location.Normal.Title' | translate }}</ion-label>
+                    <ng-template #preciseTitle>
+                        <ion-label>{{ 'Location.Precise.Title' | translate }}</ion-label>
+                    </ng-template>
+
+                    <p class="preciseDescription">
+                        <ion-text *ngIf="!preciseNeeded; else preciseDescription">{{ 'Location.Normal.Content' | translate }}</ion-text>
+                        <ng-template #preciseDescription>
+                            <ion-text>{{ 'Location.Precise.Content' | translate }}</ion-text>
+                        </ng-template>
+                    </p>
+
+                    <ion-button class="mainButton" type="button" expand="block" (click)="enableLocation()">
+                        <p class="text-ellipsis">{{ (!preciseNeeded) ? ('Location.Normal.Button' | translate) : ('Location.Precise.Button' | translate) }}</p>
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

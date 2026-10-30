@@ -1,0 +1,31 @@
+.box {
+    .noRecords {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background: #fafafa;
+        padding: 10px;
+        box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px;
+
+        ion-icon {
+            font-size: 28px;
+            color: rgb(0 0 0 / 20%);
+        }
+
+        p {
+            margin: 0;
+            --ion-font-family: "DM Sans Medium" !important;
+            font-family: "DM Sans Medium" !important;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.4px;
+            color: #171717;
+            opacity: 0.6;
+        }
+    }
+}

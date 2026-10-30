@@ -1,0 +1,785 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Profile.Actions.Terms" [enableTitle]="true" [isModal]="true">
+</app-header>
+
+
+<ion-content>
+    <div class="content">
+        <ng-container *ngIf="loadingTerms; then showSpinner; else hideSpinner"></ng-container>
+        <ng-template #showSpinner>
+            <div class="loading">
+                <ion-spinner name="crescent"></ion-spinner>
+            </div>
+        </ng-template>
+        <ng-template #hideSpinner>
+            <ng-container *ngIf="currentLanguage && currentLanguage === 'ro'; then showTerms;else notAvailable"></ng-container>
+            <ng-template #showTerms>
+                <div class="terms">
+                    <p>
+                        Următorii Termeni și Condiții generale („Termenii si Condițiile”) stabilesc
+                        condițiile în care <a name="_Hlk126160687">A.D.I ECOLECT GROUP BIHOR</a>, ,
+                        care operează aplicația Bihor Curat - Wastebook („Aplicația”), va permite accesul și
+                        utilizarea acestei Aplicații.
+                    </p>
+                    <p>
+                        Pentru folosirea în bune condiții a Aplicației astfel încât sa va bucurați
+                        de toate funcționalitățile acesteia, vă recomandăm citirea cu atenție a
+                        Termenilor și Condițiilor de mai jos.
+                    </p>
+                    <p>
+                        Va rugam sa aveți în vedere ca utilizarea Aplicației presupune acceptarea
+                        în totalitate a Termenilor si Condițiilor de mai jos si în nicio situație
+                        nu veți putea invoca necunoașterea acestora.
+                    </p>
+                    <p>
+                        Pentru orice nelămuriri cu privire la conținutul și/sau efectele acestor
+                        Termeni și Condiții, ne puteți scrie la adresa de email <a
+                            href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a>
+                        .
+                    </p>
+                    <h1>I. Definiții și termeni</h1>
+                    <p>
+                        Termenii utilizați în cele ce urmează vor avea următorul înțeles:
+                    </p>
+                    <p>
+                        A.D.I ECOLECT GROUP BIHOR, – este A.D.I ECOLECT GROUP BIHOR, cod fiscal:
+                        RO28601736, Calea Armatei Române 1A, Oradea, tel, +40 359190735
+                    </p>
+                    <p>
+                        <strong>Aplicația – </strong>
+                        este un program de tip software accesibil persoanelor fizice, indiferent
+                        daca aceștia sunt sau nu beneficiari ai un contract de prestare a
+                        serviciului de salubritate pentru clienți casnici, care se dorește a fi
+                        utilizata în scopul îmbunătățirii serviciului public de salubritate pe baza
+                        experienței/reclamațiilor furnizate de dumneavoastră.
+                    </p>
+                    <p>
+                        <strong>Utilizator</strong>
+                        - orice persoană fizică care are vârsta peste 18 ani.
+                    </p>
+                    <p>
+                        <strong>Cont- </strong>
+                        ansamblul format dintr-o adresă de e-mail și o parolă care permit unui
+                        singur Utilizator accesul la Aplicație și care conține informații despre
+                        Utilizator. Utilizatorul este responsabil și se va asigura că toate
+                        informațiile introduse la crearea Contului sunt corecte, complete și vor fi
+                        actualizate pe durata existenței Contului.
+                    </p>
+                    <p>
+                        <strong>Contract la distanță- </strong>
+                        orice contract încheiat intre profesionist și consumator în cadrul unui
+                        sistem de vânzări sau de prestare de servicii la distanță organizat, fără
+                        prezența fizică simultană a profesionistului si a consumatorului, cu
+                        utilizarea exclusivă a unuia sau a mai multor mijloace de comunicare la
+                        distanță, până la și inclusiv în momentul în care este încheiat contractul
+                        (conform definiției cuprinse în OUG 34 din 4 iunie 2014 privind drepturile
+                        consumatorilor în cadrul contractelor încheiate cu profesioniștii, precum
+                        și pentru modificarea și completarea unor acte normative art. 2 punctul 7,
+                        astfel cum aceasta a transpus Directiva 2011/83/UE privind drepturile
+                        consumatorilor).
+                    </p>
+                    <p>
+                        <strong>Conținut- </strong>
+                        va include următoarele:
+                    </p>
+                    <p>
+                        · toate informațiile din Aplicație care pot fi vizitate, vizualizate sau
+                        altfel accesate prin utilizarea unui echipament electronic;
+                    </p>
+                    <p>
+                        · conținutul oricărui e-mail trimis Utilizatorului prin mijloace
+                        electronice și/sau orice alt mijloc de comunicare disponibil;
+                    </p>
+                    <p>
+                        · orice informație comunicată prin orice mijloc de către Utilizator,
+                        conform informațiilor de contactare, specificate sau nu de către acesta;
+                    </p>
+                    <ul>
+                        <li>
+                            informații legate de Aplicație într-o anumită perioadă;
+                        </li>
+                        <li>
+                            date referitoare la A.D.I ECOLECT GROUP BIHOR, sau alte date
+                            privilegiate ale acestuia.
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Comunicări Comerciale- </strong>
+                        orice tip de mesaj trimis (cum ar fi: e-mail/SMS/telefonic/mobile
+                        push/webpush/etc.) conținând informații generale și tematice, informații cu
+                        privire la Aplicație.
+                    </p>
+                    <p>
+                        <strong>Reclamație- </strong>
+                        o declarație scrisă formulata de către Utilizator cu privire la serviciul
+                        public de salubritate ce privește colectarea deșeurilor.
+                    </p>
+                    <p>
+                        <strong>Rating/Feedback</strong>
+                        – modalitate de exprimare a gradului de satisfacție a unui Utilizator fata
+                        de experiența Utilizatorului cu Aplicația, redactată pe baza experienței
+                        personale și capacității acestuia de a realiza comentarii calitative.
+                        Rating-ul se exprima sub forma de stele, cu un punctaj de la o stea, la
+                        cinci stele. Acest grad de satisfacție va fi asociat întotdeauna recenziei
+                        scrisă de un Utilizator cu privire la Aplicație.
+                    </p>
+                    <p>
+                        <strong>Consimțământ-ul persoanei vizate</strong>
+                        înseamnă orice manifestare de voință liberă, specifică, informată și
+                        lipsită de ambiguitate a persoanei vizate prin care aceasta acceptă,
+                        printr-o, declarație sau printr-o acțiune fără echivoc, ca datele cu
+                        caracter personal care o privesc sa fie prelucrate.
+                    </p>
+                    <p>
+                        <strong>Date cu caracter personal</strong>
+                        sunt datele care identifică o persoană fizică sau care se referă la o
+                        persoană fizică identificabilă. Anumite informații sunt mai puțin evidente
+                        (cum ar fi IP-ul computerului unei persoane fizice, adresa MAC a
+                        computerului sau telefonului mobil al unei persoane fizice, etc.), dar,
+                        dacă sunt asociate cu o persoană fizică, ne ajută să o putem identifica, și
+                        se circumscriu astfel noțiunii de ”Date cu caracter personal”.
+                    </p>
+                    <p>
+                        <strong>Prelucrare</strong>
+                        înseamnă orice operațiune sau set de operațiuni efectuate asupra Datelor cu
+                        caracter personal sau asupra unor seturi de Date cu caracter personal, cu
+                        sau fără utilizarea de mijloace automatizate, cum ar fi colectarea,
+                        înregistrarea, organizarea, structurarea, stocarea, adaptarea sau
+                        modificarea, extragerea, consultarea, utilizarea, divulgarea prin
+                        transmitere, diseminarea sau punerea la dispoziție în orice alt mod,
+                        alinierea sau combinarea, restricționarea, ștergerea sau distrugerea.
+                    </p>
+                    <p>
+
+                    </p>
+                    <h1>II. Cerinte tehnice minime pentru utilizarea Aplicației</h1>
+                    <p>
+                        Aplicatia Bihor Curat - Wastebook se poate descarca si instala pe smartphone cu sistem de
+                        operare Android din magazinele dedicate Play store, cu sistem iOS din App
+                        store.
+                    </p>
+                    <p>
+                        Sistemele de operare si browserele de internet se pot comporta diferit in
+                        functie de factori ce tin de modul de diferentiere a acestora, iar A.D.I
+                        ECOLECT GROUP BIHOR e nu garanteaza functionalitatea totala a Aplicatiei.
+                        Va rugam sa aveti în vedere ca pot aparea uneori disfunctionalitati pe care
+                        A.D.I ECOLECT GROUP BIHOR va incerca sa le remedieze pe cat posibil.
+                        Utilizatorul va fi informat despre aceste situatii prin canalele de
+                        comunicare pe care A.D.I ECOLECT GROUP BIHOR le are la dispozitie.
+                    </p>
+                    <p>
+                        A.D.I ECOLECT GROUP BIHOR nu are nici o raspundere în ceea ce priveste
+                        eventualele erori ce pot aparea în utilizarea Aplicatiei care se datoreaza
+                        unor defectiuni, erori sau nerespectarii prevederilor legale ce
+                        reglementeaza utilizarea serviciilor, în general, si a serviciilor de
+                        telecomunicatii, în special.
+                    </p>
+                    <p>
+
+                    </p>
+                    <h1>III. Accesul la Aplicație</h1>
+                    <p>
+                        <em>3.1. </em>
+                        <em>Accesul la Aplicație. Limitări de răspundere</em>
+                    </p>
+                    <p>
+                        1. Accesul la și utilizarea Aplicației ține cont de prezumția că Termenii
+                        și condițiile au fost acceptate de către dumneavoastră.
+                    </p>
+                    <p>
+                        Accesul precum și utilizarea Aplicației, comunicarea cu A.D.I ECOLECT GROUP
+                        BIHOR este realizată de către Utilizatori exclusiv pentru scopul personal
+                        care nu poate în niciun mod relaționat cu orice activitate de comerț sau
+                        activitate profesională.
+                    </p>
+                    <p>
+                        Menționam totodată ca accesarea Aplicației este gratuită, Utilizatorul
+                        avand acces la toate functionalitatile Aplicatie, astfel cum sunt acestea
+                        prezentate în meniul contului de utilizator și poate fi realizată de orice
+                        persoană fizică ce deține o conexiune la Internet și un dispozitiv cu
+                        capabilități de accesare a Internetului, cu respectarea Termenilor si
+                        Condițiilor.
+                    </p>
+                    <p>
+                        2. A.D.I ECOLECT GROUP BIHOR declară că:
+                    </p>
+                    <p>
+                        · va depune toate eforturile rezonabile pentru realizarea scopului
+                        Aplicației;
+                    </p>
+                    <p>
+                        · va depune toate eforturile (din punct de vedere tehnic sau de altă
+                        natură) pentru funcționarea în bune condiții a Aplicației; cu toate
+                        acestea, pot exista întreruperi în funcţionare, sau imposibilităţi de
+                        accesare de către Utilizatori, pe o perioadă nedeterminată de timp, din
+                        orice motive, fără ca în aceasta situație A.D.I ECOLECT GROUP BIHOR,
+                        reprezentanții săi legali, asociații, angajații sa poată fi făcuți
+                        responsabili pentru orice prejudiciu, direct si/sau indirect, cauzat
+                        Utilizatorului;
+                    </p>
+                    <p>
+                        · pe măsura apariţiei unor situaţii noi de orice natură ce impun acest
+                        lucru, A.D.I ECOLECT GROUP BIHOR poate modifica unilateral condițiile şi
+                        termenii de utilizare ale Aplicației, urmând a pune la dispoziție
+                        Utilizatorilor în Aplicație noua versiune a Termenilor si Condițiilor de
+                        Utilizare.
+                    </p>
+                    <p>
+                        3. A.D.I ECOLECT GROUP BIHOR nu va fi răspunzător pentru prejudiciul cauzat
+                        sistemelor informatice sau pentru pierderea de date si/sau pentru
+                        prejudiciu de alta natura ca urmare a descărcării de Conținut de pe
+                        Aplicație, aceasta făcându-se pe răspunderea Utilizatorului. De asemenea,
+                        A.D.I ECOLECT GROUP BIHOR nu va fi răspunzător pentru orice prejudiciu ce
+                        rezultă din lipsa accesului la funcționalitățile Aplicației sau pentru
+                        orice prejudiciu cauzat de viruși, fișiere corupte, erori, omisiuni,
+                        întreruperea furnizării accesului la Aplicație, ștergerea de conținut,
+                        probleme cu rețeaua, cu furnizorii sau/și cu transmisiunea de date, acces
+                        neautorizat sau defecțiunea echipamentului electronic al Utilizatorului.
+                    </p>
+                    <p>
+                        <em>3.2. </em>
+                        <em>Prelucrarea datelor cu caracter personal</em>
+                    </p>
+                    <p>
+                        A.D.I ECOLECT GROUP BIHOR colectează și prelucrează datele cu caracter
+                        personal în cadrul Aplicației conform Politicii privind prelucrarea datelor
+                        cu caracter personal disponibilă <a (click)="openPrivacyModal()"><u>aici.</u></a>
+                    </p>
+                    <p>
+                        <em>3.3. </em>
+                        <em>Drepturi de proprietate intelectuală </em>
+                    </p>
+                    <p>
+                        Asupra conținutului Aplicației, incluzând fără a se limita la fonturile și
+                        design-ul Aplicației, logo-uri, reprezentări stilizate, simboluri
+                        comerciale, imagini statice sau grafice, imagini dinamice, text și/sau
+                        conținut multimedia prezentate pe Aplicație, funcții sau aplicații software
+                        care sunt parte din Aplicație A.D.I ECOLECT GROUP BIHOR are drepturi
+                        patrimoniale exclusive de utilizare, acesteia fiindu-i rezervate toate
+                        drepturile obținute în acest sens în mod direct sau indirect (prin licențe
+                        de utilizare și/sau publicare), Aplicația fiind astfel protejate de
+                        drepturile de autor sau alte drepturi de proprietate intelectuală.
+                        Modificarea neautorizată a Aplicației constituie infracțiune şi se
+                        pedepsește conform Legii nr. 8/1996.
+                    </p>
+                    <p>
+                        Reproducerea, în parte sau totală, și în orice formă a Aplicației și
+                        Conținutului său, copierea, distribuirea, publicarea, transferul către
+                        terțe părți, modificarea și/sau altfel alterarea, utilizarea, legarea la,
+                        expunerea, includerea oricărui Conținut în orice alt context decât cel
+                        original intenționat de A.D.I ECOLECT GROUP BIHOR , includerea oricărui
+                        conținut în afara A.D.I ECOLECT GROUP BIHOR , îndepărtarea însemnelor care
+                        semnifică dreptul de autor asupra Conținutului precum și participarea la
+                        transferul, vânzarea, distribuția unor materiale realizate prin
+                        reproducerea, modificarea sau afișarea Conținutului, este interzisă fără
+                        acordul prealabil scris al A.D.I ECOLECT GROUP BIHOR , A.D.I ECOLECT GROUP
+                        BIHOR fiind singurul îndreptățit să autorizeze sau să interzică orice
+                        dintre acțiunile menționate în cuprinsul prezentului capitol ce privesc
+                        Aplicația și/sau Conținutul său.
+                    </p>
+                    <p>
+                        Dumneavoastră, ca și Utilizator/al Aplicației, vi se va permite doar
+                        vizualizarea Aplicației și Conținutului său. Veți fi de asemenea autorizat
+                        să întreprindeți toate actele temporare de reproducere (altele decât pentru
+                        scopuri comerciale sau profesionale), care sunt tranzitorii sau incidentale
+                        și sunt inerente pentru vizualizarea Aplicației și Conținutului său.
+                    </p>
+                    <p>
+                        <em>3.4. </em>
+                        <em>Recenzii/Feedback</em>
+                    </p>
+                    <p>
+                        1. Utilizatorii care au Cont activ în Aplicație vor putea scrie recenzii în
+                        Secțiunea “Feedback“ existentă în Aplicație. Utilizatorul va fi liber să
+                        scrie recenzii atât pozitive cât și negative, recenziile urmând a se referi
+                        la caracteristicile Aplicației, fără însă a avea posibilitatea să încarce
+                        fișiere cu imagini și/sau videoclipuri și fără să existe posibilitatea din
+                        partea altor Utilizatori de a răspunde la Recenzia respectivă. De asemenea,
+                        la momentul înscrierii unei Recenzii Utilizatorul va adăuga și un Rating
+                        relevant pentru Aplicație.
+                    </p>
+                    <p>
+                        2. Recenziile dumneavoastră sunt un instrument indicat pentru a analiza
+                        satisfacția Utilizatorilor Aplicației cât și percepția dumneavoastră cu
+                        privire la calitatea funcționalitățile acesteia, încurajându-vă astfel să
+                        postați recenziile dumneavoastră într-un interval de 5-7 zile de la
+                        interacțiunea dumneavoastră cu Aplicația.
+                    </p>
+                    <p>
+                        3. Vă rugăm să rețineți următoarele reguli care trebuie respectate la
+                        momentul înregistrării unei Recenzii în Aplicația noastră:
+                    </p>
+                    <p>
+                        – Să folosească doar limba română, maghiară sau engleză.
+                    </p>
+                    <p>
+                        – Să utilizeze un limbaj corespunzător, neofensator, fără termeni care pot
+                        jigni sau afecta orice alt Utilizator si/sau orice alta persoana;
+                    </p>
+                    <p>
+                        – Să furnizeze doar informații corecte, neînșelătoare care sunt conform cu
+                        actele normative în vigoare aplicabile, cu respectarea drepturilor altor
+                        părți;
+                    </p>
+                    <p>
+                        – Să folosească rubrica de Recenzii doar pentru a comunica detalii
+                        referitoare la Aplicație;
+                    </p>
+                    <p>
+                        – Să nu furnizeze datele sale cu caracter personal (de exemplu fără a se
+                        limita la nume/prenume, adresă de livrare, număr de telefon, adresă de
+                        email), datele altor persoane vizate sau orice altă informație care poate
+                        determina dezvăluirea acestor date;
+                    </p>
+                    <p>
+                        – Să nu afișeze Recenzii care să conțină materiale publicitare.
+                    </p>
+                    <p>
+                        – Să nu utilizeze rubrica de Recenzii ca modalitate de contact cu A.D.I
+                        ECOLECT GROUP BIHOR .
+                    </p>
+                    <p>
+                        În cazul în care A.D.I ECOLECT GROUP BIHOR constată că una dintre Recenzii
+                        are un conținut inadecvat sau nu respectă regulile mai sus menționate, va
+                        elimina respectiva Recenzie de pe Aplicație.
+                    </p>
+                    <p>
+                        4. La momentul înregistrării unei Recenzii în Aplicație, se consideră că
+                        respectivul utilizator garantează originalitatea lor și acordă A.D.I
+                        ECOLECT GROUP BIHOR și afiliaților/asociaților săi dreptul neexclusiv,
+                        nelimitat, gratuit, irevocabil și retransmisibil de a folosi, reproduce,
+                        modifica, adapta, publica, traduce, crea opere derivate, precum și dreptul
+                        de a distribui, de a prezenta aceste conținuturi oriunde, prin orice
+                        mijloace. Utilizatorul garantează că are toate drepturile asupra
+                        continutului pe care îl afișează sau îl transmite în Aplicație, prin orice
+                        modalitate, astfel încât, prin folosirea acestui continut, să nu cauzeze
+                        prejudicii niciunei terțe entități fizice sau juridice.
+                    </p>
+                    <p>
+                        5. A.D.I ECOLECT GROUP BIHOR își rezerva dreptul de a suspenda
+                        posibilitatea de a înscrie Recenzii la rubrica de Recenzii cu privire la un
+                        Utilizator care a încălcat în mod repetat Termenii și Condițiile.
+                    </p>
+                    <p>
+                        <em>3.5. </em>
+                        <em>Reclamații cu privire la serviciul de colectare deșeuri</em>
+                    </p>
+                    <p>
+                        Întrucât scopul nostru este acela de a îmbunătăți serviciul de colectare
+                        deșeuri, orice reclamații cu privire la acest serviciu si la condițiile de
+                        furnizare a acestuia sunt oricând binevenite, punând-va astfel la
+                        dispoziție rubrica de Reclamații.
+                    </p>
+                    <p>
+                        Regulile stipulate la punctul 2.4. de mai sus vor fi respectate în mod
+                        corespunzător de către Utilizatorii în momentul transmiterii unei
+                        Reclamații.
+                    </p>
+                    <p>
+                        <em>3.6. </em>
+                        <em>Link-uri către alte website-uri</em>
+                    </p>
+                    <p>
+                        Aplicația poate conţine legături web spre alte site-uri asupra conținutului
+                        cărora A.D.I ECOLECT GROUP BIHOR nu deţine nici un control şi pentru care
+                        nu îşi asumă nici o responsabilitate. Astfel, A.D.I ECOLECT GROUP BIHOR nu
+                        poate fi răspunzătoare pentru conținutul acestor website-uri și regulile
+                        stabilite de acestea (inclusiv cu privire la regulile ce stabilesc
+                        prelucrarea datelor cu caracter personal în timpul navigării pe aceste
+                        website-uri).
+                    </p>
+                    <p>
+                        Vă rugăm ca, atunci când accesați aceste website-uri prin intermediul
+                        link-ului afișat în Aplicație, să citiți cu atenție condițiile de utilizare
+                        ale acestora precum și regulile de confidențialitate, Termenii și
+                        condițiile menționate în Aplicația noastră neaplicând-se acestor
+                        website-uri.
+                    </p>
+                    <p>
+                        Existența unor link-uri în Aplicație nu constituie o recomandare sau o
+                        invitație a noastră de a accesa sau naviga pe aceste website-uri, sau vreo
+                        garanție cu privire la conținutul acestora, serviciile sau bunurile pe care
+                        le comercializează către utilizatorii de internet.
+                    </p>
+                    <p>
+                        <em>3.7. </em>
+                        <em>Conținut. Limitări cu privire la conținutul Aplicației</em>
+                    </p>
+                    <p>
+                        1. Orice Conținut la care Utilizatorul are și/sau obține acces prin orice
+                        mijloc, se află sub incidența Termenilor și Condițiilor, în cazul în care
+                        Conținutul nu este însoțit de un acord de utilizare specific și valid
+                        încheiat între A.D.I ECOLECT GROUP BIHOR și acesta, și fără nici o garanție
+                        implicit sau expres formulată din partea A.D.I ECOLECT GROUP BIHOR cu
+                        referire acel Conținut.
+                    </p>
+                    <p>
+                        A.D.I ECOLECT GROUP BIHOR poate oferi Utilizatorului la solicitarea expresă
+                        a acestuia, printr-un acord, dreptul de a utiliza sub o forma descrisă, un
+                        anumit Conținut al Aplicației. Acest acord se aplică strict pentru
+                        conținutul/conținuturile definite, pe o perioadă stabilită în acord și doar
+                        pentru persoana/persoanele cărora li s-a permis utilizarea acestor
+                        Conținuturi, fără a putea utiliza alte Conținuturi ale Aplicației .
+                    </p>
+                    <p>
+                        2. Utilizatorul poate copia, transfera și/sau utiliza Conținutul numai în
+                        scopuri personale sau non-comerciale, numai în cazul în care acestea nu
+                        intră în conflict cu prevederi ale Termenilor și Condițiilor.
+                    </p>
+                    <p>
+                        3. Niciun Conținut transmis către Utilizator, prin orice mijloc de
+                        comunicare (electronic, telefonic, etc) sau dobândit de acesta prin
+                        accesare, vizitare și/sau vizualizare nu constituie o obligație
+                        contractuală din partea A.D.I ECOLECT GROUP BIHOR față de respectivul
+                        Conținut.
+                    </p>
+                    <p>
+                        4. A.D.I ECOLECT GROUP BIHOR a făcut toate eforturile pentru a publica in
+                        Aplicație doar Conținutul care respectă drepturile și libertățile
+                        utilizatorilor săi. Cu toate acestea, A.D.I ECOLECT GROUP BIHOR nu
+                        garantează ca acest Conținut este adecvat sau legal în țara unde Conținutul
+                        este accesat. Dacă optați să accesați Aplicația, răspunderea pentru
+                        accesarea acesteia sunt răspunderea dumneavoastră exclusivă.
+                    </p>
+                    <p>
+                        A.D.I ECOLECT GROUP BIHOR a adoptat de asemenea măsurile tehnice și
+                        organizatorice necesare pentru a se asigura că Conținutul Aplicației este
+                        corect și nu conține informații incorecte sau neactualizate față de data
+                        publicării acestora în Aplicație, pentru a asigura securitatea Aplicației,
+                        integritatea traficului și a comunicațiilor electronice, pentru a preveni
+                        riscul de diseminare, distrugerea sau pierdere a Datelor ce privesc
+                        Utilizatorii precum și pentru a preveni accesul neautorizat sau ilegal la
+                        asemenea Date. Cu toate acestea, A.D.I ECOLECT GROUP BIHOR nu va fi
+                        răspunzător pentru acuratețea și caracterul complet al Conținutului afișat
+                        în Aplicație. Mai mult, A.D.I ECOLECT GROUP BIHOR nu poate garanta că
+                        Aplicația va funcționa în mod continuu, fără întreruperi, erori sau
+                        funcționare necorespunzătoare determinate de conexiunea la internet. În
+                        eventualitatea unei probleme de funcționare în utilizarea Aplicației, vă
+                        îndemnăm să ne contactați.
+                    </p>
+                    <h1>IV. Termeni și condiții pentru utilizarea funcționalităților Aplicației</h1>
+                    <p>
+                        <em>4.1. </em>
+                        <em>Contul dumneavoastră</em>
+                    </p>
+                    <p>
+                        A.D.I ECOLECT GROUP BIHOR oferă posibilitatea Utilizatorilor de a
+                        beneficia, printre altele, de următoarele funcționalități prin intermediul
+                        Contului creat pe Aplicație:
+                    </p>
+                    <p>
+                        (i) Detaliile contului dumneavoastră: administrarea datelor din contul
+                        dumneavoastră (nume și prenume, adresă de email, număr de telefon, parolă);
+                    </p>
+                    <p>
+                        (ii) Adresele dumneavoastră: administrarea adreselor de preluare a
+                        deșeurilor;
+                    </p>
+                    <p>
+                        (iii) Transmiterea de solicitări pentru preluarea deșeurilor de către
+                        operatorul serviciului de salubrizare care asigura colectarea deșeurilor pe
+                        raza administrativă a unității administrativ-teritoriale unde aveți
+                        domiciliul/reședința, putând selecta intervalul dorit pentru ridicarea
+                        deșeurilor de către operatorul serviciului de salubrizare. Va rugam sa
+                        aveți în vedere ca lansarea unei solicitări pentru preluarea deșeurilor nu
+                        constituie Contract la Distanta în sensul prevederilor legale aplicabile si
+                        nici nu se naște niciun raport contractual intre A.D.I ECOLECT GROUP BIHOR
+                        si Utilizator, orice asemenea solicitare făcând obiectul contractului de
+                        prestare a serviciului de salubritate pentru clienți casnici încheiat intre
+                        Utilizator si operatorul serviciului de salubrizare care asigura colectarea
+                        deșeurilor, neputând fi antrenata răspunderea A.D.I ECOLECT GROUP BIHOR cu
+                        privire la orice asemenea solicitare;
+                    </p>
+                    <p>
+                        (iv) Centrele de colectare deșeuri cu toate informațiile legate de acestea;
+                    </p>
+                    <p>
+                        (v) Transmiterea de feedback/recenzii cu privire la Aplicație;
+                    </p>
+                    <p>
+                        (vi) Transmiterea de reclamații cu privire la serviciul de colectare a
+                        deșeurilor.
+                    </p>
+                    <p>
+                        <em>3.2. Înregistrarea Contului</em>
+                    </p>
+                    <p>
+                        1. Dacă doriți să utilizați Aplicația, trebuie să aveți peste 18 ani, să vă
+                        creați un Cont în Aplicație și să acceptați Termenii și Condițiile ce
+                        includ condițiile în care puteți utiliza Aplicația. Crearea Contului este
+                        gratuită. Pentru a crea Contul, este necesar să completați formularul de
+                        înregistrare existent la accesarea Aplicației cu datele necesare pentru
+                        crearea Contului și să garantați că Datele furnizate în procesul de creare
+                        a Contului sunt complete, corecte și adevărate, iar înregistrarea
+                        dumneavoastră ca Utilizator nu este interzisă de lege. Vă vom transmite un
+                        email care va confirma crearea Contului.
+                    </p>
+                    <p>
+                        2. Este permisă înregistrarea unui singur Cont pentru un Utilizator. Contul
+                        nu va putea fi partajat de mai mulți Utilizator. În situația în care A.D.I
+                        ECOLECT GROUP BIHOR descoperă Conturi partajate de mai mulți Utilizatori
+                        își rezervă dreptul de a suspenda sau revoca accesul acestora la Cont.
+                    </p>
+                    <p>
+                        3. A.D.I ECOLECT GROUP BIHOR își rezervă dreptul de a limita accesul
+                        Utilizatorului la Aplicație în cazurile următoare: folosirea unui limbaj
+                        tendențios, încălcarea drepturilor de proprietate intelectuală sau a altor
+                        drepturi A.D.I ECOLECT GROUP BIHOR prevăzute în Termeni și condiții, dacă
+                        accesul și existența Contului Utilizatorului ar putea prejudicia în vreun
+                        fel A.D.I ECOLECT GROUP BIHOR . Acest drept poate fi exercitat în orice
+                        moment de A.D.I ECOLECT GROUP BIHOR fără notificarea prealabilă a
+                        Utilizatorului.
+                    </p>
+                    <p>
+                        4. Vă reamintim că datele necesare pentru a accesa Contul vor fi utilizate
+                        exclusiv de către dumneavoastră și nu pot fi transferate către terțe
+                        persoane. Cu excepția cazurilor prevăzute expres de legislația în vigoare
+                        aplicabilă, A.D.I ECOLECT GROUP BIHOR nu poate fi tras la răspundere în
+                        cazul în care terțe persoane neautorizate accesează Contul dumneavoastră ca
+                        urmare a neasigurării confidențialității datelor dumneavoastră sau ca
+                        urmare a unei folosire neadecvate, pierderii sau ștergerii unor asemenea
+                        Date. Pentru aceste rațiuni, vă recomandăm să păstrați confidențialitate
+                        Datelor de acces în Cont și să ne informați de îndată dacă aveți suspiciuni
+                        că a existat un acces neautorizat la Contul dumneavoastră sau dacă parola
+                        dumneavoastră de acces la Cont a fost compromisă.
+                    </p>
+                    <p>
+                        Prin folosirea Aplicației/Conținutului, Utilizatorul este singurul
+                        responsabil pentru toate activitățile care decurg prin folosirea acestuia.
+                        De asemenea, acesta răspunde pentru orice daune de orice natură produse
+                        A.D.I ECOLECT GROUP BIHOR sau oricărui terț cu care A.D.I ECOLECT GROUP
+                        BIHOR are încheiate contracte, în conformitate cu legislația română în
+                        vigoare.
+                    </p>
+                    <p>
+                        Astfel,
+                        <strong>
+                            prin crearea si utilizarea Contului, Utilizatorul iși asumă raspunderea
+                            pentru mentinerea confidentialitatii datelor de cont (nume de
+                            Utilizator si parola) si pentru gestionarea accesarii Contului, si este
+                            responsabil de activitatea derulata prin intermediul Contului sau.
+                        </strong>
+
+                    </p>
+                    <p>
+                        5. Poate fi necesar să va furnizam anumite informații cu privire la
+                        Aplicație, orice asemenea informații fiind transmise prin intermediul
+                        rubricii Notificări. În măsura în care vom dori sa va transmitem Comunicări
+                        Comerciale, vă vom solicita de fiecare data Consimțământul.
+                    </p>
+                    <p>
+                        <em>3.3. Durată și încetare</em>
+                    </p>
+                    <p>
+                        1. Contul dumneavoastră va deveni activ de la momentul la care primiți un
+                        email de confirmare pentru întreaga perioada în care veți utiliza Aplicația
+                        prin intermediul Contului.
+                    </p>
+                    <p>
+                        2. Veți putea șterge, în orice moment și indiferent de motiv, contul
+                        dumneavoastră de Utilizator, printr-o solicitare de ștergere prin e-mail la
+                        adresa <a href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a>
+                        cu titlul “ștergere”. Contul dumneavoastră de Utilizator va fi șters de
+                        îndată ce primim această solicitare, urmând a vă confirma ulterior prin
+                        email ștergerea Contului.
+                    </p>
+                    <p>
+                        În plus, dacă nu vă utilizați Contul timp de 3 (trei) ani, acesta va deveni
+                        inactiv și va fi șters automat după anunțarea dumneavoastră la adresa de
+                        email furnizată, în afară de cazul în care vă opuneți în mod expres într-un
+                        termen de A.D.I ECOLECT GROUP BIHOR .
+                    </p>
+                    <p>
+                        3. A.D.I ECOLECT GROUP BIHOR își rezervă dreptul de a anula accesul dumneavoastră la Aplicație în cazul
+                        în care constată încălcarea prevederilor Termenilor și Condițiilor sau în cazul în care constată că
+                        datele furnizate de Utilizator nu sunt complete, corecte sau adevărate, fără a aduce atingere dreptului
+                        A.D.I ECOLECT GROUP BIHOR la despăgubiri pentru prejudiciul suferit. A.D.I ECOLECT GROUP BIHOR își
+                        rezervă de asemenea dreptul de a suspenda, fără notificare prealabilă, accesul Utilizatorului la
+                        Aplicație pe perioada necesară pentru remedierea unui deficiențe tehnice sau pentru îmbunătățirea
+                        calității funcționalităților Aplicației. A.D.I ECOLECT GROUP BIHOR poate în orice moment să întrerupă
+                        accesul la Aplicație din motive de securitate, urmând a informa Utilizatorul asupra acestei întreruperi
+                        prin intermediul rubricii Notificări.
+                    </p>
+                    <p>
+                        <em>3.4. Limitări cu privire la funcționalitățile Aplicației</em>
+                    </p>
+                    <p>A.D.I ECOLECT GROUP BIHOR face tot posibilul pentru a oferi accesul Utilizatorului la funcționalitățile
+                        Aplicației. Cu excepția cazurilor prevăzute expres de legislația în vigoare aplicabilă, Aplicația este
+                        furnizata cu titlu gratuit. Cu toate acestea, în momentul folosirii Aplicatiei de catre Utilizatori este
+                        posibil ca acestia sa plateasca costurile impuse de operatorul de internet, date sau telefonie mobila,
+                        cum ar fi taxele de conectare si navigare internet. </p>
+                    <p>A.D.I ECOLECT GROUP BIHOR nu furnizează nicio garanție și nu își asumă vreo răspundere ca de exemplu fără
+                        a se limita la calitatea, funcționarea corespunzătoare, lipsa unor întreruperi în furnizarea
+                        funcționalităților Aplicației sau adecvarea Aplicatiei pentru un obiectiv sau un anumit rezultat
+                        stabilit sau dorit de utilizator.
+                    </p>
+                    <h1>V. Frauda</h1>
+                    <p>
+                        1. A.D.I ECOLECT GROUP BIHOR nu solicită Utilizatorilor săi prin niciun
+                        mijloc de comunicare (e-mail/telefonic/SMS/ etc) informații referitoare la
+                        date confidențiale, conturi/carduri bancare sau parole.
+                    </p>
+                    <p>
+                        2. A.D.I ECOLECT GROUP BIHOR își declină orice responsabilitate, în
+                        situația în care un Utilizator ar fi / este prejudiciat sub orice formă de
+                        către un terț care ar pretinde că este/reprezintă interesele A.D.I ECOLECT
+                        GROUP BIHOR .
+                    </p>
+                    <p>
+                        3. Crearea de conturi multiple folosind adrese de email generate automat și
+                        care expiră după o perioadă predefinită sau orice comportament fraudulos în
+                        măsură să afecteze bunul mers al Aplicației, este interzisă și va fi
+                        considerată o tentativă de fraudă. A.D.I ECOLECT GROUP BIHOR își rezervă
+                        dreptul de a suspenda conturile astfel create si/sau de a anula Contul fără
+                        preaviz, înștiințare, alte formalități sau despăgubiri.
+                    </p>
+                    <p>
+                        3. Orice tentativă de fraudă sau orice fraudă (cum ar fi dar fără a se
+                        limita la: accesarea datelor Utilizatorilor, alterarea conținutului
+                        Aplicatiei, încercarea de afectare a performanțelor serverelor unde sunt
+                        stocate informațiile din Aplicație, alterarea sau modificarea Conținutului
+                        Aplicației sau orice corespondență expediată prin orice modalitate de către
+                        A.D.I ECOLECT GROUP BIHOR către Utilizator etc) vor fi pedepsite conform
+                        prevederilor legale în vigoare.
+                    </p>
+                    <p>
+                        4. A.D.I ECOLECT GROUP BIHOR va raporta de îndată orice fraudă sau
+                        tentative de fraudă autorităților competente.
+                    </p>
+                    <h1>VI. Răspundere</h1>
+                    <p>
+                        1. A.D.I ECOLECT GROUP BIHOR nu garantează că Aplicația, serverele pe care
+                        este găzduit, si/sau, daca e cazul, e-mailurile trimise de la A.D.I ECOLECT
+                        GROUP BIHOR , sunt fără viruși sau alte componente informatice cu caracter
+                        potențial dăunător, că nu conține erori, omisiuni, defecțiuni, întârzieri
+                        sau întreruperi ăn operare sau transmitere, căderi de linie sau orice alți
+                        factori similari.
+                    </p>
+                    <p>
+                        2. Utilizatorul folosește Aplicația pe riscul propriu, A.D.I ECOLECT GROUP
+                        BIHOR fiind liber de orice răspundere pentru eventualele daune directe sau
+                        indirecte cauzate de utilizarea sau accesarea/vizitarea Aplicației sau ca
+                        urmare a utilizării informațiilor din Aplicație.
+                    </p>
+                    <h1>VII. Forța majoră</h1>
+                    <p>
+                        1.Niciuna din Părțile contractante nu răspunde de neexecutarea la termen –
+                        total sau parțial - a oricărei obligații care îi revine în baza Termenilor
+                        și Condițiilor, dacă neexecutarea obligației respective a fost cauzată de
+                        forța majoră. În sensul prezentului articol, forța majora reprezintă un eveniment
+                        independent de voința parților, imprevizibil si insurmontabil, care nu
+                        se datorează intenției sau culpei acestora, intervenit după intrarea în
+                        vigoare a Contractului si care împiedica părțile contractante sa-si
+                        execute, total sau parțial, obligațiile asumate. Sunt considerate
+                        asemenea evenimente conflictele armate, mișcările sociale, incendiile,
+                        inundațiile sau orice alte calamitați naturale sau restricții apărute
+                        ca urmare ca urmare a unei carantine sau a unui embargo, enumerarea
+                        neavând un caracter limitativ, ci enunțiativ. Conflictele de munca nu
+                        reprezintă forța majoră.
+                        Nu este considerat caz de forța majoră un eveniment asemănător celor de
+                        mai sus care, fără a crea o imposibilitate de executare, face extreme
+                        de costisitoare executarea obligațiilor oricăreia dintre Părți.
+                    </p>
+                    <p>
+                        2. Partea care invoca evenimentul de forța majora este obligata sa notifice
+                        cealaltă Parte în termen de 5 zile calendaristice de la data producerii
+                        evenimentului si sa furnizeze înăuntrul acestui termen dovezi necesare in
+                        acest sens. De asemenea, Partea care a invocat Forța majora este obligata sa
+                        informeze cealaltă Parte cu privire la încetarea cazului de forța
+                        majora. În situația în care nu se face notificarea, Partea care invoca
+                        apariția evenimentului de forța majora va răspunde pentru toate
+                        prejudiciile ivite ca urmare a omisiunii notificării cu privire la
+                        producerea/încetarea cazului de Forța majoră.
+                    </p>
+                    <p>
+                        3. Daca în termen de 15 (cincisprezece) zile de la data producerii lui,
+                        respectivul eveniment de forță majoră nu încetează, fiecare Parte va
+                        avea dreptul sa notifice celeilalte Parți încetarea de plin drept a
+                        Contractului, fără ca vreuna din Părți sa poată pretinde celeilalte
+                        daune-interese.
+                    </p>
+                    <h1>VIII. Confidențialitate</h1>
+                    <p>
+                        1. A.D.I ECOLECT GROUP BIHOR va păstra confidențialitatea informațiilor de
+                        orice natură pe care ni le furnizați. Dezvăluirea acestora se va realiza în
+                        conformitate cu Termenii și Condițiile.
+                    </p>
+                    <p>
+                        2. Nici o declarație publică, promovare, comunicat de presă sau orice alt
+                        mod de dezvăluire către terțe parți cu privire la Aplicație nu va fi făcută
+                        de Utilizator fără consimțământul prealabil scris al A.D.I ECOLECT GROUP
+                        BIHOR .
+                    </p>
+                    <p>
+                        3. Prin transmiterea de informații sau materiale prin intermediul
+                        Aplicației, oferiți A.D.I ECOLECT GROUP BIHOR acces nerestricționat și
+                        irevocabil la acestea, dreptul de a utiliza, reproduce, afișa, modifica,
+                        transmite și distribui aceste materiale sau informații. Sunteți, de
+                        asemenea, de acord ca A.D.I ECOLECT GROUP BIHOR să poată utiliza liber, în
+                        interes propriu, aceste idei, concepte, know-how-uri sau tehnici pe care ni
+                        le-ați trimis prin intermediul Aplicației. A.D.I ECOLECT GROUP BIHOR nu va
+                        constitui subiect de obligații referitoare la confidențialitatea
+                        informațiilor trimise, daca legislația în vigoare nu prevede alte
+                        specificări în acest sens.
+                    </p>
+                    <h1>IX. Legislația aplicabilă. Soluționarea reclamațiilor. Litigii</h1>
+                    <p>
+                        1. Contractul va fi guvernat și interpretat în conformitate cu legea
+                        română.
+                    </p>
+                    <p>
+                        2. Părțile vor depune toate eforturile pentru a soluționa pe cale amiabila,
+                        orice dispută apăruta intre A.D.I ECOLECT GROUP BIHOR si Utilizator in
+                        legătura cu Termenii si Condițiile. În cazul în care acest lucru nu este
+                        posibil, litigiul va fi înaintat spre soluționare instanțelor competente.
+                    </p>
+                    <p>
+                        3. Pentru sesizări sau reclamații legate de Aplicație, Utilizatorii pot
+                        formula reclamații/sesizări la adresa de email
+                        <a href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a>. Termenul maxim de soluționare a reclamațiilor
+                        sau sesizărilor este de 30 de zile calendaristice de la primirea acestora.
+                    </p>
+                    <h1>X. Actualizarea Termenilor și condițiilor</h1>
+                    <p>
+                        A.D.I ECOLECT GROUP BIHOR își rezervă dreptul de a actualiza și modifica
+                        periodic Termenii și Condițiile Aplicatiei pentru a reflecta orice
+                        modificări ale acestor prevederi precum și orice modificări ale
+                        Aplicației/structurii acesteia/ Conținutului sau orice modificări ale
+                        cerințelor legale, fără notificare prealabilă a Utilizatorilor. Termenii și
+                        Condițiile sunt opozabile Utilizatorilor de la momentul afișării in
+                        Aplicatie. Pentru acest motiv, vă recomandăm să verificați periodic
+                        conținutul Termenilor si condițiilor.
+                    </p>
+                    <h1>XI. Date de contact</h1>
+                    <p>
+                        În cazul în care există întrebări sau sugestii în legătură cu Aplicația, ne
+                        puteți contacta telefonic la numărul de telefon A.D.I ECOLECT GROUP BIHOR
+                        sau prin email la A.D.I ECOLECT GROUP BIHOR .
+                    </p>
+                    <h1>XIV. Dispoziții finale</h1>
+                    <p>
+                        1. Nulitatea oricărei clauze a Termenilor si Condițiilor, parțiala sau
+                        integrala, nu va afecta valabilitatea celorlalte clauze sau parți de
+                        clauze. În cazul în care anumite clauze ale Termenilor si Condițiilor
+                        devin inoperante în întreg sau parțial, sau în cazul în care un punct
+                        nu a fost inclus în Termeni si Condiții, acestea nu vor afecta
+                        valabilitatea celorlalte clauze. Clauza inoperanta sau nemenționata va
+                        fi înlocuita cu o clauza corespunzătoare care, în măsura acceptabila
+                        legal, se apropie cel mai mult de ceea ce părțile contractante au
+                        intenționat sau, urmărind concepția si exprimarea Termenilor si
+                        Condițiilor, se obține ceea ce se intenționează după avizarea despre
+                        clauza lipsa sau inoperanta.
+                    </p>
+                    <p>
+                        2. Prevederile Termenilor si Condițiilor se completează cu dispozițiile
+                        Codului civil.
+                    </p>
+                    <br/>
+                    <small>Actualizat la data de 23.03.2023</small>
+                </div>
+            </ng-template>
+            <ng-template #notAvailable>
+                <app-no-array content="Tabs.Profile.Actions.InformationNotAvailable" icon="alert-outline" [hasPadding]="false"></app-no-array>
+            </ng-template>
+        </ng-template>
+    </div>
+</ion-content>

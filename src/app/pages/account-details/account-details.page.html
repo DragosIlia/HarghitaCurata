@@ -1,0 +1,67 @@
+<app-header iconName="arrow-back-outline" title="Details.Title" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <form [formGroup]="accountDetailsForm">
+            <ion-item>
+                <ion-label position="stacked">{{ 'Details.Username' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" spellcheck="false" type="text" [value]="data?.userName"
+                    disabled>
+                    <ion-icon class="disabledIcon" name="person-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Details.Email' | translate }}</ion-label>
+                <ion-input inputmode="email" mode="ios" spellcheck="false" type="email" [value]="data?.email"
+                    disabled>
+                    <ion-icon class="disabledIcon" name="mail-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Details.FirstName' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="text"
+                    formControlName="firstName">
+                    <ion-icon name="id-card-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Details.LastName' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="text"
+                    formControlName="lastName">
+                    <ion-icon name="id-card-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Details.Phone' | translate }}</ion-label>
+                <ion-input inputmode="tel" pattern="[0-9]*" mode="ios" required="true" spellcheck="false" type="tel"
+                    formControlName="phoneNumber">
+                    <ion-icon name="call-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <h1 class="title">{{ 'Details.Security' | translate }}</h1>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Details.CurrentPassword' | translate }}</ion-label>
+                <app-password>
+                    <ion-input inputmode="text" mode="ios" spellcheck="false" type="password"
+                        formControlName="oldPassword">
+                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </app-password>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Details.NewPassword' | translate }}</ion-label>
+                <app-password>
+                    <ion-input inputmode="text" mode="ios" spellcheck="false" type="password"
+                        formControlName="newPassword">
+                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </app-password>
+            </ion-item>
+
+            <ion-button class="mainButton" (click)="saveDetails()" [disabled]="!accountDetailsForm.valid">
+                <p class="text-ellipsis">{{ 'Details.Save' | translate }}</p>
+                <!-- <ion-icon name="shield-checkmark-outline"></ion-icon> -->
+            </ion-button>
+        </form>
+    </div>
+</ion-content>

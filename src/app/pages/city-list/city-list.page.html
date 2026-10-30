@@ -1,0 +1,16 @@
+<app-header iconName="arrow-back-outline" title="Address.CityList" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <ion-searchbar inputmode="text" placeholder="" spellcheck="false" type="text"
+            placeholder="{{ 'Placeholder.Filter' | translate }}" (ionChange)="filter($any($event))">
+        </ion-searchbar>
+        <ion-item *ngFor="let city of cities" (click)="selectCity(city)">
+            <ion-label>{{ city.fullName }}</ion-label>
+            <ion-checkbox slot="end" [ngModel]="data !== -1 && data === city.id"></ion-checkbox>
+        </ion-item>
+        <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+            <ion-infinite-scroll-content loadingSpinner="crescent"></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+    </div>
+</ion-content>

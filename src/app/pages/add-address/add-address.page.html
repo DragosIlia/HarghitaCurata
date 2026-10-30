@@ -1,0 +1,41 @@
+<app-header iconName="arrow-back-outline" title="Address.Add" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <form [formGroup]="addressForm">
+            <ion-item (click)="openCityList()">
+                <ion-label position="stacked">{{ 'Address.City' | translate }}</ion-label>
+                <span>
+                    {{ (selectedCityName !== null) ? selectedCityName : ('Address.SelectCity' | translate) }}
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </span>
+            </ion-item>
+
+            <ion-item (click)="tryOpenStreets()" [disabled]="currentStreets && currentStreets.length <= 0">
+                <ion-label position="stacked">{{ 'Address.Street' | translate }}</ion-label>
+                <span>
+                    {{ (selectedStreet !== null) ? selectedStreet : ('Address.SelectStreet' | translate) }}
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </span>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">{{ 'Address.StreetNumber' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" spellcheck="false" type="text"
+                    formControlName="streetNumber" [required]="currentStreets && currentStreets.length <= 0">
+                    <ion-icon name="pricetag-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+
+            <ion-item class="includedBlock">
+                <ion-checkbox slot="start" [checked]="liveInBlock" (ionChange)="changeTypeOfLiving($event)"></ion-checkbox>
+                <ion-label>{{ 'Address.LiveInBlock' | translate }}</ion-label>
+            </ion-item>
+
+            <ion-button class="mainButton" [disabled]="selectedCity === -1 || !addressForm.valid || (currentStreets && currentStreets.length > 0 && !selectedStreet)" (click)="addAddress()">
+                <p class="text-ellipsis">{{ 'Address.Confirm' | translate }}</p>
+                <!-- <ion-icon name="save-outline"></ion-icon> -->
+            </ion-button>
+        </form>
+    </div>
+</ion-content>

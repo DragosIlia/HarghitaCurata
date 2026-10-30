@@ -1,0 +1,15 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Profile.Actions.FAQ" [enableTitle]="true" [isModal]="true">
+</app-header>
+
+<ion-content>
+    <div class="content">
+        <ion-accordion-group #accordionGroup>
+            <ion-accordion *ngFor="let question of questions" [value]="question.id.toString()">
+                <ion-item slot="header">
+                    <ion-label>{{ question.title | translate }}</ion-label>
+                </ion-item>
+                <div class="accordion-content" slot="content" [innerHTML]="question.content | translate"></div>
+            </ion-accordion>
+        </ion-accordion-group>
+    </div>
+</ion-content>

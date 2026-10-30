@@ -1,0 +1,118 @@
+<app-header [enableImage]="true" [enableTitle]="true"></app-header>
+
+<ion-content class="fade-in-image">
+    <div class="content">
+        <div class="top">
+            <h1 class="text-ellipsis">{{ 'Tabs.Dashboard.Salute' | translate }}, {{ isLogged ? (userDetails?.firstName +
+                ' ' + userDetails?.lastName) : 'Tabs.Dashboard.Guest' | translate}}</h1>
+            <p class="text-ellipsis">{{ 'Tabs.Dashboard.Welcome' | translate }}</p>
+        </div>
+
+        <div class="dashboard">
+            <div class="cities" (click)="openZoneList()">
+                <span>
+                    <ng-container *ngIf="loadingCalendar;else noLoading">
+                        <ion-spinner name="circular"></ion-spinner>
+                    </ng-container>
+                    <ng-template #noLoading>
+                        {{ (currentZoneName) ? currentZoneName : ('Tabs.Dashboard.Select' | translate) }}
+                    </ng-template>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </span>
+            </div>
+
+            <div class="dashboard-calendar">
+                <div class="actions">
+                    <!-- Left -->
+                    <h1>{{ currentDate | date: 'MMMM yyyy': '' : locale | titlecase }}</h1>
+
+                    <!-- Right -->
+                    <div class="arrows">
+                        <ion-icon name="chevron-back-outline" mwlCalendarPreviousView [view]="view"
+                            [(viewDate)]="currentDate" (viewDateChange)="changeDay($event)"></ion-icon>
+                        <ion-icon name="chevron-forward-outline" mwlCalendarNextView [view]="view"
+                            [(viewDate)]="currentDate" (viewDateChange)="changeDay($event)"></ion-icon>
+                    </div>
+                </div>
+
+                <mwl-calendar-month-view [viewDate]="currentDate" [events]="fractionEvents" [refresh]="refresh"
+                    [locale]="locale" [activeDayIsOpen]="true" (dayClicked)="dayClicked($event.day)" [weekStartsOn]="1"
+                    [cellTemplate]="cellTemplate"></mwl-calendar-month-view>
+
+                <ng-template #cellTemplate let-day="day" let-openDay="openDay" let-locale="locale"
+                    let-tooltipPlacement="tooltipPlacement" let-highlightDay="highlightDay"
+                    let-unhighlightDay="unhighlightDay" let-eventClicked="eventClicked"
+                    let-tooltipTemplate="tooltipTemplate" let-tooltipAppendToBody="tooltipAppendToBody"
+                    let-tooltipDelay="tooltipDelay" let-trackByEventId="trackByEventId" let-validateDrag="validateDrag">
+                    <div class="cal-cell-top"
+                        [attr.aria-label]="{ day: day, locale: locale } | calendarA11y: 'monthCell'">
+                        <span aria-hidden="true">
+                            <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">{{ day.badgeTotal }}</span>
+                            <span class="cal-day-number">{{ day.date | calendarDate: 'monthViewDayNumber':locale
+                                }}</span>
+                        </span>
+                    </div>
+                    <ng-container *ngIf="day.events.length > 0">
+                        <div class="cal-events">
+                            <ng-container *ngFor="let event of day.events; let i = index; trackBy: trackByEventId">
+                                <div class="cal-event" *ngIf="i <= 2;" [ngStyle]="{ backgroundColor: event.color?.primary }" [ngClass]="event?.cssClass"></div>
+                            </ng-container>
+                            <small *ngIf="day.events.slice(3).length > 0">+{{ day.events.slice(3).length }}</small>
+                        </div>
+                    </ng-container>
+                </ng-template>
+            </div>
+
+            <div class="information">
+                <div class="today">
+                    <div class="actions">
+                        <h1>{{ currentDate | date: 'dd MMM yyyy' : '' : locale }}</h1>
+
+                        <ion-icon class="noFractionsCalendar" *ngIf="selectedCalendar === null; else acceptedCalendar"
+                            name="warning-outline"></ion-icon>
+                        <ng-template #acceptedCalendar>
+                            <ng-container *ngIf="selectedCalendar !== undefined && selectedCalendar !== null">
+                                <ion-icon class="acceptedCalendar" name="checkmark-circle-outline"></ion-icon>
+                            </ng-container>
+                        </ng-template>
+                    </div>
+                    <div class="events"
+                        *ngIf="todayEvents !== null && todayEvents !== undefined && todayEvents.length > 0; else no_events_today">
+                        <div class="badge" *ngFor="let event of todayEvents"
+                            [ngStyle]="{'background-color': event.color }">
+                            {{ event.name }}
+                        </div>
+                    </div>
+
+                    <ng-template #no_events_today>
+                        <div class="no-events">
+                            <ng-container *ngIf="selectedCalendar === undefined; else no_fractions">
+                                <p class="text-ellipsis">{{ 'Tabs.Dashboard.NoCalendar' | translate }}</p>
+                            </ng-container>
+                            <ng-template #no_fractions>
+                                <ng-container
+                                    *ngIf="selectedCalendar !== undefined && selectedCalendar === null; else no_collections">
+                                    <p class="text-ellipsis">{{ 'Tabs.Dashboard.NoFractions' | translate }}</p>
+                                </ng-container>
+                            </ng-template>
+                            <ng-template #no_collections>
+                                <p class="text-ellipsis">{{ 'Tabs.Dashboard.NoCollections' | translate }}</p>
+                            </ng-template>
+                        </div>
+                    </ng-template>
+                </div>
+
+                <ng-container *ngIf="nextCollectEvents && nextCollectEvents.length > 0">
+                    <ng-container *ngIf="isNotTheSameDay(nextCollectEvents[0].start)">
+                        <div class="next-collection">
+                            <h1>{{ 'Tabs.Dashboard.NextCollection' | translate }} ({{ nextCollectEvents[0].start | date: 'dd MMM yyyy' : '' : locale }})</h1>
+                            <div class="badge" *ngFor="let nextCollectEvent of nextCollectEvents" [ngStyle]="{'background-color': nextCollectEvent.color.primary }">
+                                {{ nextCollectEvent.title }}
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</ion-content>

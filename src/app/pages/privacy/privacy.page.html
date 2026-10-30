@@ -1,0 +1,1227 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Profile.Actions.Privacy" [enableTitle]="true" [isModal]="true">
+</app-header>
+
+<ion-content>
+    <div class="content">
+        <ng-container *ngIf="loadingPrivacy; then showSpinner; else hideSpinner"></ng-container>
+        <ng-template #showSpinner>
+            <div class="loading">
+                <ion-spinner name="crescent"></ion-spinner>
+            </div>
+        </ng-template>
+        <ng-template #hideSpinner>
+            <ng-container *ngIf="currentLanguage && currentLanguage === 'ro'; then showPrivacy;else notAvailable"></ng-container>
+            <ng-template #showPrivacy>
+                <div class="privacy">
+                    <p>
+                        Noi apreciem decizia dumneavoastră de a deveni un utilizator al aplicatiei
+                        Bihor Curat - WasteBook („Aplicatia”) și recunoaștem că datele dumneavoastră cu caracter
+                        personal sunt importante atât pentru dumneavoastră, cât și pentru noi. În
+                        acest scop, dorim sa cunoașteți ce date cu caracter personal colectăm, cum,
+                        în ce ocazii și pentru ce scopuri colectăm și utilizăm aceste date, și cui
+                        le putem transmite.
+                    </p>
+                    <p>
+                        Acestea sunt motivele pentru care am decis să vă informăm prin această
+                        Politică de prelucrare a datelor cu caracter personal („<strong>Politica de Prelucrare a
+                            Datelor</strong>”
+                        sau „ <strong>Politica</strong>”) referitor la următoarele aspecte:
+                    </p>
+                    <p>
+                        <strong>1. </strong>
+                        <strong>Cine suntem?</strong>
+                    </p>
+                    <p>
+                        <strong>2. </strong>
+                        <strong>Cui este adresata Aplicatia?</strong>
+                    </p>
+                    <p>
+                        <strong>3. </strong>
+                        <strong>
+                            Ce sunt datele cu caracter personal și prelucrarea unor astfel de date?
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>4. </strong>
+                        <strong>Ce date prelucrăm cu privire la dumneavoastra?</strong>
+                    </p>
+                    <p>
+                        <strong>5. </strong>
+                        <strong>
+                            În ce mod colectăm și prelucrăm ulterior datele dumneavoastră cu
+                            caracter personal?
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>6. </strong>
+                        <strong>
+                            Cât timp păstrăm datele dumneavoastră cu caracter personal?
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>7. </strong>
+                        <strong>
+                            Daca folosim procese decizionale automatizate, incluzând crearea de
+                            profiluri pe aceasta cale
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>8. </strong>
+                        <strong>
+                            Cine are acces la datele dumneavoastră cu caracter personal?
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>9. </strong>
+                        <strong>
+                            Transferuri ale datelor dumneavoastră cu caracter personal în afara
+                            spațiului Uniunii Europene si al SEE
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>10. </strong>
+                        <strong>
+                            Ce măsuri tehnice și de securitate implementam pentru a asigura
+                            protecția datelor dumneavoastra cu caracter personal?
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>11. </strong>
+                        <strong>
+                            Ce drepturi și obligații aveți în raport cu Noi cu privire la datele
+                            dumneavoastră cu caracter personal pe care le prelucrăm?
+                        </strong>
+                    </p>
+                    <p>
+                        Prezenta Politică descrie ocaziile, scopurile și modalitățile în care noi
+                        prelucrăm anumite categorii de date ale dumneavoastră cu caracter personal
+                        prin intermediul Aplicatiei.
+                    </p>
+                    <p>
+                        Astfel, vă rugăm să alocați timpul necesar pentru a citi cu atenție și a
+                        înțelege conținutul prezentei Politici. Vă rugăm să aveți in vedere că, în
+                        cazul în care intenționați să ne transmiteți date cu caracter personal ale
+                        unei altei persoane fizice (de ex., cu ocazia unei rezervări pentru alta
+                        persoana fizica, etc.), aveți dreptul să ne furnizați astfel de date doar
+                        după, și în măsura în care, ați obținut consimțământul acesteia în acest
+                        scop și doar după informarea persoanei respective privind prelucrarea
+                        datelor sale cu caracter personal in acest scop si celelalte scopuri
+                        menționate în prezenta Politică (noi pornim de la premisa că ați procedat
+                        în acest mod, si nu ne asumăm răspunderea în cazuri contrare).
+                    </p>
+                    <h1>1. Cine suntem?</h1>
+                    <p>
+                        Avand in vedere obligatiile legale ce incumba entitatilor implicate in
+                        gestionarea deseurilor (atat autoritatilor administraţiei publice locale
+                        ale unităţilor administrativ-teritoriale, fie direct, fie prin intermediul
+                        Asociatiilor de Dezvoltare Intercomunitară in baza mandatului acordat de
+                        unitatile administrativ-teritoriale acestora, cat operatorilor serviciului
+                        de salubrizare) in scopul, printre altele, prevenirii generării de deşeuri
+                        şi gestionarii sustenabile a deşeurilor, cresterii gradului de colectare
+                        separata a deseurilor, inclusiv prin promovarea unor programe pentru
+                        atingerea scopurilor mai sus mentionate, dar si pentru imbunatatirea
+                        calitatii serviciului de salubrizare A.D.I ECOLECT GROUP BIHOR am decis
+                        crearea aplicatiei Bihor Curat - WasteBook care va prelucra Datele dumneavoastra in
+                        conditiile mentionate in prezenta Politica, A.D.I ECOLECT GROUP BIHOR
+                        urmand a va comunica prin intermediul prezentei Politici informatiile
+                        prevazute la articolul 13 si, dupa caz, articolul 14, din Regulamentul nr.
+                        679 din 27 aprilie 2016 privind protecţia persoanelor fizice în ceea ce
+                        priveşte prelucrarea datelor cu caracter personal şi privind libera
+                        circulaţie a acestor date şi de abrogare a Directivei 95/46/CE
+                        (Regulamentul general privind protecția datelor). Astfel, prelucrarea de
+                        Date obtinute prin intermediul Aplicatiei va fi realizata de catre fiecare
+                        dintre operatorii mai sus mentionati in vederea atingerii obiectivelor
+                        mentionate in cuprinsul prezentului articol.
+                    </p>
+                    <p>
+                        <strong>
+                            Astfel, ne puteți contacta oricând la (inclusiv pentru exercitarea
+                            drepturilor persoanelor vizate):
+                        </strong>
+                    </p>
+                    <p>
+                        Adresă: A.D.I ECOLECT GROUP BIHOR, Calea Armatei Române 1A, Oradea,
+                    </p>
+                    <p>
+                        Tel.: +40 0770262113
+                    </p>
+                    <p>
+                        E-mail: <a href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a>
+                    </p>
+                    <p>
+                        Totodată, întrucât intentionam să asigurăm o protecție sporită a datelor
+                        dumneavoastră cu caracter personal, am decis desemnarea unui responsabil cu
+                        protecția datelor. Pentru orice întrebări sau comentarii legate de prezenta
+                        Politică, de modul în care prelucrăm datele dumneavoastră cu caracter
+                        personal sau drepturile și obligațiile dumneavoastră în raport cu Noi cu
+                        privire la aceste date, ne puteți contacta printr-o cerere specifica
+                        semnata si datata fie la adresa de email dedicată:
+                        <a href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a> fie la adresa poștală
+                        a
+                        sediului nostru situat
+                        în loc.Oradea, str. Calea Armatei Romane nr.1/A, corp C, etajul 2, în
+                        atenția Consilierului relații publice.
+                    </p>
+                    <h1>2. Cui este adresata Aplicatia noastra?</h1>
+                    <p>
+                        Aplicatia pusa la dispozitia utilizatorilor de Noi NU este adresata în mod
+                        direct persoanelor cu vârstă mai mică de 18 ani, și de aceea nici nu
+                        solicităm și nu colectăm date cu caracter personal privind persoane cu
+                        această vârstă.
+                    </p>
+                    <p>
+                        În procesul de creare a contului de utilizator, persoanele vizate trebuie
+                        să confirme faptul că au împlinit vârsta de 18 ani<strong>.</strong>
+                    </p>
+                    <p>
+                        În cazul în care descoperim/suntem informați că am colectat date cu
+                        caracter personal privind persoane care nu au împlinit vârsta legală de
+                        majorat fără a exista acordul reprezentanților legali ai acestora, vom
+                        verifica de îndată și, când legea cere acest lucru, fie (i) vom obține de
+                        îndată consimțământul expres al reprezentanților legali pentru a prelucra
+                        acestea date, fie, în caz de imposibilitatea de obțirene a acestui
+                        consimțământ, (ii) vom șterge aceste informații din evidențele noastre și
+                        ne vom asigura de ștergerea acestora și din evidențele persoanelor noastre
+                        împuternicite/operatorilor noștri asociați.
+                    </p>
+                    <h1>3. Ce sunt datele cu caracter personal și prelucrarea de astfel de date?</h1>
+                    <p>
+                        “<em>Datele cu caracter personal</em>” sunt datele care identifică o
+                        persoană fizică sau care se referă la o persoană fizică identificabilă.
+                        Anumite informații sunt mai puțin evidente (cum ar fi IP-ul computerului
+                        unei persoane fizice, adresa MAC a computerului sau telefonului mobil al
+                        unei persoane fizice, etc.), dar, dacă sunt asociate cu o persoană fizică,
+                        ne ajută să o putem identifica, și se circumscriu astfel noțiunii de ” <em>Date cu caracter
+                            personal</em>”.
+                    </p>
+                    <p>
+                        „<em>Prelucrare</em>” înseamnă orice operațiune sau set de operațiuni
+                        efectuate asupra Datelor cu caracter personal sau asupra unor seturi de
+                        Date cu caracter personal, cu sau fără utilizarea de mijloace automatizate,
+                        cum ar fi colectarea, înregistrarea, organizarea, structurarea, stocarea,
+                        adaptarea sau modificarea, extragerea, consultarea, utilizarea, divulgarea
+                        prin transmitere, diseminarea sau punerea la dispoziție în orice alt mod,
+                        alinierea sau combinarea, restricționarea, ștergerea sau distrugerea.
+                    </p>
+                    <h1>4. Ce Date cu caracter personal prelucrăm despre dumneavoastră?</h1>
+                    <p>
+                        Politica noastră este aceea de a colecta doar acele Date cu caracter
+                        personal ale dumneavoastră ca persoană fizică ce ne sunt strict necesare
+                        pentru a realiza scopul pentru care a fost creata Aplicatia astfel cum este
+                        acesta evidentiat la articolul 1 de mai sus (conform principiului
+                        minimizării prelucrării de date cu caracter personal).
+                    </p>
+                    <p>
+                        Ca regulă generală, colectăm, în conformitate cu prevederile legale în
+                        vigoare aplicabile, următoarele Date cu caracter personal cu privire la
+                        dumneavoastră:
+                    </p>
+                    <p>
+                        &#x2022; Nume și prenume
+                    </p>
+                    <p>
+                        &#x2022; Adresa de email
+                    </p>
+                    <p>
+                        &#x2022; Numar de telefon
+                    </p>
+                    <p>
+                        &#x2022; Nume de utilizator
+                    </p>
+                    <p>
+                        &#x2022; Parola
+                    </p>
+                    <p>
+                        &#x2022; Adresă de preluare a deseurilor
+                    </p>
+                    <p>
+                        &#x2022; Informații oferite de dumneavoastră in momentul in care transmiteti
+                        Feedback cu privire la Aplicatie sau transmiteti o reclamatie cu privire la
+                        activitatea operatorului de colectare deseuri
+                    </p>
+                    <p>
+                        &#x2022; Activitațile dumneavoastră cu ocazia navigării în Aplicatie
+                    </p>
+                    <p>
+                        &#x2022; Geo-localizarea dispozitivului/echipamentului terminal de pe care vă
+                        autentificați și navigați în contul de utilizat creat în Aplicatie atunci
+                        cand doriti sa identificati cu exactitate centrele de colectare deseuri
+                        existente in zona unde locuiti.
+                    </p>
+                    <h1>5. În ce scopuri și modalități prelucrăm Datele dumneavoastră cu caracter personal?</h1>
+                    <p>
+                        Noi prelucrăm Datele dumneavoastră cu caracter personal strict în scopurile
+                        de (i) a identifica utilizatorii casnici care apartin unei anumite unitati
+                        administrativ-teritoriale aparținând județului Bihor, (ii) cresterea
+                        gradului de colectare separata a deseurilor de catre fiecare utilizator
+                        casnic; (iii) obtinerea de informatii cu privire la gestiunea deseurilor de
+                        la utilizatorii casnici (ce deseuri genereaza in gospodarie, ce
+                        infrastructura au, ce imbunatatiri ar aduce serviciului de colectare
+                        separata) astfel incat Noi sa indeplinim obiectivele generale mentionate la
+                        articolul 1 de mai sus, precum si (iv) imbunatatirea calitatii serviciilor
+                        oferite de catre operatorul serviciului de salubrizare.
+                    </p>
+                    <p>
+                        În anumite cazuri, vă vom solicita să ne furnizați în mod direct datele
+                        dumneavoastra cu caracter personal, în alte cazuri vom avea acces la aceste
+                        date în mod indirect. În anumite cazuri, dacă nu veți fi de acord cu
+                        prelucrarea lor, există riscul să nu vă putem furniza toate
+                        functionalitatile Aplicatiei sau chiar accesul la aplicatie pentru că ne va
+                        fi imposibilă executarea propriilor obligații legale și/sau contractuale.
+                        Astfel, Datele dumneavoastră cu caracter personal prelucrate în scopurile
+                        prevăzute la literele B-D) si G) din tabelul de mai jos ne sunt necesare în
+                        vederea fie a accesului la Aplicatie, fie pentru respectarea unei obligații
+                        legale ce ne incumbă, astfel că refuzul dummneavoastra ca noi să
+                        prelucrăm aceste date poate determina imposibilitatea accesului la
+                        Aplicatie și/sau a respectării unor obligații legale care ne revin.
+                    </p>
+                    <p>
+                        De asemenea, exceptând Datele cu caracter personal prelucrate conform
+                        acestei politici, Noi nu vă vom solicita, și vă recomandăm să nu ne
+                        transmiteți/dezvăluiți nesolicitat, cu ocazia și/sau în legătură Aplicatia,
+                        în alt mod, alte Date cu caracter personal, în special dintre cele
+                        considerate sensibile conform legii (de ex., nelimitativ, numărul cardului
+                        de sănătate, codul numeric personal, date referitoare la originea etnică
+                        sau rasială, originea rasială sau etnică, opinii politice, confesiune
+                        religioasă/convingeri filozofice, apartenența la sindicate, date genetice,
+                        date biometrice pentru identificarea unică a unei persoane fizice, date
+                        privind sănătatea / date privind viața sexuală sau orientarea sexuală,
+                        informații cu privire la sancțiuni administrative sau penale, sau la
+                        investigații penale în curs, care va privesc pe dumneavoastră și/sau pe
+                        alte persoane fizice). În cazul în care acest lucru se va întâmpla
+                        (inclusiv accidental) vom lua de îndată măsuri de ștergere/distrugere a
+                        Datelor cu caracter personal respective din evidențele noastre.
+                    </p>
+                    <p>
+                        <strong> </strong>
+                    </p>
+                    <table border="1" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top">
+                                    <p>
+                                        <strong>Nr. crt.</strong>
+                                    </p>
+                                </td>
+                                <td valign="top">
+                                    <p>
+                                        <strong>
+                                            În ce scop prelucrăm datele dumneavoastra cu caracter
+                                            personal?
+                                        </strong>
+                                    </p>
+                                </td>
+                                <td valign="top">
+                                    <p>
+                                        <strong>
+                                            Ce Date cu caracter personal prelucrăm, și în ce
+                                            cazuri, modalități și scopuri?
+                                        </strong>
+                                    </p>
+                                </td>
+                                <td colspan="2" valign="top">
+                                    <p>
+                                        <strong>
+                                            Care este temeiul juridic al prelucrării datelor
+                                            dumneavoastra?
+                                        </strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p align="center">
+                                        <strong><em> </em></strong>
+                                    </p>
+                                </td>
+                                <td width="564" colspan="4" valign="top">
+                                    <p align="center">
+                                        <strong><em>Date cu caracter personal (</em></strong>
+                                        <strong><em>“Date”</em></strong>
+                                        <strong>
+                                            <em>
+                                                ) pe care le obținem în mod direct de la persoanele
+                                                vizate
+                                            </em>
+                                        </strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>A.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>
+                                            Crearea unui cont de utilizator in Aplicatie
+                                        </strong>
+                                    </p>
+                                </td>
+                                <td width="260" colspan="2" valign="top">
+                                    <p>
+                                        Vă putem crea un cont de utilizator in Aplicatie în
+                                        procesul de solicitare de către dumneavoastră a deschiderii
+                                        unui cont de utilizator, doar dacă ne oferiți în mod
+                                        voluntar următoarele Date:
+                                    </p>
+                                    <p>
+                                        &#x2022; Nume utilizator
+                                    </p>
+                                    <p>
+                                        &#x2022; Nume si prenume
+                                    </p>
+                                    <p>
+                                        &#x2022; Adresa de email
+                                    </p>
+                                    <p>
+                                        &#x2022; Numar de telefon
+                                    </p>
+                                    <p>
+                                        &#x2022; Parola
+                                    </p>
+                                    <p>
+                                        Aceste Date sunt necesare pentru crearea contului de
+                                        utilizator si pentru a fi in contact cu dumneavoastra in
+                                        cazul in care va fi necesar (de exemplu fara a se limita la
+                                        contactarea dumneavoastra in vederea solutionarii unei
+                                        reclamatii, in vederea obtinerii de informatii suplimentare
+                                        cu privire la solicitarea dumneavoastra de preluare de
+                                        deseuri, detalii cu privire la Aplicatie furnizate de
+                                        dumneavoastra in rubrica Feedback).
+                                    </p>
+                                    <p>
+                                        Puteți șterge oricând contul dumneavoastră de utilizator și datele personale
+                                        din Aplicatie, direct din meniul de profil. Oricând
+                                        ulterior puteți recrea contul prin reininregistrarea datelor.
+                                    </p>
+                                </td>
+                                <td width="148" valign="top">
+                                    <p>
+                                        <strong>Interesul nostru legitim</strong>
+                                        (articolul 6 alineatul (1) litera (f) din Regulamentul
+                                        general privind protecția datelor). Interesul nostru
+                                        legitim rezultă din dorința de a obtine informatii cu
+                                        privire la gestionarea deseurilor in scopul cresterii
+                                        eficientei serviciului public de salubrizare (inclusiv
+                                        cresterea gradului de colectare separata a deseurilor).
+                                    </p>
+                                    <p>
+                                        <strong>Executarea contractului </strong>
+                                    </p>
+                                    <p>
+                                        (articolul 6 alineatul (1) litera (b) din Regulamentul
+                                        general privind protecția datelor)
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>B.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>
+                                            Efectuarea unei solicitari de preluare deseuri de catre
+                                            operatorul serviciului de salubrizare
+                                        </strong>
+                                    </p>
+                                </td>
+                                <td width="260" colspan="2" valign="top">
+                                    <p>
+                                        În cazul în care decideți să efectuați o solicitare de
+                                        preluare deseuri de la locuinta dumneavoastra de catre
+                                        operatorul serviciului salubrizare, vom prelua urmatoarele
+                                        Date necesare pentru a putea da curs solicitarii
+                                        dumneavoastra:
+                                    </p>
+                                    <p>
+                                        &#x2022; nume și prenume
+                                    </p>
+                                    <p>
+                                        &#x2022; adresa de email
+                                    </p>
+                                    <p>
+                                        &#x2022; numărul de telefon
+                                    </p>
+                                    <p>
+                                        &#x2022; adresa de preluare deseuri
+                                    </p>
+                                    <p>
+                                        &#x2022; orice alte informații pe care ni le oferiți voluntar cu
+                                        privire la solicitare.
+                                    </p>
+                                </td>
+                                <td width="148" valign="top">
+                                    <p>
+                                        <strong>
+                                            Executarea contractului incheiat cu operatorul
+                                            serviciului de salubrizare
+                                        </strong>
+                                        (articolul 6 alineatul (1) litera (b) din Regulamentul
+                                        general privind protecția datelor)
+                                    </p>
+                                    <p>
+                                        <strong>Interesul nostru legitim</strong>
+                                        (articolul 6 alineatul (1) litera (f) din Regulamentul
+                                        general privind protecția datelor)
+                                    </p>
+                                    <p>
+                                        In vederea cresterii gradului de colectare separata a
+                                        deseurilor si a imbunatarii serviciului de salubrizare
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>C.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>Asistență și suport utilizatori Aplicatie</strong>
+                                    </p>
+                                </td>
+                                <td width="260" colspan="2" valign="top">
+                                    <p>
+                                        Pentru a vă asigura suportul necesar cu privire la contul
+                                        dumneavoastră creat în Aplicatie, va fi necesară
+                                        prelucrarea următoarelor Date:
+                                    </p>
+                                    <p>
+                                        &#x2022; nume și prenume
+                                    </p>
+                                    <p>
+                                        &#x2022; adresa de email și/sau numărul de telefon (după caz)
+                                    </p>
+                                    <p>
+                                        &#x2022; orice alte informații pe care ni le furnizati si care
+                                        necesare pentru acordarea suportului.
+                                    </p>
+                                    <p>
+                                        Prelucrarea acestor date este necesară atât pentru
+                                        confirmarea identității dumneavoastră cât și pentru
+                                        furnizarea de informații de asistență și suport.
+                                    </p>
+                                </td>
+                                <td width="148" valign="top">
+                                    <p>
+                                        <strong>Executarea contractului </strong>
+                                    </p>
+                                    <p>
+                                        (articolul 6 alineatul (1) litera (b) din Regulamentul
+                                        general privind protecția datelor)
+                                    </p>
+                                    <p>
+                                        <strong>Interesul nostru legitim</strong>
+                                        (articolul 6 alineatul (1) litera (f) din Regulamentul
+                                        general privind protecția datelor)
+                                    </p>
+                                    <p>
+                                        In vederea imbunatatirii functionalitatilor Aplicatiei
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>D.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>
+                                            Soluționarea de cereri, întrebări și/sau reclamații
+                                        </strong>
+                                        <strong></strong>
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="260" colspan="2" valign="top">
+                                    <p>
+                                        Când primim cereri, întrebări sau reclamații de la
+                                        dumnevoastră prin intermediul Aplicatiei (rubrica
+                                        Reclamatii) sau, dupa caz, telefonic sau prin email, vom
+                                        colecta și prelucra după caz următoarele Date:
+                                    </p>
+                                    <p>
+                                        &#x2022; nume și prenume
+                                    </p>
+                                    <p>
+                                        &#x2022; adresa de email
+                                    </p>
+                                    <p>
+                                        &#x2022; numărul de telefon
+                                    </p>
+                                    <p>
+                                        &#x2022; orice alte informații pe care ni le furnizați cand ne
+                                        contactați
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                    <p>
+                                        <strong>Nota:</strong>
+                                        Prelucrarea acestor Date ne este necesară pentru a avea
+                                        ține o evidentă a acestor cereri, întrebări, reclamații,
+                                        pentru a face dovada acestora, pentru a ține la curent
+                                        petenții cu stadiul soluționării acestora, și pentru a le
+                                        transmite răspunsul nostru la acestea. De asemenea,
+                                        prelucrarea acestor Date este necesara pentru imbunatatirea
+                                        serviciului de salubrizare.
+                                    </p>
+                                </td>
+                                <td width="148" valign="top">
+                                    <p>
+                                        <strong>Interes nostru legitim</strong>
+                                        ,
+                                    </p>
+                                    <p>
+                                        (articolul 6 alineatul (1) litera (f) din Regulamentul
+                                        general privind protecția datelor)
+                                    </p>
+                                    <p>
+                                        În scopul îmbunătățirii calității serviciului de
+                                        salubrizare.
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                    <p>
+                                        <strong>Îndeplinirea unor obligații legale </strong>
+                                        (articolul 6 alineatul (1) litera (b) din Regulamentul
+                                        general privind protecția datelor), respectiv pentru
+                                        conformarea cu obligațiile impuse de prevederile legale
+                                        aplicabile (de exemplu în domeniul protecției
+                                        consumatorilor).<strong></strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>E.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>
+                                            Analiza satisfacției utilizatorilor noștri cu privire
+                                            la Aplicatie (sugestii, aprecieri sau critici transmise
+                                            prin intermediul rubricii Feedback existenta in
+                                            Aplicatie)
+                                        </strong>
+                                        <strong></strong>
+                                    </p>
+                                </td>
+                                <td width="260" colspan="2" valign="top">
+                                    <p>
+                                        În scopul analizei satisfacției utilizatorilor Aplicatiei,
+                                        colectăm și prelucrăm următoarele date:
+                                    </p>
+                                    <p>
+                                        &#x2022; numele și prenumele utilizatorului (în cazul
+                                        utilizatorilor autentificati în conturile lor care decid să
+                                        plaseze sugestii, aprecieri, critici la rubrica Feedback
+                                        din Aplicatie),
+                                    </p>
+                                    <p>
+                                        &#x2022; nume și prenume și adresa de email în cazul sugestiilor,
+                                        aprecierilor și/sau criticilor transmise prin email de
+                                        către utilizatorii Aplicatiei,
+                                    </p>
+                                    <p>
+                                        &#x2022; sugestiile, aprecierile, criticile utilizatorilor
+                                        Aplicatiei.
+                                    </p>
+                                    <p>
+                                        Toate Datele pe care ni le-ați furnizat în cadrul
+                                        sugestiilor, aprecierilor sau criticilor transmise către
+                                        noi prin intermediul Aplicatiei sau prin e-mail, sunt
+                                        șterse de Noi cel târziu după 90 de zile de la
+                                        primire/răspunsul final care ți-a fost oferit (după caz).
+                                        Păstrarea pe o durată de maximum 90 de zile se explică prin
+                                        faptul că uneori se poate întâmpla ca dumneavoastră, în
+                                        calitate de utilizator, să ne contactați din nou în
+                                        legătură cu un răspuns în aceeași privință, iar Noi trebuie
+                                        să putem consulta corespondența anterioară. Experiența a
+                                        arătat că, de regulă, după 90 de zile, nu mai apar
+                                        întrebări referitoare la răspunsurile noastre.
+                                    </p>
+                                </td>
+                                <td width="148" valign="top">
+                                    <p>
+                                        <strong>Interes nostru legitim</strong>
+                                        ,
+                                    </p>
+                                    <p>
+                                        (articolul 6 alineatul (1) litera (f) din Regulamentul
+                                        general privind protecția datelor)
+                                    </p>
+                                    <p>
+                                        În scopul imbunatatirii functionalitatilor Aplicatiei.
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>F.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>
+                                            Formularea de acțiuni/exercitarea de apărări în
+                                            justiție
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                </td>
+                                <td width="260" colspan="2" valign="top">
+                                    <p>
+                                        Pentru a ne proteja drepturile legale și interesele
+                                        legitime, putem prelucra datele dumneavoastră cu caracter
+                                        personal necesare formulării de actiuni/exercitării de
+                                        apărări în justiție (incluzand pregatirea documentației
+                                        aferente si parcurgerea procedurilor/formalitatilor legale
+                                        aferente) în raport cu instanțe/autorități/instituții/alți
+                                        terți.
+                                    </p>
+                                </td>
+                                <td width="148" valign="top">
+                                    <p>
+                                        <strong>Interes legitim </strong>
+                                    </p>
+                                    <p>
+                                        articolul 6 alineatul (1) litera (f) din Regulamentul
+                                        general privind protecția datelor)<strong> </strong>
+                                    </p>
+                                    <p>
+                                        Pentru a asigura respectarea drepturilor și intereselor
+                                        legitime ale noastre
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>G.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>
+                                            Furnizarea de informații și documente în
+                                            proceduri/investiga-ții în raport cu
+                                            autorități/instituți/alte entități competente legal
+                                        </strong>
+                                    </p>
+                                </td>
+                                <td width="260" colspan="2" valign="top">
+                                    <p>
+                                        În cazul unor: (i) solicitări exprese ale ale
+                                        autorităților/instituțiilor/altor entități competente legal
+                                        în cadrul unor proceduri/investigații formale; ori (ii)
+                                        necesității îndeplinirii unor obligații legale de
+                                        informare/raportare către autorități/instituții/alte
+                                        entități competente legal ce ne revin - vom furniza în mod
+                                        excepțional și conform legii exclusiv Datele dumneavostră
+                                        cu caracter personal solicitate în mod expres de aceste
+                                        autorități sau instituții sau care trebuie să fie furnizate
+                                        acestor autorități/instituții/entități conform legii și vom
+                                        documenta aceste demersuri în scop de probă.
+                                    </p>
+                                </td>
+                                <td width="148" valign="top">
+                                    <p>
+                                        <strong>Îndeplinirea unei obligații legale</strong>
+                                    </p>
+                                    <p>
+                                        articolul 6 alineatul (1) litera (b) din Regulamentul
+                                        general privind protecția datelor), respectiv <strong> </strong>pentru
+                                        conformarea
+                                        cu
+                                        obligațiile
+                                        specifice impuse de prevederi legale referitoare la, de
+                                        ex., nelimitativ, prevenire și protecție împotriva
+                                        fraudelor, spălării banilor, actelor de terorism, etc.)
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong><em> </em></strong>
+                                    </p>
+                                </td>
+                                <td width="564" colspan="4" valign="top">
+                                    <p align="center">
+                                        <strong><em>Date pe care le colectăm automat</em></strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="42" valign="top">
+                                    <p>
+                                        <strong>H.</strong>
+                                    </p>
+                                </td>
+                                <td width="156" valign="top">
+                                    <p>
+                                        <strong>Mentenanța și securizarea Aplicatie</strong>
+                                    </p>
+                                    <p>
+                                        <em> </em>
+                                    </p>
+                                </td>
+                                <td width="258" valign="top">
+                                    <p>
+                                        Pentru mentenanța și securizarea Aplicatiei, putem prelucra
+                                        Date ale utilizatorilor acesteia constând în următorii
+                                        identificatori online:
+                                    </p>
+                                    <p>
+                                        &#x2022; Localizarea dispozitivului/ echipamentului terminal
+                                        utilizat de vizitator pentru conectarea la Internet cu
+                                        ocazia vizitării Website-ului (dacă este activată vreo
+                                        aplicație de geo-localizare).
+                                    </p>
+                                    <p>
+                                        Mai exact, prelucrăm Datele dumneavoastră mai
+                                        sus-mentionate pentru:
+                                    </p>
+                                    <p>
+                                        &#x2022; a asigura funcționarea adecvata a Aplicatiei;
+                                    </p>
+                                    <p>
+                                        &#x2022; afișarea corectă a conținutului Aplicatiei;
+                                    </p>
+                                    <p>
+                                        &#x2022; îmbunătățirea Aplicatiei;
+                                    </p>
+                                    <p>
+                                        &#x2022; parametrarea dispozitivului/echipamentului terminal de pe
+                                        care vă conectați la Aplicatie;
+                                    </p>
+                                    <p>
+                                        &#x2022; a asigura securitatea Aplicatiei și a vă proteja
+                                        împotriva fraudelor/breșelor de securitate IT în ceea ce
+                                        privește Aplicatia;
+                                    </p>
+                                    <p>
+                                        &#x2022; identificarea și remedierea eventualelor defecțiuni care
+                                        împiedică utilizarea Aplicatiei.
+                                    </p>
+                                </td>
+                                <td width="150" colspan="2" valign="top">
+                                    <p>
+                                        <strong>Interes nostru legitim</strong>
+                                    </p>
+                                    <p>
+                                        (articolul 6 alineatul (1) litera (f) din Regulamentul
+                                        general privind protecția datelor)<strong> </strong>
+                                    </p>
+                                    <p>
+                                        În scopul<strong> </strong>implementării și menținerii
+                                        măsurilor de securitate a Aplicatiei
+                                    </p>
+                                    <p>
+                                        <strong> </strong>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr height="0">
+                                <td width="41">
+                                </td>
+                                <td width="167">
+                                </td>
+                                <td width="252">
+                                </td>
+                                <td width="1">
+                                </td>
+                                <td width="145">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        În cazul în care vom decide să prelucrăm Date ale dumneavoastră în alte
+                        modalitati si pentru alte scopuri decât cele mai sus-menționate in aceasta
+                        politica, vă vom informa in mod legal, pentru a vă permite să vă exercitati
+                        drepturile legale aferente.
+                    </p>
+                    <h1>6. Cât timp reținem Datele dumneavoastră cu caracter personal?</h1>
+                    <p>
+                        Stocăm Datele dumneavoastră strict pentru perioadele de timp necesare
+                        îndeplinirii fiecăruia dintre scopurile mai sus-mentionate in prezenta
+                        Politica si conform politicii noastre interne de retenție a datelor cu
+                        caracter personal conform legilor aplicabile (inclusiv legislația specială
+                        și generală aplicabilă in vigoare în materie de arhivare de
+                        date/documente).
+                    </p>
+                    <p>
+                        Pentru a determina perioada adecvată pentru stocarea Datelor dumneavoastră
+                        cu caracter personal pe care le prelucrăm, ținem cont de cantitatea, natura
+                        și sensibilitatea lor, de potențialul de risc de vătămare rezultat din
+                        prelucrarea și dezvăluirea neautorizate, scopurile pentru care prelucrăm
+                        aceste date și dacă putem atinge aceste scopuri prin alte mijloace mai
+                        puțin intruzive, cerințele legale aplicabile care ne impun stocarea pentru
+                        anumite perioade de timp, bunele practici convenite în domeniul lor de
+                        prelucrare, precum și modalitatea în care ne putem asigura ca datele
+                        prelucrate sunt corecte și actuale .
+                    </p>
+                    <p>
+                        În cazul în<strong> care ne-ați oferit consimțământul</strong> la
+                        prelucrarea datelor dumneavoastră cu caracter personal mentionate în
+                        tabelul de mai sus, vom prelucra aceste date până la realizarea scopurilor
+                        mai sus-menționate, sau până la data retragerii consimțământului
+                        dumneavoastră, oricare dintre aceste date intervine prima, cu excepția
+                        cazurilor în care avem obligația legală să prelucram aceste date pentru
+                        perioade mai lungi de timp.
+                    </p>
+                    <p>
+                        La finalul perioadelor de retenție aplicabile, dacă și în măsura în care nu
+                        vom mai avea motive legale, interese legitime, ori consimțământul
+                        dumneavoastră de a vă prelucra Datele cu caracter personal (în cazurile
+                        aplicabile), aceste Date vor fi eliminate din evidențele noastre în
+                        conformitate cu procedurile noastre interne si cu legile aplicabile (prin
+                        modalitati care pot include arhivarea, anonimizarea si/sau distrugerea
+                        acestor date, de la caz la caz).
+                    </p>
+                    <h1>7. Procese decizionale automatizate, incluzând crearea de profiluri în mod automat</h1>
+                    <p>
+                        Datele prelucrate prin intermediul Aplicatiei nu fac obiectul unor procese
+                        decizionale automatizate (incluzand crearea de profiluri in mod automat).
+                    </p>
+                    <h1>8. Cine are acces la Datele dumneavoastră cu caracter personal?</h1>
+                    <p>
+                        Scopul nostru este acela de a vă asigura cea mai bună experiență în
+                        contextul navigării in Aplicatie și, pentru a obtine acest lucru, putem
+                        acorda acces (integral/parțial) la Datele dumneavoastră unora dintre
+                        angajații noștri care si-au asumat obligații de confidențialitate în
+                        legătura cu datele cu caracter personal la care pot avea acces în
+                        exercitarea atribuțiilor lor de serviciu, precum și catre parteneri de
+                        afaceri pe care i-am selecționat cu responsabilitate, si doar strict în
+                        măsura necesară pentru ca aceștia să-și poată îndeplini obligațiile asumate
+                        față de noi prin contractele incheiate cu noi.
+                    </p>
+                    <p>
+                        Atunci când externalizăm anumite activități/servicii/obligații care
+                        presupun prelucrarea datelor dumneavoastră cu caracter personal către
+                        parteneri ai noștri de afaceri, depunem toate eforturile rezonabile pentru
+                        a verifica în prealabil dacă aceștia asigura protecția Datelor
+                        dumneavoastră prin măsuri stricte tehnice și de securitate și încheiem cu
+                        fiecare dintre aceștia contracte (separate sau în formă de acte adiționale)
+                        de prelucrare a acestor date. Astfel, Datele dumneavoastra pe care le
+                        divulgam către partenerii noștri de afaceri sunt limitate la informațiile
+                        cu caracter personal minime care le sunt necesare pentru executarea
+                        obligațiilor lor și le interzicem acestora să le utilizeze în vreun alt
+                        scop fără informarea și acordurile cerute de lege.
+                    </p>
+                    <p>
+                        Unii dintre acești parteneri de afaceri sunt terți care nu trebuie sa
+                        prelucreze Date ale dumneavoastră, însă pot avea acces la acestea în
+                        îndeplinirea sarcinilor/activităților/obligațiilor, sau în
+                        interacțiunile lor cu Noi (de ex., societăți care prestează servicii de
+                        întreținere tehnică, auditori financiar-contabii, consultanți juridici,
+                        etc.).
+                    </p>
+                    <p>
+                        Mai exact, divulgam unele Date către terțe părți (furnizorii și partenerii
+                        noștri) pentru realizarea unor funcții și servicii necesare pentru
+                        navigarea in Aplicatie, dupa cum urmeaza:
+                    </p>
+                    <p>
+                        &#x2022; Furnizorul nostru- ECO SOLUTII ONLINE SRL care ne asigura servicii de
+                        suport, mentenanta si dezvoltare Aplicatiei precum si;
+                    </p>
+                    <p>
+                        &#x2022; furnizorul care asigură găzduirea in cloud a Datele stocate prin
+                        intermediul Aplicatiei (MICROSOFT AZURE)- prin intermediul ECO SOLUTII
+                        ONLINE SRL
+                    </p>
+                    <h1>9. Divulgarea datelor dumneavoastra cu caracter personal către autorități/instituţii publice sau
+                        organe judiciare</h1>
+                    <p>
+                        Putem transmite unele din Datele dumneavoastră către autorități/instituții
+                        publice competente, atunci când ne impune legea (de ex. pentru investigarea
+                        fraudelor, prevenirea și combaterea spălării banilor, depunerea
+                        declarațiilor/situațiilor financiar-contabile la autoritățile
+                        financiar-fiscale, indicarea unor posibile acte criminale sau amenințări la
+                        adresa siguranței publice (dacă supectăm că ați fost implicați sau afectați
+                        într-un incident care implică un comportament criminal sau potențial
+                        criminal, dacă suspectăm că s-a comis o fraudă sau o infracțiune
+                        cibernetică, dacă primim amenințări sau comunicări rău intenționate
+                        adresate noua sau unor terți, etc.), sau către instanțe/organe judiciare,
+                        atunci când ne exercitam/apărăm drepturi legale/interese legitime în
+                        justiție.
+                    </p>
+                    <h1>10. Transferuri ale datelor dumneavoastră cu caracter personal în afara spațiului Uniunii
+                        Europene
+                        si al SEE</h1>
+                    <p>
+                        Ca regulă generală, Datele dumneavoastră nu vor fi transferate (inclusiv
+                        prin stocare) într-o țară situată în afara Uniunii Europene sau Spațiului
+                        Economic European („SEE”).
+                    </p>
+                    <p>
+                        Daca vom transfera Date ale dumneavoastră și către alți terti situați în
+                        tari care nu asigură un nivel adecvat de protecție conform legilor
+                        aplicabile, ne angajăm să depunem toate eforturile rezonabile pentru a
+                        asigura că respectivii terti respectă termenii și condițiile din această
+                        Politică și că astfel de transferuri respectă prevederile legale aplicabile
+                        in materie de protectia a datelor cu caracter personal.
+                    </p>
+                    <h1>11. Ce măsuri tehnice si organizationale am implementat pentru protecția datelor dumneavoastră
+                        cu
+                        caracter personal?</h1>
+                    <p>
+                        Am implementat măsurile tehnice și organizatorice necesare pentru a asigura
+                        un nivel adecvat de securitate pentru colectarea, prelucrarea pe alte cai
+                        și păstrarea în siguranță a datelor dumneavoastra cu caracter personal,
+                        inclusiv împotriva accesului neautorizat la acestea, al utilizării lor
+                        neautorizate, si de asemenea impotriva distrugerii, pierderii sau alterării
+                        acestora. Aceste măsuri includ, fără a se limita la, folosirea de tehnici
+                        de criptare, acordarea de drepturi de acces restricționat la sistemele
+                        noastre fizice și de IT, impunerea de obligații de confidențialitate
+                        angajaților și partenerilor noștri de afaceri.
+                    </p>
+                    <p>
+                        În plus, depunem toate eforturile rezonabile pentru a ne asigura (inclusiv
+                        prin contractele încheiate cu aceștia) că și parteneri noștri de afaceri
+                        care pot avea acces la Date ale dumneavoastră în contextul serviciilor
+                        furnizate nouă gestionează măsuri tehnice și organizatorice adecvate pentru
+                        prelucrare.
+                    </p>
+                    <p>
+                        În cazul în care va exista un incident de securitate care implică Datele
+                        dumneavoastră, vom face toate notificările și vom adopta toate măsurile
+                        necesare prevăzute de prevederile legale în vigoare.
+                    </p>
+                    <h1>12. Transmiterea de informații către noi</h1>
+                    <p>
+                        Comunicarea prin Internet/alte cai electronice nu este în întregime sigură
+                        și de aceea, când ne trimiteți informații/date cu caracter personal pe
+                        această cale (de ex., prin email, prin intermediul Aplicatiei, sau prin
+                        orice alt mijloc electronic), vă asumați riscuri.
+                    </p>
+                    <p>
+                        Nu ne putem asuma responsabilitatea pentru niciun tip de cheltuieli,
+                        pierderi de profit, prejudicii ale reputației, daune, datorii sau orice
+                        altă formă de pierdere sau de prejudiciu suferită de dumneavoastră ca
+                        rezultat al deciziei dumneavoastră de a ne transmite informații/date
+                        (inclusiv personale) prin mijloace electronice, în afară de obligațiile
+                        noastre legale imperative (inclusiv în domeniul protecției datelor cu
+                        caracter personal) și de cele asumate prin contractele încheiate cu
+                        dumneavoastră.
+                    </p>
+                    <h1>13. Ce drepturi aveti in legatura cu prelucrarea de catre noi a datelor dumneavoastra cu
+                        caracter
+                        personal?</h1>
+                    <p>
+                        În contextul prelucrării Datelor dumneavoastră cu caracter personal, aveți
+                        următoarele drepturi:
+                    </p>
+                    <p>
+                        <strong>a) Dreptul de acces la Datele cu caracter personal prelucrate:</strong>
+                        aveți dreptul de a obține confirmarea faptului că Datele dumneavoastră cu
+                        caracter personal sunt sau nu prelucrate de noi și, în caz afirmativ, de a
+                        avea acces la aceste date și la condițiile în care acestea sunt
+                        prelucrate, prin adresarea unei cereri specifice către noi in
+                        calitate de operator de date;
+                    </p>
+                    <p>
+                        <strong>b) Dreptul de a solicita rectificarea sau ștergerea Datelor cu caracter personal
+                            (dreptul de
+                            a fi uitat):</strong>
+
+                        puteti sa ne solicitati, prin adresarea unei cereri specifice în acest
+                        sens către noi ca operator de date, rectificarea datelor cu caracter
+                        personal inexacte, completarea datelor incomplete sau ștergerea datelor
+                        dumneavoastră cu caracter personal în cazul în cazul în care (i) datele
+                        nu mai sus necesare în scopul inițial (și nu există un nou scop legal),
+                        (ii) temeiul juridic al prelucrării este consimțământul persoanei
+                        vizate, iar persoana vizată își retrage consimțământul și nu există alt
+                        temei legal, (iii) persoana vizată își exercită dreptul de a se opune,
+                        iar operatorul nu are motive legitime care să prevaleze pentru a
+                        continua prelucrarea, (iv) datele au fost prelucrate ilegal, (v)
+                        ștergerea este necesară pentru conformarea cu legislația UE sau
+                        legislația română sau (vi) datele au fost colectate în legătură cu
+                        servicii ale societății informaționale oferite copiilor (dacă este
+                        cazul), când se aplică cerințe specifice cu privire la consimțământ.
+                        <strong>
+                            Acesta nu este un drept absolut. Vom putea respinge solicitarea
+                            dumneavoastră de ștergere a datelor dacă: (i) suntem ținuți să ne
+                            conformăm unor obligații legale de a păstra datele; sau (ii) dacă
+                            datele ne sunt necesare pentru constatarea, exercitarea sau apărarea
+                            drepturilor și/sau intereselor noastre legitime în justiție
+                        </strong>
+                        ;
+                    </p>
+                    <p>
+                        <strong>c) Dreptul de a solicita restricționarea prelucrării:</strong>
+                        aveți dreptul de a obține restricționarea prelucrării în cazurile în
+                        care: (i) considerați că datele cu caracter personal prelucrate sunt
+                        inexacte, pentru o perioadă care să ne permită nouă ca operator să
+                        verificăm exactitatea datelor cu caracter personal; (ii) prelucrarea
+                        este ilegală, dar nu doriți să vă ștergem datele cu caracter personal,
+                        ci să restrângem utilizarea acestor date; (iii) în cazul în care noi,
+                        ca operator de date nu mai avem nevoie de datele dumneavoastră cu
+                        caracter personal în scopurile menționate mai sus, însă dumneavoastră
+                        aveți nevoie de date pentru a constata, exercita sau apăra un drept în
+                        instanță; sau (iv) v-ați opus prelucrării, pentru intervalul de timp în
+                        care să verificăm dacă temeiurile legitime ale noastre ca operator de
+                        date prevalează asupra drepturilor persoanei vizate;
+                    </p>
+                    <p>
+                        <strong>d) Dreptul de a vă retrage consimțământul cu privire la prelucrare</strong>
+                        , atunci când prelucrarea are la bază consimțământul, fără a afecta
+                        legalitatea prelucrării efectuate până în momentul respectiv;
+                    </p>
+                    <p>
+                        <strong>e) Dreptul de a vă opune cu privire la prelucrarea datelor</strong>
+                        din motive legate de situația particulară în care vă aflați, atunci când
+                        prelucrarea se întemeiază pe interes legitim, precum și de a vă opune,
+                        în orice moment, prelucrării datelor în scopuri de marketing direct,
+                        inclusiv crearea de profiluri;
+                    </p>
+                    <p>
+                        <strong>f) Dreptul de a nu face obiectul unei decizii bazate exclusiv pe
+                            prelucrare automatizată, inclusiv crearea de profiluri</strong>
+                        , care produce efecte juridice care privesc persoana vizată sau o afectează
+                        pe aceasta în mod similar într-o manieră semnificativă;
+                    </p>
+                    <p>
+                        <strong>g) Dreptul la portabilitatea datelor</strong>
+                        , însemnând dreptul de a vă primi datele cu caracter personal pe care
+                        le-ați furnizat nouă ca operator de date într-o formă structurată,
+                        utilizată în mod curent și care poate fi citită automat, precum și dreptul
+                        de a transfera respectivele date către un alt operator, în cazul în care
+                        prelucrarea se bazează pe consimțământul dumneavoastră sau executarea unui
+                        contract și este efectuată prin mijloace automate;
+                    </p>
+                    <p>
+                        <strong>h) Dreptul de a depune plângere</strong>
+                        în fața Autorității de Protecție a Datelor (ANSPDCP) situată înB-dul G-ral.
+                        Gheorghe Magheru 28-30, Sector 1, cod postal 010336, Bucuresti, Romania,
+                        telefon +40.318.059.211 / +40.318.059.212, email <a
+                            href="mailto:anspdcp@dataprotection.ro">anspdcp&#64;dataprotection.ro</a> și
+                        dreptul de a vă adresa instanțelor de judecată competente.
+                    </p>
+                    <p>
+                        Drepturile de mai sus pot fi exercitate oricând. În acest scop, puteți
+                        adresa solicitări specifice, datate și semnate, fie la adresa sediului
+                        nostru din: loc.Oradea, str. Armatei Române nr.1/A, corp C, etaj II, fie prin email la adresa
+                        dedicată:
+                        <a href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a>, în atenția
+                        Consilierului relații publice.
+                    </p>
+                    <p>
+                        <strong>Vom răspunde</strong>
+                        la fiecare dintre aceste solicitari ale dumneavoastra în cel mult 1 (o)
+                        lună de la primirea solicitarii, exceptând situația în care avem nevoie sa
+                        extindem aceasta perioada cu inca cel mult 2 (doua) luni de la primirea
+                        solicitării initiale) ținându-se seama de complexitatea și numărul
+                        solicitărilor primite. Vă vom informa cu privire la orice astfel de
+                        prelungire, în termen de o lună de la primirea solicitării initiale,
+                        impreuna cu motivele întârzierii.
+                    </p>
+                    <p>
+                        <strong>
+                            Precizăm totodată faptul că exercitarea drepturilor dumneavoastra de
+                            către persoana vizată mai sus-mentionate este gratuită. In cazul
+                            solicitarilor care sunt manifest nefondate sau excesive, in particular
+                            din cauza caracterului lor repetitiv, vom putea: (a) să percepem o taxa
+                            rezonabila avand in vedere costurile administrative ale furnizarii
+                            informatiilor de comunicare sau ale realizarii actiunii solicitate; sau
+                            (b) să refuzam să dăm curs solicitarii, cu motivarea răspunsului
+                            nostru.
+                        </strong>
+                    </p>
+                    <p>
+                        Dacă solicitați copii suplimentare ale Datelor dumneavoastră care fac
+                        obiectul prelucrarii, vă vom putea percepe o taxă rezonabilă, care se
+                        bazează pe costurile administrative ale furnizării acestor copii. <strong></strong>
+                    </p>
+                    <p>
+                        Dacă nu sunteți satisfacuti de răspunsul nostru, puteți formula o plângere
+                        la ANSPDCP. Mai multe informații despre procedura aferentă plângerilor
+                        adresate acestei autoritati sunt disponibile pe website-ul ANSPDCP accesând
+                        următorul <a
+                            href="http://dataprotection.ro/?page=procedura_de_solutionare_a_plangerilor">link</a>.
+                    </p>
+                    <h1>14. Intrebări și solicitări privind protecția datelor dumneavoastra cu caracter personal</h1>
+                    <p>
+                        Pentru orice comentarii, clarificări sau alte detalii de care aveți nevoie
+                        cu privire la prezenta Politică, vă puteți adresa Responsabilului nostru cu
+                        protecția datelor, adresând solicitări specifice, fie la adresa poștală a
+                        sediului nostru (mai sus-mentionata), fie la adresa de email dedicata:
+                        <a href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a>.
+                    </p>
+                    <h1>15. Actualizari ale acestei Politici</h1>
+                    <p>
+                        Prezenta Politică este supusă actualizarilor ulterioare (de ex., din cauza
+                        modificărilor legislative și de practică în materie, ori a modificărilor în
+                        operatiunile noastre de afaceri, etc.), ultima versiune a acesteia fiind
+                        publicată în Aplicatie. În măsura în care doriți să vi se comunice o
+                        versiune anterioară a acestei Politici, ne puteți transmite o solicitare
+                        specifica datata si semnata, fie la adresa sediului nostru, fie la
+                        urmatoarea adresă de email dedicată: <a
+                            href="mailto:bihorcurat@ecolectbihor.ro">bihorcurat&#64;ecolectbihor.ro</a>.
+                    </p>
+                    <p>
+                        În cazul în care vom efectua modificări minore ale acestei Politici (ce nu
+                        se referă la modificarea categoriilor de date cu caracter personal
+                        prelucrate, tipurile de prelucrări, scopurile și/sau modalitățile de
+                        prelucrare), vom actualiza această Politică si vom mentiona in aceasta data
+                        actualizarii. Prelucrarea datelor dumneavoastră cu caracter personal va fi
+                        guvernată astfel de prevederile noii versiuni a Politicii de la data
+                        efectivă a actualizarii.
+                    </p>
+                    <p>
+                        În cazul în care vom efectua modificări majore ale acestei Politici (ce se
+                        referă la modificarea categoriilor de date cu caracter personal prelucrate,
+                        tipurile de prelucrări, scopurile și/sau modalitățile de prelucrare), vă
+                        vom informa în prealabil despre această modificare fie via e-mail (dacă
+                        este posibil), fie prin publicarea unui anunț în acest sens in Aplicatie.
+                    </p>
+                    <p>
+                        Ori de câte ori este cerut conform legii, vom obține consimțământul
+                        dumneavoastră specific, si informat anterior prelucrării datelor
+                        dumneavoastră cu caracter personal în alte scopuri și modalități decât cele
+                        pentru care deja am obținut consimțământul dumneavoastră.
+                    </p>
+                    <br />
+                    <small>Actualizat la data de 08.05.2023</small>
+                </div>
+            </ng-template>
+            <ng-template #notAvailable>
+                <app-no-array content="Tabs.Profile.Actions.InformationNotAvailable" icon="alert-outline"
+                    [hasPadding]="false"></app-no-array>
+            </ng-template>
+        </ng-template>
+    </div>
+</ion-content>

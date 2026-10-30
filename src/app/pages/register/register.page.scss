@@ -1,0 +1,181 @@
+ion-content {
+    .content {
+        form {
+            margin: 10px 0px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-direction: column;
+
+            .validationError {
+                margin: -2px 0 2px;
+                font-size: 12px;
+                line-height: 16px;
+                --ion-font-family: "DM Sans Medium" !important;
+                font-family: "DM Sans Medium" !important;
+            }
+
+            .termsItem {
+                --border-style: none;
+                margin-top: 5px;
+
+                ion-checkbox {
+                    margin-right: 10px;
+                    --size: 16px;
+                    --background: unset !important;
+                    --background-checked: transparent;
+                }
+
+                ion-checkbox::part(container) {
+                    border-radius: 4px;
+                    border: 2px solid #3d3d3d;
+                }
+
+                .terms {
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    letter-spacing: -0.8px;
+                    color: #171717;
+                    white-space: unset;
+
+                    a {
+                        color: #171717;
+                        text-decoration: underline;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            ion-item {
+                --padding-start: 0;
+                --border-style: groove;
+                --border-color: rgb(213 213 213 / 24%);
+                --background: transparent !important;
+
+                ion-input {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: -0.2px;
+                    color: #171717;
+                    position: relative;
+                    --padding-end: 0;
+                    margin-top: 8px;
+                    --padding-start: 8px;
+
+                    ion-icon {
+                        color: #171717;
+                        font-size: 20px;
+                    }
+                }
+
+                ion-label {
+                    font-style: normal;
+                    font-weight: 500;
+                    --ion-font-family: "DM Sans Medium" !important;
+                    font-family: "DM Sans Medium" !important;
+                    letter-spacing: -0.171429px;
+                    color: #8f92a1;
+                }
+            }
+
+            ion-button.mainButton.button-disabled {
+                opacity: 0.45;
+                --background: #b9dadd;
+            }
+
+            .mainButton {
+                margin-bottom: 30px;
+            }
+        }
+
+        .bottom {
+            margin-top: 10px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            // h2 {
+            //   text-align: center;
+            //   position: relative;
+            //   width: 100%;
+            //   margin-top: -5px;
+            //   .line {
+            //     padding: 0 10px;
+            //     background: #fff;
+            //     display: inline-block;
+            //     font-style: normal;
+            //     font-weight: 600;
+            //     font-size: 14px;
+            //     line-height: 18px;
+            //     text-align: center;
+            //     color: rgba(23, 23, 23, 0.6);
+            //     --ion-font-family: 'DM Sans Regular' !important;
+            //     font-family: 'DM Sans Regular' !important;
+            //   }
+            //   &::after {
+            //     content: "";
+            //     position: absolute;
+            //     top: 60%;
+            //     left: 0;
+            //     right: 0;
+            //     border-top: solid 2px rgb(213 213 213 / 24%);
+            //     z-index: -1;
+            //   }
+            // }
+
+            p {
+                margin: 0;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                --ion-font-family: "DM Sans Regular" !important;
+                font-family: "DM Sans Regular" !important;
+                color: rgba(23, 23, 23, 0.6);
+
+                strong {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 18px;
+                    text-align: center;
+                    color: #3d3d3d;
+                    text-decoration: underline;
+                }
+            }
+
+            // .guest, .google {
+            //   --background: #B9BEA5;
+            //   font-style: normal;
+            //   font-weight: 500;
+            //   font-size: 14px;
+            //   line-height: 24px;
+            //   text-align: center;
+            //   letter-spacing: -0.8px;
+            //   --ion-font-family: 'DM Sans Medium' !important;
+            //   font-family: 'DM Sans Medium' !important;
+            //   color: #3D3D3D;
+            //   text-transform: none;
+            // }
+
+            // .google {
+            //   --background: #e2e2e2 !important;
+
+            //   ion-icon {
+            //     position: unset;
+            //     margin-right: 8px;
+            //   }
+            // }
+        }
+    }
+}

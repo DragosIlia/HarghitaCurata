@@ -1,0 +1,13 @@
+<ion-content>
+    <div class="content">
+        <ion-icon class="greeting" src="./assets/icons/welcome.svg"></ion-icon>
+
+        <div class="bottom">
+            <h1>{{ 'Onboarding.Welcome' | translate }} <strong>{{ applicationName }}</strong> </h1>
+            <p class="description"> {{ 'Onboarding.Description' | translate }} </p>
+            <ion-button class="mainButton" (click)="assignBoard()">
+                <p class="text-ellipsis">{{ 'Onboarding.Continue' | translate }}</p>
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

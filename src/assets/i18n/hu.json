@@ -1,0 +1,388 @@
+{
+    "Onboarding": {
+        "Welcome": "Üdvözöljük a",
+        "Description": "Csatlakozzon mozgalmunkhoz, hogy egy fenntartható világban éljünk, és tegye tudatosabbá a különgyűjtést.",
+        "Continue": "Folytatás"
+    },
+    "Placeholder": {
+        "Filter": "Keresés szűkítése"
+    },
+    "Tabs": {
+        "Dashboard": {
+            "Tab": "Naptár",
+            "Salute": "Üdv",
+            "Welcome": "Üdvözöljük (újra)!",
+            "Guest": "Felhasználó",
+            "Select": "Válasszon zónát a naptárhoz",
+            "Zone": "Zóna",
+            "ZoneList": "Érvényes zónák",
+            "LastUpdate": "Frissítve",
+            "Unknown": "Unknown",
+            "NoCollections": "Nincs gyűjtés a megadott napon!",
+            "NoCalendar": "Válasszon egy létező naptárt!",
+            "NoFractions": "A naptárban nincsenek érvényes adatok!",
+            "NextCollection": "Következő gyűjtés",
+            "CancelSheet": "Törölje"
+        },
+        "Map": {
+            "Tab": "Térkép",
+            "Filter": "Szűrje a központokat",
+            "FractionTypes": "Hulladékok típusai",
+            "RecyclableItems": "Újrahasznosítható elemek",
+            "SeeMoreItems": "Lásd még",
+            "NoRecyclableItems": "Nincsenek újrahasznosítható tárgyak",
+            "NearbyCentres": "Központok az Ön közelében"
+        },
+        "Guide": {
+            "Tab": "Útmutató",
+            "WithoutDescription": "Nincs elérhető leírás ",
+            "Details": {
+                "Title": "Információk a tételről",
+                "Type": "Hulladék típusa",
+                "Fraction": "Melyik edényzet",
+                "Material": "Anyag",
+                "Recyclable": "Újrahasznosítható",
+                "NonRecyclable": "Nem újrahasznosítható",
+                "Visit": "Látogassa meg a következő linket",
+                "LastUpdate": "Frissítve"
+            }
+        },
+        "WasteHunter": {
+            "Tab": "Bejelentés",
+            "NewRecord": "Jelentsen be illegális hulladéklerakást",
+            "LastEntries": "Az utolsó 10 bejegyzés",
+            "NoRecords": "Nem található bejegyzés",
+            "Details": "Információk a hulladékról",
+            "Add": {
+                "Title": "Hulladék bejelentése",
+                "Additional": "További információk",
+                "Location": "A hulladék helye",
+                "Fit": {
+                    "Title": "Hulladék mennyisége",
+                    "NotSelected": "Nem választott ki legalább egy hulladék mennyiséget!",
+                    "Bag": "Elfér egy zsákban",
+                    "Wheelbarrow": "Elfér egy talicskában",
+                    "Car": "Autó szükséges az elszállitáshoz"
+                },
+                "Success": "A bejelentés sikeresen el lett küldve!"
+            }
+        },
+        "Profile": {
+            "Tab": "Fiók",
+            "ApplicationVersion": "Alkalmazási verzió",
+            "UnknownVersion": "ismeretlen",
+            "NewUpdate": "Új",
+            "Actions": {
+                "Dividers": {
+                    "Account": "Fiókom",
+                    "ForYou": "Önnek",
+                    "Information": "Hasznos információk"
+                },
+                "Details": "Fiókom adatai",
+                "Addresses": "Az én címeim",
+                "Truck": "Fuvar rendelése",
+                "Message": "Panasz küldése",
+                "Language": "Nyelv",
+                "Support": "Segítség",
+                "Feedback": "Visszajelzés a programról",
+                "Curiosities": "Kiadatlan érdekességek",
+                "FAQ": "Gyakran ismételt kérdések",
+                "Terms": "Általános szerződési feltételek",
+                "Privacy": "Adatvédelmi irányelvek",
+                "Logout": "Kilépés",
+                "Delete": "Fiók törlése",
+                "PromptDelete": {
+                    "Title": "Fiók törlése",
+                    "Message": "Az Ön személyes adatai ezzel a művelettel együtt törlődnek, biztos, hogy ezt szeretné?",
+                    "Ok": "Megerősítés",
+                    "Cancel": "Törölje"
+                },
+                "AccountDeleted": "Az Ön fiókját és adatait sikeresen eltávolítottuk az alkalmazásunkból. Bármikor létrehozhat egy másik fiókot ugyanazokkal az adatokkal.",
+                "NeedAddress": "Ezt csak akkor teheti meg, ha legalább egy érvényes cím van a fiókjában!",
+                "NeedToBeLogged": "Be kell jelentkeznie, hogy használni tudja ezt a funkciót!",
+                "ToBeEdited": "Hamarosan közzéteszik",
+                "InformationNotAvailable": "Információk csak román nyelven!"
+            },
+            "Share": {
+                "Text": "Szeretne hozzájárulni egy tisztább és élhetőbb városhoz? Próbálja ki alkalmazásunkat most!",
+                "Title": "Ajánljon a barátainak"
+            },
+            "Logged": {
+                "Contribute": "Szeretne hozzájárulni egy tisztább és élhetőbb városhoz?",
+                "Recommend": "Ajánljon minket most!"
+            },
+            "NotLogged": {
+                "Auth": "Az alkalmazás összes funkciójának használatához be kell jelentkeznie!",
+                "Button": "Belépés / Új fiók"
+            }
+        }
+    },
+    "Login": {
+        "Sign": "Bejelentkezés",
+        "Back": "Üdvözöljük újra, már hiányozott!",
+        "Username": "Felhasználónév",
+        "Password": "Jelszó",
+        "Login": "Bejelentkezés",
+        "Without": "Nincs még fiókja?",
+        "Register": "Regisztráljon",
+        "Forgot": "Elfelejtette a jelszavát?"
+    },
+    "Register": {
+        "Start": "Kezdjük el",
+        "Info": "Készítsen egy fiókot a folytatáshoz!",
+        "Username": "Felhasználónév",
+        "Email": "E-mail cím",
+        "Password": "Jelszó",
+        "ConfirmPassword": "Jelszó még egyszer",
+        "FirstName": "Keresztnév",
+        "LastName": "Vezetéknév",
+        "Phone": "Telefonszám",
+        "BeforeTerms": "A fiók létrehozásával Ön elfogadja az",
+        "Terms": "Általános szerződési feltételeket",
+        "Privacy": "Adatvédelmi irányelveket",
+        "Create": "Regisztráció",
+        "Identical": "A jelszavak nem egyeznek",
+        "PasswordRules": "A jelszónak {{min}} és {{max}} karakter között kell lennie.",
+        "PasswordInvalid": "A jelszónak {{min}} és {{max}} karakter között kell lennie.",
+        "TermsAccepted": "Nem fogadta el az Általános Szerződési Feltételeket",
+        "AccountCreated": "A fiókja sikeresen elkészült!",
+        "And": "és"
+    },
+    "Recovery": {
+        "Title": "Jelszó visszaállitása",
+        "Subtitle": "Írja be az e-mail cimét a jelszó visszaállitásához.",
+        "Email": "E-mail cím",
+        "Send": "Kód küldése"
+    },
+    "Reset": {
+        "Title": "Jelszó visszaállítása",
+        "Subtitle": "Írja be a helyreállítási kódot az e-mail címéről.",
+        "Code": "Helyreállítási kód",
+        "NewPassword": "Új jelszó",
+        "ConfirmNewPassword": "Új jelszó megerősítése",
+        "IdenticalPasswords": "A jelszavak nem azonosak!",
+        "Submit": "Jelszó módosítása",
+        "Success": "Jelszó sikeresen megváltozott, most már be tudsz jelentkezni"
+    },
+    "Language": {
+        "Language": "Nyelv"
+    },
+    "Details": {
+        "Title": "Fiókom",
+        "General": "Általános információk",
+        "Security": "Biztonság",
+        "Username": "Felhasználónév",
+        "Email": "E-mail cím",
+        "FirstName": "Keresztnév",
+        "LastName": "Vezetéknév",
+        "Phone": "Telefonszám",
+        "CurrentPassword": "Jelenlegi jelszó",
+        "NewPassword": "Új jelszó",
+        "Save": "Mentés",
+        "Success": "A fiókadatok sikeresen elmentésre kerültek!"
+    },
+    "Addresses": {
+        "Title": "Címek",
+        "Add": "Cím hozzáadása",
+        "Main": "Elsődleges cím",
+        "Secondary": "Másodlagos cím",
+        "DeleteTitle": "Cím törlése",
+        "DeleteConfirm": "Biztos, hogy törölni szeretné ezt a címet? Ez a művelet visszafordíthatatlan!",
+        "DeleteOk": "Megerősítés",
+        "DeleteCancel": "Törölje",
+        "Delete": "A cím sikeresen törölve lett!",
+        "Success": "A címet sikeresen hozzáadtuk a főcímhez!",
+        "CanNotDeleteMain": "Ez a cím van elsődleges címként beállítva, és ha törölni szeretné, adjon hozzá egy másikat, vagy válasszon egy másik címet elsődleges címként!",
+        "NoRecords": "Nincs érvényes cím"
+    },
+    "Address": {
+        "Add": "Új cím",
+        "City": "Település",
+        "CityList": "Település",
+        "SelectCity": "Válasszon települést",
+        "Street": "Utca",
+        "StreetList": "Utcák",
+        "SelectStreet": "Válasszon egy utcát",
+        "StreetNumber": "Házszám",
+        "Confirm": "Megerősítés",
+        "NeedSelectCity": "Először ki kell választania egy érvényes települést!",
+        "NoValidStreets": "Ez a település nem rendelkezik utcákkal adatbázisunk szerint!",
+        "NoAddressesOnCity": "A kiválasztott településen nincsenek utcanevek az adatbázisunk szerint, a házszám kötelező!",
+        "LiveInBlock": "Egy tömbben lakom"
+    },
+    "Centres": {
+        "Title": "Információk a központról",
+        "Navigate": "Vezessen oda",
+        "Call": "Hívja fel",
+        "LastUpdate": "Frissítve"
+    },
+    "Curiosities": {
+        "Title": "Tudtad ezt?"
+    },
+    "Notifications": {
+        "Notifications": "Értesítések",
+        "Today": "Ma",
+        "Yesterday": "Tegnap",
+        "Recently": "Mostanában",
+        "NoNotifications": "Nincsenek értesítések",
+        "Register": {
+            "AccountCreated": "Létrehozott fiók",
+            "AccountCreatedSuccess": "A fiók sikeresen létrehozásra és érvényesítésre került!"
+        },
+        "Complaint": {
+            "ReplyReceived": "Panasz megoldva",
+            "ReplyReceivedSuccess": "A panaszát kezelték, és választ kapott, ellenőrizze az előzményeket!"
+        }
+    },
+    "Request": {
+        "Request": "Fuvar rendelése",
+        "Name": "Teljes név",
+        "Address": "Cím",
+        "Message": "Rendelés",
+        "Button": "Rendelés elküldése",
+        "Success": "Megrendelése sikeres volt!",
+        "CancelSheet": "Törölje",
+        "SelectAddress": "Válasszon címet",
+        "NoInfo": "Nem áll rendelkezésre információ"
+    },
+    "Send": {
+        "Send": "Panasz küldése",
+        "Name": "Teljes név",
+        "Address": "Cím",
+        "Title": "Az üzenet tárgya",
+        "Message": "Üzenet",
+        "Button": "Küldés",
+        "Success": "A panasza sikeresen el lett küldve!",
+        "CancelSheet": "Törölje",
+        "SelectAddress": "Válasszon címet",
+        "SelectCategory": "Válasszon kategóriát",
+        "ReviewHistory": "Tekintse meg panaszai előzményeit",
+        "Categories": {
+            "NotLifted": "Nem lett elszállitva a hulladék",
+            "Dustbin": "Megsérült, törött edényzet(kuka)",
+            "Compliance": "A gyűjtési naptár be nem tartása",
+            "NotReceivedBags": "Nem kaptam gyűjtőzsákot az újrahasznositható hulladéknak",
+            "Crew": "A hulladékszállitó cég személyzete udvariatlan",
+            "Invoice": "Számlázási hiba/probléma",
+            "MixingWaste": "A hulladékszállitó cég emberei összekeverik a hulladékot",
+            "Other": "Egyéb problémák"
+        }
+    },
+    "Complaints": {
+        "Title": "Panaszok előzményei",
+        "SeeDetails": "Részletek",
+        "SendAt": "A panaszt küldték el",
+        "Details": {
+            "Title": "Panasz",
+            "Category": "Az üzenet tárgya",
+            "Message": "Üzenet",
+            "Address": "Cím",
+            "SendDate": "Küldés dátuma",
+            "State": "A panasz státusza",
+            "Response": "Válasz",
+            "Accepted": "Megoldott",
+            "Waiting": "Válaszra várva"
+        }
+    },
+    "Feedback": {
+        "Title": "Visszajelzés küldése",
+        "Message": "Üzenet",
+        "RatingRequired": "Kérjük értékelje az alkalmazást",
+        "Experience": "Mi a tapasztalata az alkalmazást illetően?",
+        "Button": "Küldés",
+        "Success": "Visszajelzése elküldésre került, köszönjük!"
+    },
+    "Faq": {
+        "Language": {
+            "Title": "Nem látom a nyelvemet az alkalmazásban!",
+            "Content": "<strong>Nem látom a nyelvemet az alkalmazásban!</strong><br/>Jelenleg az alkalmazásunk 3 nyelven érhető el, <strong>magyar</strong>, <strong>román</strong> és <strong>angol</strong> nyelven."
+        },
+        "Calendar": {
+            "Title": "Hogyan láthatom a címemhez tartozó naptárat?",
+            "Content": "<strong>Hogyan láthatom a címemhez tartozó naptárat?</strong><br/>Ahhoz, hogy megtekinthesse az elsődleges címéhez tartozó naptárat, érvényes címnek kell lennie a fiókjában. Ehhez menjen a <strong>Fiók</strong> -> <strong>Fiókadatok</strong> -> <strong>Címek</strong> -> <strong>Cím hozzáadása menüpontba</strong>."
+        },
+        "CalendarDates": {
+            "Title": "A naptár nem a valós gyűjtési napokat tartalmazza. Hogyan tudnék hozzájutni a valós adatokhoz?",
+            "Content": "<strong>A naptár nem a valós gyűjtési napokat tartalmazza. Hogyan tudnék hozzájutni a valós adatokhoz?</strong><br/>Többféle oka lehet, hogy nem a valós gyűjtési napokat mutatja a naptár.<br/>1. Ha tömbházban lakik, illetve olyan helyen ahol közös kukákban történik a hulladék gyűjtése, akkor lehetősége van a bepipálni ezt a lehetőséget a cim hozzáadásánál.  Ekkor egy speciális naptárt fog találni, mivel Önnek mindig lehetősége van hulladékot elhelyezni a közös tárolókban.<br/>2. Ha házban lakik, és saját edényzetei vannak, és a gyújtési naptár mégsem felel meg amit a rendszer ad, kérem vegye fel velünk a kapcsolatot, hogy ki tudjuk javitani ezt a hibát.<br/>Folyamatosan dolgozunk az applikáció jobbitásán, igy minden visszajelzés fontos számunkra."
+        },
+        "InvalidStreet": {
+            "Title": "Bár kiválasztottam a települést, nem találom az utcát, ahol lakom. Mit tegyek?",
+            "Content": "<strong>Bár kiválasztottam a települést, nem találom az utcát, ahol lakom. Mit tegyek?</strong><br/>1. Lehetséges, hogy az Ön településének utcaneve nem került be az adatbázisunkba. Ezt az adatbázist folyamatosan frissítjük. Ha ezzel a helyzettel találkozik, kérjük, vegye fel velünk a kapcsolatot a probléma orvoslása érdekében.<br/>2. Ha Ön Nagyváradon él, az utcanévjegyzék frissítése jelenleg folyamatban van, és <strong>2023. április 30-ig befejeződik</strong>.<br/>Elnézést kérünk az esetlegesen okozott kellemetlenségekért. Köszönjük türelmét és megértését!"
+        },
+        "Centres": {
+            "Title": "Hogyan láthatom a körülöttem lévő gyűjtőközpontokat?",
+            "Content": "<strong>Hogyan láthatom a körülöttem lévő gyűjtőközpontokat?</strong><br/>Az Ön körül található gyűjtőpontok megtekintéséhez lépjen a Térkép részre. Opcionálisan szűrheti ezeket a központokat a jobb alsó sarokban található szűrőgombra kattintva és a kívánt hulladéktípusok kiválasztásával."
+        },
+        "WasteHunter": {
+            "Title": "Hogyan jelenthetek be elhagyott hulladékot?",
+            "Content": "<strong>Hogyan jelenthetek be elhagyott hulladékot?</strong><br/>Ha elhagyott hulladékot szeretne bejelenteni, válassza a <strong>Jelentkezés</strong> -> <strong>Elhagyott hulladék bejelentése menüpontot</strong>. A kép elkészítése után opcionálisan töltse ki a hulladékra vonatkozó információkat és a hulladék kategóriáját."
+        },
+        "Notifications": {
+            "Title": "Hogyan láthatom a fiókomhoz tartozó értesítéseket?",
+            "Content": "<strong>Hogyan láthatom a fiókomhoz tartozó értesítéseket?</strong><br/>Ehhez be kell jelentkeznie a jobb felső sarokban található gombra kattintva."
+        },
+        "Complaints": {
+            "Title": "Hogyan tehetek panaszt?",
+            "Content": "<strong>Hogyan tehetek panaszt?</strong><br/>Panaszt akkor lehet benyújtani, ha be van jelentkezve, és érvényes cím van a fiókjában a <strong>Fiók</strong> -> <strong>Panasz benyújtása menüpontra kattintva</strong>."
+        }
+    },
+    "DirectivePassword": {
+        "Show": "Mutasd",
+        "Hide": "Rejtsd el"
+    },
+    "Network": {
+        "Connection": "Nincs kapcsolat!",
+        "Description": "Valami rosszul ment, próbálj meg újra az internethez csatlakozni a folytatáshoz"
+    },
+    "Location": {
+        "Normal": {
+            "Title": "A helymeghatározási szolgáltatások ki vannak kapcsolva",
+            "Content": "Ez az alkalmazás igényli a helymeghatározási szolgáltatások aktiválását. Kérjük, aktiválja őket az alábbi gomb megnyomásával.",
+            "Button": "Aktiválás"
+        },
+        "Precise": {
+            "Title": "A pontos hely megadása szükséges!",
+            "Content": "Az alkalmazásengedélyekből engedélyezni kell a pontos helyhasználatot amikor fut az alkalmazás",
+            "Button": "Beállitások"
+        },
+        "ManuallyEnabled": "Manuálisan engedélyeznie kell a helyszolgáltatásokat, és vissza kell térnie az alkalmazáshoz.",
+        "PreciseNeeded": "A pontos helyhasználat elengedhetetlen az alkalmazás használatához."
+    },
+    "Maintenance": {
+        "Title": "Karbantartás alatt",
+        "Content": "Jelenleg karbantartás alatt található az alkalmazás. Kérjük próbálja újra később..."
+    },
+    "Versioning": {
+        "Cancel": "Bezárás",
+        "Update": {
+            "Title": "Alkalmazás frissítés",
+            "Content": "Új verzió érhető el, kérjük, frissítse az alkalmazást a legújabb verzióra, ha továbbra is használni szeretné.",
+            "Button": "Töltse le"
+        },
+        "Major": {
+            "Title": "Fontos frissítés",
+            "Content": "Az alkalmazás használatához kérjük frissítsen a legújabb változatra.",
+            "Button": "Töltse le"
+        },
+        "Minor": {
+            "Title": "Frissítés elérhető",
+            "Content": "Elérhető egy új verzió, szeretné letölteni most?",
+            "Button": "Töltse le"
+        }
+    },
+    "Errors": {
+        "ContactDeveloper": "Kérjük, lépjen kapcsolatba az alkalmazásfejlesztő csapattal",
+        "InvalidLogin": "A felhasználónév vagy a jelszó nem helyes",
+        "UsernameExists": "Ez a felhasználónév már létezik",
+        "EmailExists": "Ez az e-mail cim már létezik",
+        "UsernameHasSpaces": "A felhasználónév nem tartalmazhat szóközöket!",
+        "PasswordIncorect": "A jelszó helytelen, használjon nagybetűket, kisbetűket és legalább egy írásjelet!",
+        "BadOldPassword": "A régi jelszó helytelen",
+        "SamePasswords": "Az új jelszónak különböznie kell a régitől",
+        "BadNewPassword": "Az új jelszó érvénytelen",
+        "InvalidCode": "A helyreállítási kód érvénytelen vagy már nem érvényes!",
+        "InvalidCodeOrPassword": "A helyreállítási kód érvénytelen vagy a jelszó érvénytelen!",
+        "AccessForbiddenOnMobile": "Mobilról nem tudsz bejelentkezni ebbe a fiókba!",
+        "SendReclamation": "A panasz elküldéséhez kérjük, válasszon ki egy címet, töltse ki a címsort, és írjon be legalább 4 karakterből álló üzenetet."
+    }
+}

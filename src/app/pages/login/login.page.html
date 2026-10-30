@@ -1,0 +1,43 @@
+<app-header iconName="close-outline" [enableTitle]="true" [isModal]="true" [enableImage]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <div class="top">
+            <h1 class="text-ellipsis">{{ 'Login.Sign' | translate }}</h1>
+            <p>{{ 'Login.Back' | translate }}</p>
+        </div>
+
+        <form [formGroup]="loginForm">
+
+            <ion-item>
+                <ion-label position="stacked">{{ 'Login.Username' | translate }}</ion-label>
+                <ion-input #usernameInput inputmode="text" formControlName="username" mode="ios" required="true"
+                    spellcheck="false" type="text">
+                    <ion-icon name="person-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">{{ 'Login.Password' | translate }}</ion-label>
+                <app-password>
+                    <ion-input inputmode="text" formControlName="password" mode="ios" required="true" spellcheck="false"
+                        type="password">
+                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </app-password>
+            </ion-item>
+
+            <div class="recovery">
+                <p (click)="openModal('recovery')">{{ 'Login.Forgot' | translate }}</p>
+            </div>
+
+            <ion-button class="mainButton" type="button" expand="block" (click)="login()" [disabled]="!loginForm.valid">
+                <p class="text-ellipsis">{{ 'Login.Login' | translate }}</p>
+            </ion-button>
+
+            <div class="register">
+                <p (click)="openModal('register')">{{ 'Login.Without' | translate }} <strong>{{ 'Login.Register' | translate }}</strong></p>
+            </div>
+        </form>
+    </div>
+</ion-content>

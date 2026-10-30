@@ -1,0 +1,26 @@
+<app-header iconName="arrow-back-outline" title="Tabs.Map.Filter" [enableTitle]="true" [isModal]="true"></app-header>
+
+<ion-content>
+    <div class="content ion-margin-bottom">
+        <div class="group">
+            <h1 class="title text-ellipsis">{{ 'Tabs.Map.FractionTypes' | translate }}</h1>
+            <div class="fractionTypes">
+                <div class="fractionType" *ngFor="let fractionType of data" [ngStyle]="{'background-color': hexToRGB(fractionType.id) }" (click)="markFraction(fractionType)">
+                    <p class="text-ellipsis">
+                        <ng-container *ngIf="currentLanguage === 'ro';else nameGb">
+                            {{ fractionType.name }}
+                        </ng-container>
+                        <ng-template #nameGb>
+                            <ng-container *ngIf="currentLanguage === 'gb';else nameHu">
+                                {{ fractionType.nameGb }}
+                            </ng-container>
+                        </ng-template>
+                        <ng-template #nameHu>
+                            {{ fractionType.nameHu }}
+                        </ng-template>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

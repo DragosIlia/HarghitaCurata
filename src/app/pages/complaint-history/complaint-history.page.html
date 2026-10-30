@@ -1,0 +1,35 @@
+<app-header iconName="arrow-back-outline" title="Complaints.Title" [enableTitle]="true" [isModal]="true"></app-header>
+
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <div class="content">
+        <ion-list *ngIf="data && data.length > 0">
+            <ng-container *ngFor="let complaint of data">
+                <div class="complaint">
+                    <ion-badge mode="ios" class="unread" color="danger" *ngIf="complaint.state === 3 && !complaint.read"></ion-badge>
+
+                    <div class="complaint__top">
+                        <div class="icon">
+                            <ion-icon [name]="complaint.state === 1 ? 'help-outline' : 'checkmark-outline'" [ngStyle]="{'color': complaint.state === 1 ? 'var(--ion-color-warning)' : 'var(--ion-color-primary)' }"></ion-icon>
+                        </div>
+                        <div class="info">
+                            <div class="main">
+                                <h1 class="text-ellipsis">{{ complaint.title | translate }}</h1>
+                                <p class="text-ellipsis">{{ 'Complaints.SendAt' | translate }} {{ complaint.sendDate | date: 'dd MMM yyyy HH:mm' : '' : locale }}</p>
+                            </div>
+                            <span class="text-ellipsis">{{ complaint.content }}</span>
+                        </div>
+                    </div>
+                    <div class="complaint__bottom">
+                        <ion-button class="mainButton" (click)="viewComplaint(complaint)">
+                            <p class="text-ellipsis">{{ 'Complaints.SeeDetails' | translate }}</p>
+                        </ion-button>
+                    </div>
+                </div>
+            </ng-container>
+        </ion-list>
+    </div>
+</ion-content>

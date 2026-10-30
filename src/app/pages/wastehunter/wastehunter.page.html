@@ -1,0 +1,90 @@
+<ng-container *ngIf="wasteReporting; then reportHeader; else normalHeader"></ng-container>
+<ng-template #reportHeader><app-header title="Tabs.WasteHunter.Add.Title"
+        [enableTitle]="true"></app-header></ng-template>
+<ng-template #normalHeader><app-header [enableImage]="true" [enableTitle]="true"></app-header></ng-template>
+
+<ion-content class="fade-in-image">
+    <!-- <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher> -->
+    <ng-container *ngIf="wasteReporting; then reportTemplate; else lastEntries"></ng-container>
+    <ng-template #reportTemplate>
+        <div class="report">
+            <div class="previewImage">
+                <img [src]="wastePhoto?.webPath" />
+                <ion-button type="button" expand="block" (click)="recordDump()">
+                    <ion-icon name="camera-outline"></ion-icon>
+                </ion-button>
+            </div>
+
+            <div class="rest-content">
+                <div class="additionalInformation">
+                    <h1>{{ 'Tabs.WasteHunter.Add.Additional' | translate }}</h1>
+                    <ion-textarea inputmode="text" mode="ios" required="true" spellcheck="false" maxlength="128"
+                        cols="3" [(ngModel)]="wasteLocation.details"></ion-textarea>
+                </div>
+
+                <div class="trashSize">
+                    <h1>{{ 'Tabs.WasteHunter.Add.Fit.Title' | translate }}</h1>
+                    <div class="trashSizeButtons">
+                        <ion-button *ngFor="let wasteFit of wasteFits" class="mainButton" [ngClass]="{'unselectedSize': !wasteFit.selected }" type="button" expand="block" (click)="setWasteFit(wasteFit.size)">
+                            <p class="text-ellipsis">{{ wasteFit.name | translate }}</p>
+                        </ion-button>
+                    </div>
+                </div>
+
+                <div class="location">
+                    <h1>{{ 'Tabs.WasteHunter.Add.Location' | translate }}</h1>
+
+                    <div class="previewLocation">
+                        <capacitor-google-map #previewMap></capacitor-google-map>
+                        <h1 class="text-ellipsis">{{ wasteLocation?.address }}</h1>
+                    </div>
+                </div>
+
+                <ion-button class="mainButton" type="button" expand="block" (click)="sendDump()">
+                    <p class="text-ellipsis">{{ 'Send.Button' | translate }}</p>
+                    <!-- <ion-icon name="send-outline"></ion-icon> -->
+                </ion-button>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #lastEntries>
+        <div class="content">
+            <div class="newRecord">
+                <ion-button class="mainButton" type="button" expand="block" (click)="recordDump()">
+                    <p class="text-ellipsis">{{ 'Tabs.WasteHunter.NewRecord' | translate }}</p>
+                </ion-button>
+            </div>
+
+            <div class="lastEntries">
+                <h1>{{ 'Tabs.WasteHunter.LastEntries' | translate }}</h1>
+
+                <ng-container *ngIf="wasteHunterEntries === null; else noRecords">
+                    <div class="spinner">
+                        <ion-spinner name="dots"></ion-spinner>
+                    </div>
+                </ng-container>
+                <ng-template #noRecords>
+                    <ng-container
+                        *ngIf="wasteHunterEntries !== null && wasteHunterEntries.length === 0; else recordList">
+                        <app-no-array content="Tabs.WasteHunter.NoRecords" [hasPadding]="true"></app-no-array>
+                    </ng-container>
+                </ng-template>
+                <ng-template #recordList>
+                    <ion-list
+                        *ngIf="wasteHunterEntries !== null && wasteHunterEntries !== undefined && wasteHunterEntries.length > 0;">
+                        <ion-item *ngFor="let wasteHunterEntry of wasteHunterEntries" lines="full" button detail="true"
+                            detail-icon="chevron-forward-outline" (click)="viewInformation(wasteHunterEntry)">
+                            <ion-label>
+                                <h3>{{ wasteHunterEntry.insertDate | date: 'dd MMM yyyy HH:mm:ss' : '' : locale }}</h3>
+                                <p>{{ getLocationName(wasteHunterEntry) }}</p>
+                            </ion-label>
+                        </ion-item>
+                    </ion-list>
+                </ng-template>
+
+            </div>
+        </div>
+    </ng-template>
+</ion-content>

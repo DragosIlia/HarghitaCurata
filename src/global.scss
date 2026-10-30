@@ -1,0 +1,533 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+@use "sass:meta";
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/* Keep the app palette after Ionic's default colors. */
+@include meta.load-css("theme/variables");
+
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+@font-face {
+    font-family: "DM Sans Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DM Sans Regular"), url("assets/fonts/DMSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "DM Sans Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DM Sans Italic"), url("assets/fonts/DMSans-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "DM Sans Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DM Sans Medium"), url("assets/fonts/DMSans-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "DM Sans Medium Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DM Sans Medium Italic"), url("assets/fonts/DMSans-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "DM Sans Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DM Sans Bold"), url("assets/fonts/DMSans-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "DM Sans Bold Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("DM Sans Bold Italic"), url("assets/fonts/DMSans-BoldItalic.woff") format("woff");
+}
+
+.md body,
+.ios body {
+    --ion-background-color: none !important;
+}
+
+ion-modal {
+    --background: #fff;
+}
+
+:root[mode="ios"],
+:root[mode="md"] {
+    --ion-font-family: "DM Sans Bold" !important;
+    font-family: "DM Sans Bold" !important;
+}
+
+.content {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 20px !important;
+}
+
+.mainButton {
+    --background: #467f8d;
+    --background-activated: #356d7b;
+    --background-hover: #3d7482;
+    --border-radius: 5px;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    --box-shadow: none;
+
+    p {
+        font-style: normal !important;
+        font-weight: 700 !important;
+        font-size: 18px !important;
+        line-height: 30px !important;
+        text-transform: none !important;
+        text-align: center !important;
+        color: #ffffff !important;
+        margin: 0 !important;
+        width: 100% !important;
+        --ion-font-family: "DM Sans Regular" !important;
+        font-family: "DM Sans Regular" !important;
+        letter-spacing: normal !important;
+    }
+}
+
+.md .header-component ion-toolbar { position: relative; }
+
+.md .header-component ion-toolbar ion-title.center-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0; bottom: 0;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.md .header-component ion-toolbar ion-title.center-title img {
+  margin: 0;
+  width: auto;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-error {
+    color: var(--ion-color-danger) !important;
+    font-weight: 300 !important;
+}
+
+.top {
+    h1 {
+        --ion-font-family: "DM Sans Medium" !important;
+        font-family: "DM Sans Medium" !important;
+        margin: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.8px;
+        color: #171717;
+    }
+
+    p {
+        margin: 0;
+        --ion-font-family: "DM Sans Medium" !important;
+        font-family: "DM Sans Medium" !important;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+        color: #171717;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+    }
+}
+
+ion-searchbar {
+    --background: #0000000d !important;
+    --border-radius: 12px !important;
+    --icon-color: #1717174d !important;
+    --box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px !important;
+    color: #171717 !important;
+    width: 100%;
+    --clear-button-color: #1717174d !important;
+    --cancel-button-color: #1717174d !important;
+    --placeholder-color: #1717174d !important;
+    --placeholder-opacity: 1 !important;
+}
+
+.searchbar-search-icon {
+    width: 18px !important;
+    left: 8px !important;
+}
+.searchbar-input {
+    font-size: 16px !important;
+    padding-left: 32px !important;
+}
+
+.item-interactive-disabled.sc-ion-label-ios-h:not(.item-multiple-inputs),
+.item-interactive-disabled:not(.item-multiple-inputs) .sc-ion-label-ios-h,
+.item-interactive-disabled.sc-ion-label-md-h:not(.item-multiple-inputs),
+.item-interactive-disabled:not(.item-multiple-inputs) .sc-ion-label-md-h {
+    opacity: 1 !important;
+}
+
+.sc-ion-action-sheet-ios-h {
+    --button-color: #171717;
+}
+
+.action-sheet-cancel.sc-ion-action-sheet-ios
+{
+    color: var(--ion-color-danger);
+}
+
+// ion-refresher-content {
+//     position: relative;
+//     padding-bottom: 200px;
+//     background-color: #fff;
+
+//     .refresher-pulling,
+//     .refresher-refreshing {
+//         position: relative;
+//         top: 30px;
+//     }
+// }
+
+.ion-accordion-toggle-icon {
+    font-size: 22px;
+    color: rgba(23, 23, 23, 0.3);
+}
+
+ion-alert {
+    --background: #fff !important;
+}
+
+.versioning-alert {
+    --backdrop-opacity: 0.4;
+
+    .alert-title.sc-ion-alert-ios,
+    .alert-title.sc-ion-alert-md {
+        --ion-font-family: "DM Sans Medium" !important;
+        font-family: "DM Sans Medium" !important;
+        margin: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: -0.8px;
+        color: #171717;
+    }
+
+    .alert-head.sc-ion-alert-md + .alert-message.sc-ion-alert-md {
+        padding-bottom: 0 !important;
+    }
+
+    .alert-head.sc-ion-alert-md + .alert-message.sc-ion-alert-md,
+    .alert-message.sc-ion-alert-ios {
+        margin: 0;
+        --ion-font-family: "DM Sans Medium" !important;
+        font-family: "DM Sans Medium" !important;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+        color: #171717;
+    }
+}
+
+.dashboard-calendar {
+    background: #f7fbfb;
+    box-shadow: 0 3px 12px rgb(30 83 96 / 10%);
+    padding: 6px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        width: 25px;
+        height: 2px;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        background: #ced3de;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        h1 {
+            --ion-font-family: "DM Sans Regular" !important;
+            font-family: "DM Sans Regular" !important;
+            margin: 0;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.8px;
+            color: #171717;
+        }
+
+        .arrows {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            ion-icon {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .cal-month-view {
+        background: #f7fbfb;
+    }
+    .cal-month-view .cal-event {
+        width: 6px;
+        height: 6px;
+    }
+    .cal-month-view .cal-day-cell.cal-in-month.cal-has-events {
+        cursor: unset;
+    }
+    .cal-month-view .cal-open-day-events {
+        display: none !important;
+    }
+    .cal-month-view .cal-events {
+        position: absolute;
+        bottom: 0;
+        flex-wrap: nowrap;
+
+        small {
+            --ion-font-family: "DM Sans Medium" !important;
+            font-family: "DM Sans Medium" !important;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: -0.4px;
+            color: #171717;
+            mix-blend-mode: normal;
+            opacity: 0.6;
+        }
+    }
+    .cal-month-view .cal-cell-row .cal-cell:hover,
+    .cal-month-view .cal-cell.cal-has-events.cal-open {
+        background: #dddddd;
+    }
+    .cal-day-cell {
+        height: 50.51px !important;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .cal-month-view .cal-cell-row:hover {
+        background: none;
+    }
+    .cal-cell-top {
+        min-height: unset;
+        flex: unset;
+    }
+    .cal-month-view .cal-day-cell.cal-today {
+        background: #b9dadd;
+    }
+    .cal-month-view .cal-day-cell.cal-today .cal-day-number {
+        color: #24576a;
+        opacity: 1;
+    }
+    .cal-month-view .cal-out-month .cal-day-badge,
+    .cal-month-view .cal-out-month .cal-event {
+        opacity: 1;
+    }
+    .cal-tooltip {
+        display: none !important;
+    }
+    .cal-day-number {
+        font-size: 1.2em !important;
+        margin-top: unset;
+        margin-right: unset;
+        opacity: 0.8;
+        float: unset;
+        margin-bottom: unset;
+        color: #171717;
+        --ion-font-family: "DM Sans Medium" !important;
+        font-family: "DM Sans Medium" !important;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.8px;
+    }
+    .cal-month-view .cal-day-cell.cal-out-month .cal-day-number {
+        opacity: 0.3;
+    }
+    .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+        color: #171717;
+    }
+    .cal-day-badge {
+        display: none;
+    }
+    .cal-month-view .cal-header .cal-cell {
+        --ion-font-family: "DM Sans Medium" !important;
+        font-family: "DM Sans Medium" !important;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 24px;
+        color: #171717;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+    }
+    .cal-month-view .cal-day-cell {
+        min-height: unset;
+    }
+    .cal-month-view .cal-day-cell:not(:last-child),
+    .cal-month-view .cal-days .cal-cell-row,
+    .cal-month-view .cal-days {
+        border: 0;
+    }
+}
+
+.fade-in-image { animation: fadeIn 800ms; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scale-down {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/*==============================
+  INPUT COLOR IOS/ANDROID
+==============================*/
+
+    .item-interactive.ion-invalid {
+        --highlight-background: var(--ion-color-medium);
+    }
+
+    .item-interactive.ion-valid {
+        --highlight-background: var(--ion-color-medium);
+    }
+
+    .has-focus.ion-valid.sc-ion-input-md-h {
+        --highlight-color: var(--dark-grey);
+    }
+    
+    .has-focus.ion-valid.sc-ion-textarea-md-h {
+        --highlight-color: var(--dark-grey);
+    }
+    
+    .has-focus.ion-valid.sc-ion-input-ios-h {
+        --highlight-color: var(--dark-grey);
+    }
+    
+    .has-focus.ion-valid.sc-ion-textarea-ios-h {
+        --highlight-color: var(--dark-grey);
+    }
+
+    .sc-ion-textarea-md-h {
+        --highlight-color: var(--dark-grey);
+        --highlight-color-focused: var(--dark-grey);
+        --highlight-color-valid: var(--dark-grey);
+        --highlight-color-invalid: var(--dark-grey);
+    }
+
+    .sc-ion-textarea-ios-h {
+        --highlight-color: var(--dark-grey);
+        --highlight-color-focused: var(--dark-grey);
+        --highlight-color-valid: var(--dark-grey);
+        --highlight-color-invalid: var(--dark-grey);
+    }
+
+    .ion-touched.ion-invalid.sc-ion-textarea-md-h {
+        --highlight-color: var(--dark-grey);
+    }
+
+    .ion-touched.ion-invalid.sc-ion-textarea-ios-h {
+        --highlight-color: var(--dark-grey);
+    }
+    
+    .sc-ion-input-md-h {
+        --highlight-color: var(--dark-grey);
+        --highlight-color-focused: var(--dark-grey);
+        --highlight-color-valid: var(--dark-grey);
+        --highlight-color-invalid: var(--dark-grey);
+    }
+    
+    .ion-touched.ion-invalid.sc-ion-input-md-h {
+        --highlight-color: var(--dark-grey);
+    }
+    
+    .sc-ion-input-ios-h {
+        --highlight-color: var(--dark-grey);
+    }
+    
+    .ion-touched.ion-invalid.sc-ion-input-ios-h {
+        --highlight-color: var(--dark-grey);
+    }
+    
+    .item-interactive.ion-valid {
+        --highlight-background: var(--grey);
+    }
+    
+    :host {
+        --highlight-color-focused: var(--dark-grey);
+        --highlight-color-valid: var(--dark-grey);
+        --highlight-color-invalid: var(--dark-grey);
+    }
+
+/*==============================
+ INPUT COLOR IOS/ANDROID END
+==============================*/

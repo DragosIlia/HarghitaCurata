@@ -1,0 +1,90 @@
+<app-header iconName="arrow-back-outline" [enableTitle]="true" [isModal]="true" [enableImage]="true"></app-header>
+
+<ion-content>
+    <div class="content">
+        <div class="top">
+            <h1 class="text-ellipsis">{{ 'Register.Start' | translate }}</h1>
+            <p>{{ 'Register.Info' | translate }}</p>
+        </div>
+
+        <form [formGroup]="registerForm" (ngSubmit)="signUp()">
+            <ion-item>
+                <ion-label position="stacked">{{ 'Register.Username' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="text"
+                    formControlName="username">
+                    <ion-icon name="person-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Register.Email' | translate }}</ion-label>
+                <ion-input inputmode="email" mode="ios" required="true" spellcheck="false" type="email"
+                    formControlName="email">
+                    <ion-icon name="mail-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Register.Password' | translate }}</ion-label>
+                <app-password>
+                    <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="password"
+                        formControlName="password">
+                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </app-password>
+            </ion-item>
+            <p class="text-error validationError" *ngIf="shouldShowPasswordError()">{{ 'Register.PasswordInvalid' | translate:{ min: passwordMinLength, max: passwordMaxLength } }}</p>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Register.ConfirmPassword' | translate }}</ion-label>
+                <app-password>
+                    <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="password"
+                        formControlName="confirmPassword">
+                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                    </ion-input>
+                </app-password>
+            </ion-item>
+            <p class="text-error validationError" *ngIf="shouldShowConfirmPasswordError()">{{ 'Register.PasswordInvalid' | translate:{ min: passwordMinLength, max: passwordMaxLength } }}</p>
+            <p class="text-error validationError" *ngIf="shouldShowPasswordMismatchError()">{{ 'Register.Identical' | translate }}</p>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Register.LastName' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="text"
+                    formControlName="lastName">
+                    <ion-icon name="id-card-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Register.FirstName' | translate }}</ion-label>
+                <ion-input inputmode="text" mode="ios" required="true" spellcheck="false" type="text"
+                    formControlName="firstName">
+                    <ion-icon name="id-card-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="stacked">{{ 'Register.Phone' | translate }}</ion-label>
+                <ion-input inputmode="tel" pattern="[0-9]*" mode="ios" required="true" spellcheck="false" type="tel"
+                    formControlName="phoneNumber">
+                    <ion-icon name="call-outline" slot="start"></ion-icon>
+                </ion-input>
+            </ion-item>
+            <ion-item class="termsItem">
+                <ion-checkbox slot="start" formControlName="termsAccepted"></ion-checkbox>
+                <ion-label class="terms">
+                    {{ 'Register.BeforeTerms' | translate }}<br/>
+                    <a (click)="handleTerms()">{{ 'Register.Terms' | translate }}</a>
+                    {{ 'Register.And' | translate }}
+                    <a (click)="handlePolicy()">{{ 'Register.Privacy' | translate }}</a>.
+                </ion-label>
+            </ion-item>
+
+            <ion-button class="mainButton" type="submit" [disabled]="isSubmitDisabled()">
+                <p class="text-ellipsis">{{ 'Register.Create' | translate }}</p>
+                <!-- <ion-icon name="enter-outline"></ion-icon> -->
+            </ion-button>
+        </form>
+
+
+        <!-- <h2><span class="line">sau</span></h2>
+    <ion-button class="google">
+      <ion-icon src="./assets/icons/google.svg"></ion-icon>
+      Conectează-te cu Google
+    </ion-button> -->
+    </div>
+</ion-content>

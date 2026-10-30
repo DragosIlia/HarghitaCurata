@@ -1,0 +1,70 @@
+<app-header *ngIf="isLogged" [enableImage]="true" [enableTitle]="true"></app-header>
+
+<ion-content>
+    <div class="content fade-in-image">
+        <ng-container *ngIf="isLogged; then loggedIn; else loggedOut"></ng-container>
+
+        <ng-template #loggedIn>
+            <div class="main">
+                <div class="top">
+                    <h1 class="text-ellipsis">{{ userDetails?.firstName }} {{ userDetails?.lastName }}</h1>
+                    <p class="text-ellipsis">{{ userDetails?.email }}</p>
+                </div>
+                <div class="card" (click)="share()">
+                    <div class="bubble">
+                        <ion-icon src="./assets/icons/contribute.svg"></ion-icon>
+                    </div>
+                    <div class="share">
+                        <h1>{{ 'Tabs.Profile.Logged.Contribute' | translate }}</h1>
+                        <p>{{ 'Tabs.Profile.Logged.Recommend' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template #loggedOut>
+            <div class="explore">
+                <ion-icon src="./assets/icons/explore.svg"></ion-icon>
+            </div>
+
+            <div class="action">
+                <h1>{{ 'Tabs.Profile.NotLogged.Auth' | translate }}</h1>
+                <ion-button class="mainButton" (click)="sendToLogin()">
+                    <p class="text-ellipsis">{{ 'Tabs.Profile.NotLogged.Button' | translate }}</p>
+                </ion-button>
+            </div>
+        </ng-template>
+
+        <ion-list>
+            <ion-item-group *ngFor="let divider of settingsActions | keyvalue">
+                <ion-item-divider>
+                    <ion-label>
+                        {{ divider.key | translate }}
+                    </ion-label>
+                </ion-item-divider>
+
+                <ng-container *ngFor="let action of divider.value">
+                    <ion-item *ngIf="isLogged || (!isLogged && !action.auth) || (!isLogged && action.auth && action.canSeeWithoutAuth)" [ngClass]="{'grey_action': !isLogged && action.auth && action.canSeeWithoutAuth}" button [detail]="true"
+                        [detailIcon]="(action.type === SettingsType.Language) ? 'chevron-down-sharp' : 'chevron-forward-sharp'"
+                        lines="full" (click)="sendAction(action.type)">
+                        <ion-label>
+                            <h3 [ngStyle]="{ 'color': (action.type === SettingsType.Delete ? 'var(--ion-color-danger)' : '#3d3d3d') }">{{ action.name | translate }}</h3>
+                            <p *ngIf="action.type === SettingsType.Feedback">{{ 'Tabs.Profile.ApplicationVersion' | translate }}: {{ getApplicationVersion() | translate }}</p>
+                        </ion-label>
+                        <ion-avatar slot="end" *ngIf="action.type === SettingsType.Language && mainLanguage">
+                            <img alt="Flag" [src]="'./assets/icons/flags/' + mainLanguage + '.svg'" />
+                        </ion-avatar>
+                        <ion-badge mode="ios" color="primary" slot="end" *ngIf="action.type === SettingsType.Curiosities && !hasCuriositiesSeen">
+                            {{ 'Tabs.Profile.NewUpdate' | translate }}
+                        </ion-badge>
+                    </ion-item>
+                </ng-container>
+            </ion-item-group>
+
+            <ion-item class="logout" button detail="false" lines="full" *ngIf="isLogged"
+                (click)="sendAction(SettingsType.Logout)">
+                <ion-label>{{ 'Tabs.Profile.Actions.Logout' | translate }}</ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
